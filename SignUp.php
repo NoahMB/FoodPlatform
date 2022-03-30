@@ -10,15 +10,7 @@
     <title>Kuddoo Sign UP</title>
 </head>
 <body>
-    <div class="header">
-        <a href="index.html" class="logo">KADDOO</a>
-        <div class="header-right">
-          <a href="contact.html" target="_blank">CONTACT US</a>
-          <a class="active" href="index.html">Home</a>
-          <a href="index1.html">SIGN UP</a>
-          <a href="index2.html">LOG IN</a>
-        </div>
-      </div> 
+<?php include_once 'header.php';?>
         <br>
         
       <div class="SignUP_C">
