@@ -11,6 +11,7 @@
 .SignUP_C{
     display: flex;
     justify-content: center;
+    background-color: #ccc;
 }
 .Calendar_image{
     border-radius: 10px;
