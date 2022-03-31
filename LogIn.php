@@ -12,8 +12,6 @@
 </head>
 <body>
 <?php include_once 'includes/header.php';?>
-      <br>
-        
       <div class="SignUP_C">
         <div class="content">
             <h1>
