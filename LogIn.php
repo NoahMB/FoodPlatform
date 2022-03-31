@@ -13,6 +13,7 @@
 <body>
 <?php include_once 'includes/header.php';?>
       <div class="SignUP_C">
+          <br>
         <div class="content">
             <h1>
                 Welcome Back!
