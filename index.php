@@ -20,8 +20,13 @@
 
         <div class = "MissionContent">
             <h1>
-                Our Mission :
+                KADDOO Website with a heart :
             </h1>
+            <br>
+            <br>
+            <p>
+                Our mission is to manage all your birthdays and remind you about upcoming once.
+            </p>
         </div>
     
         <div id="motives">
