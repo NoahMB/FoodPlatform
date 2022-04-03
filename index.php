@@ -13,9 +13,9 @@
 <?php include_once 'includes/header.php';?>
 
 
-    <div class="content">
+    <div class="contents">
         <div id="Calendar_image">
-           
+            <img src="Image/CalendarImage.png" alt="CalendarIamge">
         </div>
     
         <div id="motives">
