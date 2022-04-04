@@ -14,7 +14,7 @@
       <div class="SignUP_C">
         <div class="content">
 
-            <form method ="GET" action="index2.html">          
+            <form method ="GET" action="Login.php">          
                     <h1>
                         WELCOME
                     </h1>
@@ -81,7 +81,7 @@
             <br>
             <br>
         </form>
-        <p> <strong>Have an Accont Already? </strong> <a href="index2.html">LOG IN NOW</a> </p>
+        <p> <strong>Have an Accont Already? </strong> <a href="Login.php">LOG IN NOW</a> </p>
         
     
     </div>

@@ -31,7 +31,7 @@
                 OR use an email/user name.
             </p>
 
-            <p> <strong> Don't have an accout yet?</strong> <a href="index1.html">Join Kaddoo.com now</a> </p>
+            <p> <strong> Don't have an accout yet?</strong> <a href="SignUp.php">Join Kaddoo.com now</a> </p>
             <input type="text" name="family_name" id="form_family_name" placeholder="User Name / E-Mail" required="true">
             <br>
             <br>

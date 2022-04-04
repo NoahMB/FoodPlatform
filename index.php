@@ -17,22 +17,26 @@
         <div id="Calendar_image">
             <img src="Image/CalendarImage.png" alt="CalendarIamge">
         </div>
-
+        
         <div class = "MissionContent">
-            <h1>
-                KADDOO Website with a heart :
+            <h1 id = "MissionStatement">
+                Birthday Gift
             </h1>
             <br>
+            <p>
+            Birthday Gifts are one of the best ways of expressing your heartfelt emotions. Send birthday gifts online from unique surprise ideas to make your wishes come true. Find best Birthday Gifts for husband, wife, father, mother, girls, boys, son, daughter, brothers, sisters, girlfriend, boyfriend, best friend male/female and add life to the celebrations with a gift that has come right from your heart.
+            </p>
             <br>
+            <br>
+            <br>
+            <form action="SignUp.php" method="get">
+                <button id = "JoinNowBtn">
+                    Join Now
+                </button>
+            </form>
            
         </div>
-    
-        <div id="motives">
-            <h1>
-                
-            </h1>
-    
-        </div>     
+
     </div>
   
 
