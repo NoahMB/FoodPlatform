@@ -16,7 +16,7 @@
       <div class="SignUP_C">
           <br>
         <div class="content">
-            <form action="" method="post">
+            <form action="calendaPage.php" method="post" target="_blank">
             <h1>
                 Welcome Back!
             </h1>
