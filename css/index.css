@@ -16,6 +16,9 @@
     justify-content: center;
    
 }
+.CalendarContent{
+  height: 50px;
+}
 .Calendar_image{
     border-radius: 10px;
 }

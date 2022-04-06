@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Calendar Page</title>
+    <title>User's Profile</title>
 </head>
 <body>
 <div class="header">
         <a href="index.php" class="logo">KADDOO</a>
         <div class="header-right">
-          <a href="contact.php" target="_blank">CONTACT US</a> 
-          <a href="UserProfile.php" class="logo">ADD USER</a>  <! --- still to add Profile picture ---> 
+          <a class="active" href="calendaPage.php">Home</a>
+          <a href="contact.php" target="_blank">CONTACT US</a>  
         </div>
 </div>
 
