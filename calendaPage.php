@@ -16,7 +16,7 @@
         <a href="index.php" class="logo">KADDOO</a>
         <div class="header-right">
           <a href="contact.php" target="_blank">CONTACT US</a> 
-          <a href="UserProfile.php" class="logo">ADD USER</a>  <! --- still to add Profile picture ---> 
+          <a href="UserProfile.php" class="logo">USER PROFILE</a>  <! --- still to add Profile picture ---> 
         </div>
 </div>
 
