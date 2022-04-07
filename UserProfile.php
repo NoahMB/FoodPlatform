@@ -21,11 +21,33 @@
 </div>
 
 
-        <div class = "CalendarContent">
-
+        <div class = "ContentUser">
+            <div class = "image">
+                <br>
+            <img src="Image/male.png" alt="ProfilePic_Male" id = "ProfilePic">
+            </div>
         </div>
-
-
+        
+        <div>
+            <h2 id = "AboutUser">
+                USER PROFILE :
+            </h2> 
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
       <div class="footer-basic">
         <footer>
             <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>

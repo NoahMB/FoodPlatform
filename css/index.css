@@ -20,10 +20,30 @@
   height: 530px;
   background-color: whitesmoke;
 }
+.ContentUser{
+  height: 400px;
+  display: flex;
+  justify-content: center;
+   
+}
+#AboutUser{
+  margin-left: 150px;
+  font-weight: bold;
+}
+
 .Calendar_image{
     border-radius: 10px;
 }
-
+.image {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+#ProfilePic {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 h1{
     font-size: 40px;
     font-family: 'Cookie', cursive;
