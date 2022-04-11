@@ -47,7 +47,7 @@
             <br>
             <br>
             <input type="password" id="pwd" name="pwd" minlength="8" placeholder="Password" required="true">
-            <p><a href="password.html">forgot password?</a> </p>
+            <p><a href="password.php">forgot password?</a> </p>
             <br>
             <input type="submit" value="LOG IN" id="btn_submit" name="submit">
             <br>

@@ -16,7 +16,7 @@
         <a href="index.php" class="logo">KADDOO</a>
         <div class="header-right">
           <a class="active" href="calendaPage.php">Home</a>
-          <a href="contact.php" target="_blank">CONTACT US</a>  
+          <a href="contact.php" target="_blank">CONTACT US</a> 
         </div>
 </div>
 
@@ -41,6 +41,30 @@
         <br>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class= "ReminderContent">
+            <div>
+                <strong>
+                    REMINDER TIME
+                </strong>
+            </div>
+
+
+            <div>
+                <a href="password.php">forgot passspord?</a>
+                <br>
+                <br>
+                UPDATE
+            </div>
+            
+        </div>
         <br>
         <br>
         <br>

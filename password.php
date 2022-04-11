@@ -25,7 +25,9 @@
                   E-MAIL
                 </label>
                <br>
+               <br>
                <input type="email" id="email" name="email" placeholder="Enter your Email"> 
+               <br>
                <br>
                <br>
                <input type="submit" value="send" id="btn_submit" name="submit">
