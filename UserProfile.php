@@ -43,14 +43,14 @@
         <br>
         <br>
         <div class= "ReminderContent">
-            <div>
+            <div class = "ReminderDetails">
                 <strong>
                     REMINDER TIME
                 </strong>
             </div>
 
 
-            <div>
+            <div class = "UpdateDetials">
                 <a href="password.php">RESET PASSWORD</a>
                 <br>
                 <br>
@@ -58,6 +58,8 @@
             </div>
             
         </div>
+        <br>
+        <br>
         <br>
         <br>
         <br>
