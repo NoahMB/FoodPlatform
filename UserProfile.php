@@ -41,7 +41,6 @@
         <br>
         <br>
         <br>
-        <br>
         <div class= "ReminderContent">
             <div class = "ReminderDetails">
                 <strong>
@@ -58,6 +57,9 @@
             </div>
             
         </div>
+        <br>
+        <br>
+        <br>
         <br>
         <br>
         <br>
