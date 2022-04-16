@@ -5,7 +5,7 @@
                 <li class="list-inline-item"><a href="index.php">Home</a></li>
                 <li class="list-inline-item"><a href="contact.php" target="_blank">CONTACT US</a></li>
                 <li class="list-inline-item"><a href="#">Services</a></li>
-                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="AboutUs.php">About</a></li>
                 <li class="list-inline-item"><a href="#">Terms</a></li>
                 <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
             </ul>
