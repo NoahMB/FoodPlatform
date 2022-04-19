@@ -41,11 +41,23 @@
         <br>
         <br>
         <br>
+        <br>
+        <br>
         <div class= "ReminderContent">
             <div class = "ReminderDetails">
                 <strong>
                     REMINDER TIME
                 </strong>
+                <br>
+                <br>
+                <div class="dropdown">
+                    <button class="dropbtn">One Week</button>
+                    <div class="dropdown-content">
+                    <a href="#">Link </a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    </div>
+                 </div>
             </div>
 
 
