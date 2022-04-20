@@ -161,6 +161,7 @@ input , select{
   .header a:hover {
     background-color: #ddd;
     color: white;
+    text-decoration: none;
   }
   
   /* Style the active/current link*/
@@ -284,5 +285,3 @@ input , select{
   .dropdown:hover .dropbtn {
     background-color: black;
   }
-  
-  /* Credit to https://epicbootstrap.com/snippets/footer-basic */
