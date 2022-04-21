@@ -45,17 +45,16 @@
         <br>
         <div class= "ReminderContent">
             <div class = "ReminderDetails">
-                <strong>
-                    REMINDER TIME
-                </strong>
-                <br>
-                <br>
+
                 <div class="dropdown">
+                  <span> REMINDER TIME : </span> 
+                  <br>
+                  <br>     
                     <button class="dropbtn">One Week</button>
                     <div class="dropdown-content">
-                    <a href="#">Link </a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a href="#">Two Week </a>
+                    <a href="#">Three Week</a>
+                    <a href="#">Four Week</a>
                     </div>
                  </div>
             </div>
