@@ -22,7 +22,7 @@
             </h1>
             <br>
             <p>
-                SIGN in to continue
+                Sign in to continue
             </p>
             <div class = "col">
                 <a href="#" class = "fb btn">
@@ -38,7 +38,7 @@
             <br>
             <br>
             <p>
-                OR use an email/user name.
+                Or use an email/user name.
             </p>
 
             <p> <strong> Don't have an accout yet?</strong> <a href="SignUp.php">Join Kaddoo.com now</a> </p>
@@ -47,7 +47,7 @@
             <br>
             <br>
             <input type="password" id="pwd" name="pwd" minlength="8" placeholder="Password" required="true">
-            <p><a href="password.html">forgot password?</a> </p>
+            <p><a href="password.php">Forgot password?</a> </p>
             <br>
             <input type="submit" value="LOG IN" id="btn_submit" name="submit">
             <br>

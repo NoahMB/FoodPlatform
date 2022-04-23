@@ -1,3 +1,6 @@
+body{
+ background-color:  rgb(176,176,176);
+}
 .ContentHome{
   background-color: whitesmoke; 
 }
@@ -13,11 +16,20 @@
 .SignUP_C{
     display: flex;
     justify-content: center;
-   
 }
+
+.ReminderContent{
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: black;
+  gap: 760px;
+}
+
 .CalendarContent{
   height: 530px;
   background-color: whitesmoke;
+
 }
 .ContentUser{
   height: 400px;
@@ -26,7 +38,10 @@
    
 }
 #AboutUser{
-  margin-left: 150px;
+  margin-left: 80px;
+  font-weight: bold;
+}
+span{
   font-weight: bold;
 }
 
@@ -149,6 +164,7 @@ input , select{
   .header a:hover {
     background-color: #ddd;
     color: white;
+    text-decoration: none;
   }
   
   /* Style the active/current link*/
@@ -233,5 +249,42 @@ input , select{
     color: white;
     margin-bottom:0;
   }
+  .dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
   
-  /* Credit to https://epicbootstrap.com/snippets/footer-basic */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: black;
+  }

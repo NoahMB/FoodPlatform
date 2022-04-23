@@ -7,33 +7,16 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <title>KADDOO SSO password</title>
+    <title>About Us</title>
 </head>
 <body>
 <?php include_once 'includes/header.php';?>
     
-    <div class="SignUP_C">
-        <div  class="content">
-            <form action="" method="get">
-                <h1>
-                    Reset Password
-                </h1>
-                <p>
-                    Enter your address linked to your kaddoo account
-                </p>
-                <label for="email">
-                  E-MAIL
-                </label>
-               <br>
-               <br>
-               <input type="email" id="email" name="email" placeholder="Enter your Email"> 
-               <br>
-               <br>
-               <br>
-               <input type="submit" value="send" id="btn_submit" name="submit">
-
-            </form>
-        </div>
+    <div class="AboutUsContent">
+      
+      <h1 >
+          ABOUTUS KADDOO
+      </h1>
     
     </div>
 
