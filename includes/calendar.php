@@ -80,7 +80,7 @@ class Calendar {
              
                         $content.='</div>';
                  
-        $content.='</div>';
+        $content.='</div></div>';
         return $content;   
     }
      

@@ -337,3 +337,8 @@ input , select{
   width: max-content;
 }
 
+.calendar {
+  width: 50%;
+  margin: auto;
+}
+
