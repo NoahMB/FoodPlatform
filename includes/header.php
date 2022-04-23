@@ -1,29 +1,13 @@
 <?php
-
-
-include_once "includes/conn.php";
-
-if (isset($_SESSION["Firstname"])) {
-  $id = $_SESSION['Firstname'];
-echo"
-<div class='header'>
-  <a href='index.php' class='logo'>KADDOO</a>
-  <div class='header-right'> 
-    <a href='index.php'>Home</a>
-    <a href='SignUp.php'>Sign Up</a>
-    <a href='LogIn.php'>Log In</a>
-    <a href='includes/logout.php'>Log In</a>
-    <a href='UserProfile.php'>welcome, " + $id +"</a>
-  </div>
-</div>";
-}
-else{
-  echo"<div class='header'>
-  <a href='index.php' class='logo'>KADDOO</a>
-  <div class='header-right'> 
-    <a href='index.php'>Home</a>
-    <a href='SignUp.php'>Sign Up</a>
-    <a href='LogIn.php'>Log In</a>
-  </div>
-</div>";
-}
+session_start();
+?>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    

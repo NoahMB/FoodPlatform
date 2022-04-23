@@ -107,7 +107,7 @@ function loginUser($conn, $email, $pwd)
         exit();
     } else if ($checkPwd === true) {
         session_start();
-        $_SESSION["fldAccountsID"] = $uidExists["AccountsID"];
+        $_SESSION["AccountsID"] = $uidExists["AccountsID"];
         $_SESSION["Firstname"] = $uidExists["Firstname"];
 
         header("location: ../calendaPage.php?table=created");
