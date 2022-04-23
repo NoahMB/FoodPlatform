@@ -59,26 +59,26 @@ class Calendar {
          
         $this->daysInMonth=$this->_daysInMonth($month,$year);  
          
-        $content='<div id="calendar">'.
-                        '<table>'.
+        $content='<div id="calendar" class="calendar">'.
+                        '<div class="navi">'.
                         $this->_createNavi().
-                        '</table>'.
-                        '<table style="width:100%">'.
-                                '<tr>'.$this->_createLabels().'</tr>';        
-                                $content.='<ul class="dates">';    
+                        '</div>'.
+                        '<div class="main">'.
+                                '<div class="labels">'.$this->_createLabels().'</div>';        
+                                $content.='<div class="dates">';    
                                  
                                 $weeksInMonth = $this->_weeksInMonth($month,$year);
                                 // Create weeks in a month
                                 for( $i=0; $i<$weeksInMonth; $i++ ){
-                                $content.='<tr>';        
+                                    $content.='<div class="week">';        
                                     //Create days in a week
                                     for($j=1;$j<=7;$j++){
                                         $content.=$this->_showDay($i*7+$j);
                                     }
-                                $content.='<tr>'; 
+                                    $content.='</div>'; 
                                 }  
              
-                        $content.='</table>';
+                        $content.='</div>';
                  
         $content.='</div>';
         return $content;   
@@ -118,12 +118,12 @@ class Calendar {
              
         # $cellContent needs to be changed 
 
-        return '<td id="li-'.$this->currentDate.'" class="'.($cellContent==null?'mask':'').'">'
+        return '<div id="'.$this->currentDate.'" class="datecell '.($cellContent==null?'mask':'').'">'
         .
 
         $cellContent # content in day cells
         
-        .'</td>';
+        .'</div>';
     }
      
     /**
@@ -140,11 +140,10 @@ class Calendar {
         $preYear = $this->currentMonth==1?intval($this->currentYear)-1:$this->currentYear;
          
         return
-            '<tr>'.
-                '<th><a class="prev" href="'.$this->naviHref.'?month='.sprintf('%02d',$preMonth).'&year='.$preYear.'">Prev</a></th>'.
-                '<th>'.date('Y M',strtotime($this->currentYear.'-'.$this->currentMonth.'-1')).'</th>'.
-                '<th><a class="next" href="'.$this->naviHref.'?month='.sprintf("%02d", $nextMonth).'&year='.$nextYear.'">Next</a></th>'.
-            '</tr>';
+            
+            '<div class="prev"><a class="prev" href="'.$this->naviHref.'?month='.sprintf('%02d',$preMonth).'&year='.$preYear.'">Prev</a></div>'.
+            '<div class="date">'.date('Y M',strtotime($this->currentYear.'-'.$this->currentMonth.'-1')).'</div>'.
+            '<div class="next"><a class="next" href="'.$this->naviHref.'?month='.sprintf("%02d", $nextMonth).'&year='.$nextYear.'">Next</a></div>';
     }
          
     /**
@@ -156,7 +155,7 @@ class Calendar {
          
         foreach($this->dayLabels as $index=>$label){
              
-            $content.='<th>'.$label.'</th>';
+            $content.='<div class="label">'.$label.'</div>';
  
         }
          

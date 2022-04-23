@@ -289,18 +289,51 @@ input , select{
     background-color: black;
   }
 
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+.week {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+.navi {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+.labels {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
+ 
+.datecell {
+  margin-top: 10px;
+  padding: 20px;
+  width: max-content;
+}
+
+.label {
+  margin-top: 10px;
+  padding: 20px;
+  width: max-content;
+}
+
+.prev {
+  margin-top: 10px;
+  padding: 20px;
+  width: max-content;
+}
+
+.next {
+  margin-top: 10px;
+  padding: 20px;
+  width: max-content;
+}
+
+.date {
+  margin-top: 10px;
+  padding: 20px;
+  width: max-content;
+}
+
