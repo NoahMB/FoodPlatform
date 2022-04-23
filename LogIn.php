@@ -13,7 +13,9 @@
 </head>
 <body>
 <?php include_once 'includes/header.php';?>
-      <div class="SignUP_C">
+<div class ="SignUP_C">   
+<figure class ="card">
+          <figcaption>
           <br>
         <div class="content">
             <form action="includes/login.inc.php" method="post">
@@ -54,7 +56,8 @@
             <br>
 
             </form>
-           
+            </figcaption>
+      </figure> 
         </div>
       </div>      
       <?php include_once 'includes/footer.php';?> 
