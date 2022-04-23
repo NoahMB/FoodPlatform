@@ -14,7 +14,7 @@ echo"
   <div class='header-right'> 
     <a href='index.php'>Home</a>
     
-    <a href='includes/logout.php'>Log In</a>
+    
     <a href='UserProfile.php'>welcome, " . $id ."</a>
   </div>
 </div>";
