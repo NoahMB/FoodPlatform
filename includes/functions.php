@@ -82,24 +82,24 @@ function createUser($conn, $name, $phonenumber, $email, $pwd, $gender, $birthday
     exit();
 }
 
-function emptyInputLogin($username, $pwd)
+function emptyInputLogin($email, $pwd)
 {
     $result;
-    if (empty($username) || empty($pwd)) {
+    if (empty($email) || empty($pwd)) {
         $result = true;
     } else {
         $result = false;
     }
     return $result;
 }
-function loginUser($conn, $username, $pwd)
+function loginUser($conn, $email, $pwd)
 {
-    $uidExists = uidExists($conn, $username, $username);
+    $uidExists = uidExists($conn, $email);
     if ($uidExists === false) {
         header("location: ../login.php?error=wronglogin");
         exit();
     }
-    $pwdHashed = $uidExists["fldWachtwoord"];
+    $pwdHashed = $uidExists["Password"];
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if ($checkPwd === false) {
@@ -107,25 +107,10 @@ function loginUser($conn, $username, $pwd)
         exit();
     } else if ($checkPwd === true) {
         session_start();
-        $sql = "SELECT tblafdeling.fldBedrijfID FROM tblafdelingbesteller
-        INNER JOIN tblafdeling USING(fldAfdelingID)
-        WHERE tblafdelingbesteller.fldBestellerID = ?
-        LIMIT 1";
-        $stmt = mysqli_stmt_init($conn);
-        if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header("location: ../signup.php?error=stmtfailed");
-            exit();
-        }
-        mysqli_stmt_bind_param($stmt, "s", $id);
-        mysqli_stmt_execute($stmt);
-        $resultdata = mysqli_stmt_get_result($stmt);
-        $uidBedrijf = mysqli_fetch_assoc($resultdata);
-        mysqli_stmt_close($stmt);
-        $_SESSION["fldBestellerID"] = $uidExists["fldBestellerID"];
-        $_SESSION["fldGebruikersnaam"] = $uidExists["fldGebruikersnaam"];
-        $_SESSION["fldBedrijfID"] = $uidBedrijf["fldBedrijfID"];
+        $_SESSION["fldAccountsID"] = $uidExists["AccountsID"];
+        $_SESSION["Firstname"] = $uidExists["Firstname"];
 
-        header("location: ../../frontend/index.php?table=created");
+        header("location: ../calendaPage.php?table=created");
     }
 }
 
