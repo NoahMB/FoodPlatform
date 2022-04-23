@@ -111,6 +111,7 @@ function loginUser($conn, $email, $pwd)
         $_SESSION["Firstname"] = $uidExists["Firstname"];
 
         header("location: ../calendaPage.php?table=created");
+        exit();
     }
 }
 

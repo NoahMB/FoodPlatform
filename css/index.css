@@ -341,3 +341,29 @@ input , select{
   margin: auto;
 }
 
+.card{
+  text-align: center;
+   width: 720px;
+   height: 700px;
+   background-color: white;
+   border: 20px solid;
+   border-image: 
+   linear-gradient(
+     black,
+     blue,
+     red) 1;
+   animation: rotate
+   2.5s
+   ease-in
+   infinite;
+ }
+ @keyframes rotate{
+   50%{
+     border-image:
+     linear-gradient(
+       360deg,
+       black,
+       blue,
+       red) 1;
+   }
+ }
