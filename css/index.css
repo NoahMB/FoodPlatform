@@ -310,7 +310,6 @@ input , select{
 .datecell {
   margin-top: 10px;
   padding: 20px;
-  width: max-content;
 }
 
 .label {
