@@ -53,7 +53,7 @@
                 <input type="password" id="pwdrepeat" name="pwdrepeat" minlength="8" placeholder="Repeat your Password">
                 <br>
                 <label for="Bday">
-                    Your Birthday
+                    Your Birthdate
                 </label>
                 <br>
                 <input type="date" id="Bday" name="Bday"value="">
