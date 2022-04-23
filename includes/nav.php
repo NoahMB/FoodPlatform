@@ -12,9 +12,6 @@ echo"
 <div class='header'>
   <a href='index.php' class='logo'>KADDOO</a>
   <div class='header-right'> 
-    <a href='index.php'>Home</a>
-    
-    
     <a href='UserProfile.php'>welcome, " . $id ."</a>
   </div>
 </div>";
