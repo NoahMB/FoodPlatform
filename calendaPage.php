@@ -21,13 +21,19 @@
     <br>
     <input type="text" name="Firstname" id="Firstname" placeholder="Insert Your First Name" >
 <br>
+<label for="LastName" >
+     Last Name
+    </label>
+    <br>
+    <input type="text" name="LastName" id="LastName" placeholder="Insert Your Last Name" >
+<br>
     <label for="Bday">
     Your Birthdate
     </label>
     <br>
     <input type="date" id="Bday" name="Bday"value="">
     <br>
-    <label for="gender">
+    <label for="interest">
                     interest
                 </label>
                 <br>
@@ -47,12 +53,28 @@
   </form>
 </div>
 <!-- 
+
+
+
+
+
+
+
+
 add event
+
+
+
+
+
+
+
+
 -->
 <button class="open-button" onclick="openForm1()">Add event</button>
 
 <div class="form-popup" id="eventform">
-  <form action="includes/friends.php"  method="POST" class="form-container">
+  <form action="includes/events.php"  method="POST" class="form-container">
     <h1>Add event</h1>
 
     <label for="friends">
@@ -68,7 +90,7 @@ add event
                     </option>
                 </select>
                 <br>
-    <label for="Firstname" >
+    <label for="Firstname">
      event name
     </label>
     <br>

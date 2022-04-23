@@ -115,13 +115,43 @@ function loginUser($conn, $email, $pwd)
     }
 }
 
-function emptyInputadres($straat, $huisnr, $gemeente, $postcode, $leveruur)
+
+function emptyInputFriends($name, $LastName, $gender, $interest)
 {
     $result;
-    if (empty($straat) || empty($huisnr) || empty($gemeente) || empty($postcode) || empty($leveruur)) {
+    if (empty($name) || empty($LastName) || empty($gender) || empty($interest)) {
         $result = true;
     } else {
         $result = false;
     }
     return $result;
+}
+function AddFriend($conn, $name, $LastName, $birthday, $interest, $id)
+{
+    //figure out how to add data in friendsintrests + data in intrests 
+    $sql = "INSERT INTO friends (Firstname, Lastname, birthdate , AccountsID) VALUES (?, ?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../calendaPage.php?error=stmtfailed3");
+        exit();
+    }
+
+    $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+
+    mysqli_stmt_bind_param($stmt, "ssss", $name, $LastName, $birthday, $id);
+    
+    
+    mysqli_stmt_execute($stmt);
+    $sqlMaxID = "SELECT FriendsID FROM friend WHERE FriendsID = (SELECT MAX(FriendsID) FROM friends)";
+    $resultMax = mysqli_query($conn , $sqlMaxID);
+    $sql2 = "INSERT INTO friendsinterests ()"
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../calendaPage.php?error=stmtfailed3");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "ssss", $name, $LastName, $birthday, $id);
+
+    mysqli_stmt_close($stmt);
+    header("location: ../calendaPage.php?error=none");
+    exit();
 }
