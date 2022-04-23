@@ -5,40 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Calendar Page</title>
+    
+    <title>Kuddoo For Birthdays</title>
 </head>
 <body>
-<div class="header">
-        <a href="index.php" class="logo">KADDOO</a>
-        <div class="header-right">
-          <a href="contact.php" target="_blank">CONTACT US</a> 
-          <a href="UserProfile.php" class="logo">USER PROFILE</a>  <! --- still to add Profile picture ---> 
-        </div>
-</div>
+  <?php include_once 'includes/header.php';
+
+  include 'includes/calendar.php';
+ 
+  $calendar = new Calendar();
+ 
+  echo $calendar->show();
 
 
-        <div class = "CalendarContent">
-
-        </div>
-
-
-      <div class="footer-basic">
-        <footer>
-            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="index.php">Home</a></li>
-                <li class="list-inline-item"><a href="contact.php" target="_blank">CONTACT US</a></li>
-                <li class="list-inline-item"><a href="#">Services</a></li>
-                <li class="list-inline-item"><a href="#">About</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-            </ul>
-            <p class="copyright">CODE QUEST © 2022</p>
-        </footer>
-    </div>
+  include_once 'includes/footer.php';?> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+    
 </body>
 </html>
