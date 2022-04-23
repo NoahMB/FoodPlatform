@@ -2,28 +2,30 @@
 
 if (isset($_POST["submit"])) {
     //code...
-$name = $_POST["name"];
+$name = $_POST["Firstname"];
 $email = $_POST["email"];
-$phonenumber = $_POST["phonenumber"];
-$username = $_POST["username"];
+$phonenumber = $_POST["PhoneNr"];
+$LastName = $_POST["family_name"];
 $pwd = $_POST["pwd"];
 $pwdrepeat = $_POST["pwdrepeat"];
+$birthday = $_POST["Bday"];
+$gender = $_POST["gender"];
 
    
 
-require_once 'dbh.inc.php';
-require_once 'functions.inc.php';
+require_once 'conn.php';
+require_once 'functions.php';
 
 
 
-if(emptyInputSignup($name, $email, $phonenumber, $username, $pwd, $pwdrepeat) !== false){
+if(emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat, $gender, $birthday, $LastName) !== false){
     header("location: ../signup.php?error=emptyinput");
     exit();
 }
-if(invalidUid($username) !== false){
-    header("location: ../signup.php?error=invaliduid");
-    exit();
-}
+// if(invalidUid($username) !== false){
+//     header("location: ../signup.php?error=invaliduid");
+//     exit();
+// }
 if(invalidEmail($email) !== false){
     header("location: ../signup.php?error=invalidemail");
     exit();
@@ -36,12 +38,12 @@ if(pwdMatch($pwd, $pwdrepeat) !== false){
     header("location: ../signup.php?error=passwordsdontmatch");
     exit();
 }
-if(uidExists($conn, $username,  $email) !== false){
+if(uidExists($conn, $email) !== false){
     header("location: ../signup.php?error=usernametaken");
     exit();
  }
 
-createUser($conn, $name, $phonenumber, $email, $username, $pwd);
+ createUser($conn, $name, $phonenumber, $email, $pwd, $gender, $birthday, $LastName);
 /* todo: */
 // na het maken van een bedrijf kom je uit op een pagina waar je een account aanmaakt
 // create createBedrijf() function

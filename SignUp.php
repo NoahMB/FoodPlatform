@@ -13,61 +13,62 @@
 <?php include_once 'includes/header.php';?>
       <div class="SignUP_C">
         <div class="content">
-
-            <form method ="GET" action="Login.php">          
+        
+            <form method ="POST" action="includes/signup.inc.php">          
                     <h1>
                         WELCOME
                     </h1>
                     <p>Create your Account</p>
                     <br>
-                <label for="form-firstname" >
-                     Name
+                <label for="Firstname" >
+                     First Name
                 </label>
                 <br>
-                <input type="text" name="Firstname" id="form-firstname" placeholder="Insert Your Name" >
+                <input type="text" name="Firstname" id="Firstname" placeholder="Insert Your First Name" >
                 <br>
     
-                <label for="form_family_name">
-                    UserName
+                <label for="family_name">
+                    Last Name
                 </label>
                 <br>
-                <input type="text" name="family_name" id="form_family_name" placeholder="User Name" required="true">
+                <input type="text" name="family_name" id="family_name" placeholder="Insert Your Last Name" required="true">
                 <br>
+                
                 <label for="email">
                    Enter Email
                 </label>
                 <br>
                 <input type="email" id="email" name="email" placeholder="Enter your Email"> 
                 <br>
-                <label for="your_gender">
+                <label for="pwd">
                     Password
                 </label>
                 <br>
                 <input type="password" id="pwd" name="pwd" minlength="8" placeholder="Enter your Password">
                 <br>
-                <label for="your_gender">
+                <label for="pwdrepeat">
                    Repeat Password
                 </label>
                 <br>
-                <input type="password" id="pwd" name="pwd" minlength="8" placeholder="Repeat your Password">
+                <input type="password" id="pwdrepeat" name="pwdrepeat" minlength="8" placeholder="Repeat your Password">
                 <br>
-                <label for="Age_form">
+                <label for="Bday">
                     Your Birthday
                 </label>
                 <br>
-                <input type="date" id="myDate" value="2014-02-09">
+                <input type="date" id="Bday" name="Bday"value="">
                 <br>
-                <label for="phone">
+                <label for="PhoneNr">
                     Enter your phone number
                 </label>
                 <br>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"> 
+                <input type="tel" id="PhoneNr" name="PhoneNr" placeholder="Enter your phone number"> 
                 <br>
-                <label for="your_gender">
+                <label for="gender">
                     Gender
                 </label>
                 <br>
-                <select name="prefered" id="your_gender">
+                <select name="gender" id="gender">
                     <option value="male">
                         Male
                     </option>
@@ -77,7 +78,7 @@
                 </select>
                 <br>
                 <br>
-            <input type="submit" value="Create Account" id="btn_submit" name="submit">
+            <input type="submit" value="Create Account" id="submit" name="submit">
             <br>
             <br>
         </form>
