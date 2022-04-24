@@ -106,11 +106,11 @@ if ($result->num_rows > 0) {
 ?>
 </select>
 <br>
-    <label for="Firstname">
+    <label for="eventname">
      Event name
     </label>
     <br>
-    <input type="text" name="Firstname" id="Firstname" placeholder="event name" >
+    <input type="text" name="eventname" id="eventname" placeholder="event name" >
 <br>
     <label for="eventdate">
     Event date
@@ -119,7 +119,7 @@ if ($result->num_rows > 0) {
     <input type="date" id="eventdate" name="eventdate"value="">
    
 <br>
-    <button type="submit" class="btn">ADD</button>
+    <button type="submit" name="submit" id="submit" class="btn">ADD</button>
     <br>
     <br>
     <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>

@@ -2,9 +2,9 @@
  session_start();
 if (isset($_POST["submit"])) {
     
-$name = $_POST["Firstname"];
-$LastName = $_POST["LastName"];
-$eventdate = $_POST["eventdate"];
+$friends = $_POST["friends"];
+$Eventname = $_POST["eventname"];
+$Eventdate = $_POST["eventdate"];
 
 
   
@@ -13,12 +13,12 @@ require_once 'conn.php';
 require_once 'functions.php';
 $id = $_SESSION["AccountsID"];
 
-if(emptyInputFriends($name, $LastName, $birthday, $interest) !== false){
+if(emptyInputevent($friends, $Eventname, $Eventdate) !== false){
     header("location: ../calendaPage.php?error=emptyinput");
     exit();
 }
 
-AddFriend($conn, $name, $LastName, $birthday, $interest, $id); 
+Addevent($conn, $friends, $Eventname, $Eventdate); 
 
 }
 else {

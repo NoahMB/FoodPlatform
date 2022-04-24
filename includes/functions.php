@@ -167,3 +167,24 @@ function AddFriend($conn, $name, $LastName, $birthday, $interest, $id)
     header("location: ../calendaPage.php?error=none");
     exit();
 }
+function emptyInputevent($friends, $Eventname, $Eventdate)
+{
+    $result;
+    if (empty($friends) || empty($Eventname) || empty($Eventdate)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function Addevent($conn, $friends, $Eventname, $Eventdate)
+{
+    $sql3 = "INSERT INTO events (Name, Date, FriendsID) Values ('".$Eventname."','".$Eventdate."',".$friends.")";
+    
+
+    mysqli_query($conn , $sql3);
+   
+    header("location: ../calendaPage.php?error=none");
+    exit();
+}
