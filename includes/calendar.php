@@ -105,8 +105,19 @@ class Calendar {
              
             $this->currentDate = date('Y-m-d',strtotime($this->currentYear.'-'.$this->currentMonth.'-'.($this->currentDay)));
              
-            $cellContent = $this->currentDay;
-             
+            $cellContent = "<p>" . $this->currentDay . "</p><br>";
+
+            include 'conn.php';
+
+            $sql = "SELECT * FROM `events` WHERE `FriendsID` IN 
+            (SELECT `FriendsID` FROM `friends` WHERE `AccountsID` = " . $_SESSION["AccountsID"] . ") and `Date` = '" . 
+            $this->currentDate ."'";
+            $result = mysqli_query($conn, $sql);
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) { 
+                    $cellContent = $cellContent . "<p>" . $row["Name"] . "</p><br>";
+                }
+            }
             $this->currentDay++;   
              
         }else{
