@@ -164,6 +164,6 @@ function AddFriend($conn, $name, $LastName, $birthday, $interest, $id)
     mysqli_query($conn , $sql3);
     mysqli_stmt_close($stmt);
     echo $sql3;
-    // header("location: ../calendaPage.php?error=none");
+    header("location: ../calendaPage.php?error=none");
     exit();
 }
