@@ -9,7 +9,7 @@
   $calendar = new Calendar();
  
   echo $calendar->show();?>
-<button class="open-button" onclick="openForm()">add friends</button>
+<button class="open-button" onclick="openForm()">Add friends</button>
 
 <div class="form-popup" id="myForm">
   <form action="includes/friends.php"  method="POST" class="form-container">
@@ -34,11 +34,11 @@
     <input type="date" id="Bday" name="Bday"value="">
     <br>
     <label for="interest">
-                    interest
+                    Interest
                 </label>
                 <br>
                 <select name="interest" id="interest">
-                    <option value="tennis">
+                    <option value="Tennis">
                         Tennis
                     </option>
                     <option value="Tech">
@@ -78,7 +78,7 @@ add event
     <h1>Add event</h1>
 
     <label for="friends">
-                    select friends
+                    Select friends
                 </label>
                 <br>
                 <select name="friends" id="friends">
@@ -91,19 +91,19 @@ add event
                 </select>
                 <br>
     <label for="Firstname">
-     event name
+     Event name
     </label>
     <br>
     <input type="text" name="Firstname" id="Firstname" placeholder="event name" >
 <br>
     <label for="eventdate">
-    event date
+    Event date
     </label>
     <br>
     <input type="date" id="eventdate" name="eventdate"value="">
     <br>
     <label for="gender">
-                    interest
+                    Interest
                 </label>
                 <br>
                 <select name="interest" id="interest">

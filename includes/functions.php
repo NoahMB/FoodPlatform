@@ -129,35 +129,31 @@ function emptyInputFriends($name, $LastName, $gender, $interest)
 function AddFriend($conn, $name, $LastName, $birthday, $interest, $id)
 {
      
-    $sql = "INSERT INTO friends (Firstname, Lastname, birthdate , AccountsID) VALUES (?, ?, ?, ?);";
+    $sql = "INSERT INTO friends (Firstname, Lastname, Birthdate , AccountsID) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../calendaPage.php?error=stmtfailed3");
         exit();
     }
 
-    $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
     mysqli_stmt_bind_param($stmt, "ssss", $name, $LastName, $birthday, $id);
     
     
     mysqli_stmt_execute($stmt);
 
-    $sqlMaxID = "SELECT FriendsID FROM friend WHERE FriendsID = (SELECT MAX(FriendsID) FROM friends)";
+    $sqlMaxID = "SELECT FriendsID FROM friends WHERE FriendsID = (SELECT MAX(FriendsID) FROM friends)";
     $resultMax = mysqli_query($conn , $sqlMaxID);
+    $rowMax = mysqli_fetch_array($resultMax);
 
-    $sqlinrestID = "SELECT interestID FROM interests WHERE interests = ".$interest;
+    $sqlinrestID = "SELECT InterestsID FROM interests WHERE Interests = '".$interest."'";
     $resultID = mysqli_query($conn , $sqlinrestID);
+    $rowID = mysqli_fetch_array($resultID);
 
-    $sql2 = "INSERT INTO friendsinterests (FriendsID, InterestsID) VALUES (?, ?)";
-    if (!mysqli_stmt_prepare($stmt, $sql2)) {
-        header("location: ../calendaPage.php?error=stmtfailed3");
-        exit();
-    }
-    
-    mysqli_stmt_bind_param($stmt, "ss", $resultMax, $resultID);
-    mysqli_stmt_execute($stmt);
+    $sql2 = "INSERT INTO friendsinterests (FriendsID, InterestsID) VALUES (".$rowMax['FriendsID']."," .$rowID['InterestsID']. ")";
+    mysqli_query($conn , $sql2);
     mysqli_stmt_close($stmt);
+    
     header("location: ../calendaPage.php?error=none");
     exit();
 }

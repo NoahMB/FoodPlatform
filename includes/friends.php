@@ -1,13 +1,13 @@
 <?php
-
+ session_start();
 if (isset($_POST["submit"])) {
-    //code...
+    
 $name = $_POST["Firstname"];
 $LastName = $_POST["LastName"];
 $birthday = $_POST["Bday"];
 $interest = $_POST["interest"];
 
-   
+  
 
 require_once 'conn.php';
 require_once 'functions.php';
