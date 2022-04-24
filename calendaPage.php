@@ -38,12 +38,20 @@
                 </label>
                 <br>
                 <select name="interest" id="interest">
-                    <option value="Tennis">
-                        Tennis
-                    </option>
-                    <option value="Tech">
-                        Tech
-                    </option>
+                <?php
+$sql    = "SELECT * FROM interests";
+
+$result = mysqli_query($conn, $sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo  "<option value='".$row['InterestsID']."'>".$row['Interests']."
+        
+    </option>";
+    }
+}
+
+?>
                 </select>
 <br>
     <button type="submit" name="submit" id="submit" class="btn">ADD</button>
@@ -82,14 +90,22 @@ add event
                 </label>
                 <br>
                 <select name="friends" id="friends">
-                    <option value="x">
-                        x
-                    </option>
-                    <option value="y">
-                        y
-                    </option>
-                </select>
-                <br>
+<?php
+$sql    = "SELECT * FROM friends WHERE AccountsID = " .$_SESSION["AccountsID"];
+
+$result = mysqli_query($conn, $sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo  "<option value='".$row['FriendsID']."'>".$row['Firstname']." ".$row['Lastname']."
+        
+    </option>";
+    }
+}
+
+?>
+</select>
+<br>
     <label for="Firstname">
      Event name
     </label>

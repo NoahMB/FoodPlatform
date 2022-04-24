@@ -163,7 +163,7 @@ function AddFriend($conn, $name, $LastName, $birthday, $interest, $id)
     $sql3 = "INSERT INTO events (Name, Date, FriendsID) Values ('".$eventname."','".$date."',".$rowMax['FriendsID'].")";
     mysqli_query($conn , $sql3);
     mysqli_stmt_close($stmt);
-    echo $sql3;
+   
     header("location: ../calendaPage.php?error=none");
     exit();
 }
