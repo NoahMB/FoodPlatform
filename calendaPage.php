@@ -46,7 +46,7 @@
                     </option>
                 </select>
 <br>
-    <button type="submit" class="btn">ADD</button>
+    <button type="submit" name="submit" id="submit" class="btn">ADD</button>
     <br>
     <br>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>

@@ -11,10 +11,19 @@ $interest = $_POST["interest"];
 
 require_once 'conn.php';
 require_once 'functions.php';
-$id = $_SESSION["AccountsID"]
+$id = $_SESSION["AccountsID"];
 
 if(emptyInputFriends($name, $LastName, $birthday, $interest) !== false){
-    header("location: ../signup.php?error=emptyinput");
+    header("location: ../calendaPage.php?error=emptyinput");
     exit();
+}
+
+AddFriend($conn, $name, $LastName, $birthday, $interest, $id); 
+
+}
+else {
+    header("location: ../index.php");
+    exit();
+    
 }
 
