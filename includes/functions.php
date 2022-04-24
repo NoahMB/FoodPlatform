@@ -152,8 +152,18 @@ function AddFriend($conn, $name, $LastName, $birthday, $interest, $id)
 
     $sql2 = "INSERT INTO friendsinterests (FriendsID, InterestsID) VALUES (".$rowMax['FriendsID']."," .$rowID['InterestsID']. ")";
     mysqli_query($conn , $sql2);
-    mysqli_stmt_close($stmt);
     
-    header("location: ../calendaPage.php?error=none");
+
+    $eventname = $name ." ". $LastName. " Birthday";
+    $year = date("Y");
+    $month = date("m",strtotime($birthday));
+    $day = date("d", strtotime($birthday));
+    $date = $year ."-". $month."-". $day;
+
+    $sql3 = "INSERT INTO events (Name, Date, FriendsID) Values ('".$eventname."','".$date."',".$rowMax['FriendsID'].")";
+    mysqli_query($conn , $sql3);
+    mysqli_stmt_close($stmt);
+    echo $sql3;
+    // header("location: ../calendaPage.php?error=none");
     exit();
 }

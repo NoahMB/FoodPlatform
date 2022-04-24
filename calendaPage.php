@@ -101,19 +101,7 @@ add event
     </label>
     <br>
     <input type="date" id="eventdate" name="eventdate"value="">
-    <br>
-    <label for="gender">
-                    Interest
-                </label>
-                <br>
-                <select name="interest" id="interest">
-                    <option value="tennis">
-                        Tennis
-                    </option>
-                    <option value="Tech">
-                        Tech
-                    </option>
-                </select>
+   
 <br>
     <button type="submit" class="btn">ADD</button>
     <br>
