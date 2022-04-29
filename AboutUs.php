@@ -5,7 +5,7 @@
 <?php include_once 'includes/nav.php'; ?>
     
     <div class="AboutUsContent">
-      
+        <br>
       <h1 id="AboutUsHeader">
           ABOUTUS 
       </h1>
@@ -23,14 +23,14 @@
             We are on a mission to make uncommon and awesome gifts accessible to everyone sitting at home. With a few clicks over the internet, your experience will be right up at your door. But, we also realise how much every gift means to you. And that is why we make sure, that it is a memorable experience!
             </p>
             <br>
-            <br>
-            <br>
-            <br>
             <br>  
             <h2>
                 About Our team
             </h2>
             <br>
+          <br>
+          <br>
+          <br>
           <br>
           <br>
           <br>
