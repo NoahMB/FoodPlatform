@@ -2,13 +2,18 @@
 <title>Kaddoo For Birthdays</title>
 </head>
 <body>
+ 
   <?php include_once 'includes/nav.php';
-
+  ?>
+  <br>
+  <h1>Calendar</h1>
+  <?php
   include 'includes/calendar.php';
  
   $calendar = new Calendar();
  
   echo $calendar->show();?>
+  <br>
 <button class="open-button" onclick="openForm()">Add friends</button>
 
 <div class="form-popup" id="myForm">
