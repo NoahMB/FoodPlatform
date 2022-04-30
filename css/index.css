@@ -300,6 +300,10 @@ input , select{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  border: solid;
+  color: blue;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .labels {
