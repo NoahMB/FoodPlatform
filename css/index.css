@@ -293,6 +293,7 @@ input , select{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+
 }
 
 .navi {
@@ -339,6 +340,12 @@ input , select{
 .calendar {
   width: 50%;
   margin: auto;
+  border: solid;
+  background-color: grey;
+}
+h1{
+  text-align: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .card{
@@ -373,4 +380,8 @@ input , select{
 
  .AboutUsContent{
   text-align: center;
+  background-color: black;
+  color: white;
+  height:650px;
+  width:650px;
  }
