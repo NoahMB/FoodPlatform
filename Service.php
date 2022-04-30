@@ -6,13 +6,32 @@
     
     <div class="AboutUsContent">
         <br>
-     
+      <h1 id="AboutUsHeader">
+          Our service
+      </h1>
       <div class ="SignUP_C">
-        <h1 id="AboutUsHeader">
-            Our Service
-        </h1>
           
-          <div class = "AboutUsData">
+          <div class ="AboutUsData">
+            <p>
+          
+            </p> 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>  
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br> 
+            <h2>
+                Steps to take while Using Our Website
+            </h2>
+            <br>
           <br>
           <br>
           <br>
@@ -25,38 +44,11 @@
           <br>
           <br>
           <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-           <h2>
-                Steps to take to use Our Website
-           </h2>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>  
           </div>
     
       </div>
