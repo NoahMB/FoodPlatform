@@ -11,7 +11,7 @@
       </h1>
       <div class ="SignUP_C">
           
-          <div class = "AboutUsContent">
+          <div class = "AboutUsData">
             <p>
             There's nothing better than a wide-eyed smile on the face of your loved ones when you give them unexpected small gifts out of the ordinary. And that's exactly what led to the birth of Kaddoo.in Leaving behind the tradition of conventional gifting, we decided to make it more than just another giveaway. We help you give your near and dear ones something that goes with their persoanality and interest, looking at which they’d say ”Yes, that’s me!”. Hence, with our aim to get you the best presents from across the world, we at bigsmall.in have embarked on a journey to make gifting a hassle-free experience. Thus, you'll never find an ordinary thing here. From products to packaging and customer service, every little thing has its personal touch. That's what makes bigsmall.in extraordinary and different from your average stores!
             </p> 
