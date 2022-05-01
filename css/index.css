@@ -293,6 +293,7 @@ input , select{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  border-bottom: solid;
 
 }
 
@@ -339,6 +340,7 @@ input , select{
   margin-top: 10px;
   padding: 20px;
   width: max-content;
+  border-bottom: solid;
 }
 
 .calendar {
