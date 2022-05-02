@@ -31,7 +31,9 @@
         </div>
 
     </div>
-
+    <br>
+    <br>
+    <br>
     <?php
     shell_exec('/includes/Python/Scraping.py');
     ?>
