@@ -302,7 +302,7 @@ input , select{
   flex-flow: row wrap;
   justify-content: space-around;
   border: solid;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 18px;
 }
@@ -347,8 +347,10 @@ input , select{
   width: 50%;
   margin: auto;
   border: solid;
-  background-color: black;
-  color: white;
+  color: black;
+  background-color: whitesmoke;
+  margin-left: -0.01px;
+  margin-top: -10px;
 }
 h1{
   text-align: center;

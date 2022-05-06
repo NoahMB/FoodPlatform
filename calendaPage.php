@@ -6,7 +6,7 @@
   <?php include_once 'includes/nav.php';
   ?>
   <br>
-  <h1>Calendar</h1>
+
   <?php
   include 'includes/calendar.php';
  
