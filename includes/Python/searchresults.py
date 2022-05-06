@@ -36,7 +36,9 @@ def scrape(url):
     return e.extract(r.text)
 
 # product_data = []
-with open("search_results_urls.txt",'r') as urllist, open('search_results_output.jsonl','w') as outfile:
+with open("search_results_urls.txt",'r') as urllist, open('search_results_output.json','w') as outfile:
+    outfile.write("{\n")
+    outfile.write("\"items\": [\n")
     for url in urllist.read().splitlines():
         data = scrape(url) 
         if data:
@@ -44,6 +46,11 @@ with open("search_results_urls.txt",'r') as urllist, open('search_results_output
                 product['search_url'] = url
                 print("Saving Product: %s"%product['title'])
                 json.dump(product,outfile)
+                print(data['products'].index(product))
+                if data['products'].index(product) != len(data['products']) - 1:
+                    outfile.write(",")
                 outfile.write("\n")
                 # sleep(5)
-    
+    outfile.write("]\n")
+    outfile.write("}")
+    print(len(data['products']))
