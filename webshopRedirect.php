@@ -16,10 +16,16 @@ if (isset($_GET["id"])) {
         $result2 = mysqli_query($conn , $sql2);
 
             while ($row2 = $result2->fetch_assoc()) {
-                $filename = $_SESSION["AccountsID"] ."_urls.txt";
-                $myfile = fopen($filename, "w");
-                $txt = $row2['InterestsID'];
-                fwrite($myfile, $txt);
+                
+                $sql3 ="SELECT Interests FROM interests WHERE InterestsID = ".$row2['InterestsID'];
+                $result3 = mysqli_query($conn , $sql3);
+                while ($row3 = $result3->fetch_assoc()) {
+                    $filename = "includes/Python/".$_SESSION["AccountsID"] ."_urls.txt";
+                    $myfile = fopen($filename, "w");
+                    $txt = "https://www.amazon.com/s?k=". $row3['Interests'];
+                    fwrite($myfile, $txt);
+                }
+                
             }
     }
 }
