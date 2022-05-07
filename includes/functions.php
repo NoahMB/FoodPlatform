@@ -146,11 +146,9 @@ function AddFriend($conn, $name, $LastName, $birthday, $interest, $id)
     $resultMax = mysqli_query($conn , $sqlMaxID);
     $rowMax = mysqli_fetch_array($resultMax);
 
-    $sqlinrestID = "SELECT InterestsID FROM interests WHERE Interests = '".$interest."'";
-    $resultID = mysqli_query($conn , $sqlinrestID);
-    $rowID = mysqli_fetch_array($resultID);
+    
 
-    $sql2 = "INSERT INTO friendsinterests (FriendsID, InterestsID) VALUES (".$rowMax['FriendsID']."," .$rowID['InterestsID']. ")";
+    $sql2 = "INSERT INTO friendsinterests (FriendsID, InterestsID) VALUES (".$rowMax['FriendsID']."," .$interest. ")";
     mysqli_query($conn , $sql2);
     
 

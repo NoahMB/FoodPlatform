@@ -5,8 +5,7 @@
 <?php include_once 'includes/nav.php';
 $json = file_get_contents('C:\xampp\htdocs\Kaddoo\includes\Python\search_results_output.json', true);
 $data = json_decode($json, true);
-//echo $data;
-#var_dump($data);
+
 foreach ($data['items'] as $address)
 {
     if($address['price'] != null){
