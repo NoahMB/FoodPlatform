@@ -115,7 +115,7 @@ class Calendar {
             $result = mysqli_query($conn, $sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) { 
-                    $cellContent = $cellContent . "<p><a href='webshop.php?id=" . $row["EventsID"] . "'>" . $row["Name"] . "</a></p><br>";
+                    $cellContent = $cellContent . "<p><a href='webshopRedirect.php?id=" . $row["EventsID"] . "'>" . $row["Name"] . "</a></p><br>";
                 }
             }
             $this->currentDay++;   
