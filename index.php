@@ -34,9 +34,6 @@
     <br>
     <br>
     <br>
-    <?php
-    shell_exec('/includes/Python/Scraping.py');
-    ?>
 
     <?php include_once 'includes/footer.php';?> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
