@@ -1,6 +1,3 @@
-
-
-
 <?php
  include_once 'includes/header.php';
 
@@ -19,14 +16,15 @@ if (isset($_GET["id"])) {
                 
                 $sql3 ="SELECT Interests FROM interests WHERE InterestsID = ".$row2['InterestsID'];
                 $result3 = mysqli_query($conn , $sql3);
+
                 while ($row3 = $result3->fetch_assoc()) {
                     $filename = "includes/Python/".$_SESSION["AccountsID"] ."_urls.txt";
                     $myfile = fopen($filename, "w");
                     $txt = "https://www.amazon.com/s?k=". $row3['Interests'];
                     fwrite($myfile, $txt);
-                }
-                
-            }
+                    header('Location: webshop.php');
+                }   
+        }
     }
 }
 echo "<p hidden class='hidden'>" . $_SESSION["AccountsID"] . "</p>";
