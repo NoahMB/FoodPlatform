@@ -83,9 +83,28 @@
 </form>
 </div>
 <?php
+$path = "C:/xampp/htdocs/Kaddoo/includes/Python/". $_SESSION["AccountsID"]."_output.json";
 $json = file_get_contents('C:\xampp\htdocs\Kaddoo\includes\Python\search_results_output.json', true);
 $data = json_decode($json, true);
+$pricelist = [];
+if (isset($_GET["order"])) {
+    $order = $_GET['order'];
+    foreach ($data['items'] as $address)
+        {
+            $price = str_replace(",","",$address['price']);
+            $price = str_replace("$","",$price);
+            $price = (int)$price;
+            array_push($pricelist, $price);
+        
+        }
+    if($order == "descending"){
+        rsort($pricelist);
+    }
+    else{
+        sort($pricelist);
+    }
 
+}
 foreach ($data['items'] as $address)
 {
     $price = str_replace(",","",$address['price']);
@@ -95,16 +114,21 @@ foreach ($data['items'] as $address)
     
         if($price != null){
             if($rating != null){
+                
                 $rating = $rating[0];
                 $rating = (int)$rating;
+
                 if (isset($_GET["max"])) {
+
                     $maxprice = $_GET['max'];
 
                     if (isset($_GET["min"])) {
                         $minrating = $_GET['min'];
                         
                         if($price <= $maxprice){
+
                             if($rating >= $minrating){
+
                                 echo "<div class='card' >";
                                 echo "<img src='". $address['image'] ." 'style='height:300px'>";
                                 echo  "<p> ".$address['title'] ."</p> ";
@@ -113,7 +137,9 @@ foreach ($data['items'] as $address)
                                 echo  "<p class='price'>".$address['price'] ."</p> ";
                                 echo"<p><button>Buy</button><a href='https://www.amazon.com" . $address['url']. "' target = '_blank'>
                                 </a></p></div></br>";
+                                
                             }
+
                         }
 
                     }
@@ -136,8 +162,4 @@ foreach ($data['items'] as $address)
     }
 };
 ?>
-<script>
-    function myFunction() { 
-          document.getElementById("myFunction").submit(); 
-        }
-</script>
+
