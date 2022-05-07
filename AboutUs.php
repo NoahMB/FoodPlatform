@@ -7,7 +7,7 @@
     <div class="AboutUsContent">
         <br>
       <h1 id="AboutUsHeader">
-          ABOUTUS 
+          ABOUT US 
       </h1>
       <div class ="SignUP_C">
           

@@ -1,5 +1,5 @@
 <?php include_once 'includes/header.php';?>
-    <title>Kuddoo Sign Up</title>
+    <title>Kaddoo Sign Up</title>
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
