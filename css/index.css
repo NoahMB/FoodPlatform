@@ -295,6 +295,7 @@ input , select{
   justify-content: space-around;
   border-top: solid;
   border-width: thin;
+  height: 125px;
 }
 
 .navi {
@@ -343,7 +344,12 @@ input , select{
   border-bottom: solid;
 }
 
+.dates {
+  height: 625px;
+}
+
 .calendar {
+  height: 790px;
   width: 75%;
   border: solid;
   color: black;

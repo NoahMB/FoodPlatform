@@ -13,12 +13,12 @@
     width: 25%;
     padding-left: 2%;
     padding-right: 2%;
-    max-height: 1112px;
+    max-height: 790px;
   }
 
   .List {
     overflow-y: auto;
-    max-height: calc(1112px - 38.39px - 51px);
+    max-height: calc(790px - 38.39px - 51px);
   }
 
   .Event {
@@ -302,10 +302,6 @@ window.onclick = function(event) {
   }
 }
 </script>
-<br>
-<br>
-<br>
-<br>
 
 <?include_once 'includes/footer.php';?> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
