@@ -80,7 +80,7 @@ button{
     background-color: black;
     color: white;
 }
-button:not(.plusButton):hover{
+button:not(.plusButton, .friendEventButton):hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     cursor: pointer;
 }
@@ -321,6 +321,7 @@ input , select{
   align-items: center;
   border: solid;
   border-width: thin;
+  height: 100%;
 }
 
 .label {
