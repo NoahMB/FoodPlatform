@@ -12,7 +12,6 @@ echo"
 <div class='header'>
   <a href='calendaPage.php' class='logo'>KADDOO</a>
   <div class='header-right'> 
-  <a id='myBtn'>Add</a>
   <a href='includes/Logout.php'>Logout</a>
     <a href='UserProfile.php'>Welcome, " . $id ."</a>
   </div>
