@@ -1,11 +1,10 @@
-#!/usr/bin/env python
-
 from selectorlib import Extractor
 import requests 
 import json 
-from time import sleep
-
-
+import urllib3
+http = urllib3.PoolManager()
+import sys
+import nltk
 
 # Create an Extractor by reading from the YAML file
 e = Extractor.from_yaml_file('includes/Python/search_results.yml')
@@ -26,7 +25,6 @@ def scrape(url):
     }
 
     # Download the page using requests
-    print("Downloading %s"%url)
     r = requests.get(url, headers=headers)
     # Simple check to check if page was blocked (Usually 503)
     if r.status_code > 500:
@@ -38,8 +36,13 @@ def scrape(url):
     # Pass the HTML of the page and create 
     return e.extract(r.text)
 
+id = sys.argv[1]
+
+urlName = "includes/Python/" + str(id) + "_urls.txt"
+outputName = "includes/Python/" + str(id) + "_output.json"
+
 # product_data = []
-with open("includes/Python/search_results_urls.txt",'r') as urllist, open('includes/Python/search_results_output.json','w') as outfile:
+with open(urlName,'r') as urllist, open(outputName,'w') as outfile:
     outfile.write("{\n")
     outfile.write("\"items\": [\n")
     for url in urllist.read().splitlines():
@@ -47,13 +50,10 @@ with open("includes/Python/search_results_urls.txt",'r') as urllist, open('inclu
         if data:
             for product in data['products']:
                 product['search_url'] = url
-                print("Saving Product: %s"%product['title'])
                 json.dump(product,outfile)
-                print(data['products'].index(product))
                 if data['products'].index(product) != len(data['products']) - 1:
                     outfile.write(",")
                 outfile.write("\n")
                 # sleep(5)
     outfile.write("]\n")
     outfile.write("}")
-    print(len(data['products']))

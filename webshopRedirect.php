@@ -1,7 +1,8 @@
 <?php
- include_once 'includes/header.php';
+include_once 'includes/header.php';
 
 
+// Interests
 if (isset($_GET["id"])) {
     $eventid = $_GET['id'];
     $sql = "SELECT FriendsID FROM events WHERE EventsID = ". $eventid;
@@ -22,13 +23,17 @@ if (isset($_GET["id"])) {
                     $myfile = fopen($filename, "w");
                     $txt = "https://www.amazon.com/s?k=". $row3['Interests'];
                     fwrite($myfile, $txt);
-                    header('Location: webshop.php');
                 }   
         }
     }
 }
-echo "<p hidden class='hidden'>" . $_SESSION["AccountsID"] . "</p>";
 
+//Run python file
 
+$strID = strval($_SESSION["AccountsID"]);
+$command = escapeshellcmd("python includes/Python/searchresults.py " . $strID);
+$output = exec($command);
+
+header('Location: webshop.php');
 ?>
 
