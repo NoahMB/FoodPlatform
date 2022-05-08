@@ -392,3 +392,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height:700px;
   width:800px;
  }
+
+ a#myBtn {
+   color: white;
+ }
