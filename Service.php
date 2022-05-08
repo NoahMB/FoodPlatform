@@ -12,38 +12,35 @@
       <div class ="SignUP_C">
           
           <div class ="AboutUsData">
+          <br>
             <p>
-          
+            Our website, kaddoo, it's main objective is to help our users to be able to save dates for their love ones and also helping our users get gift during their birthday.
+            <br>
+            Hence, through our platform we bring multiple users across the glob together.
             </p> 
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>  
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br> 
             <h2>
                 Steps to take while Using Our Website
             </h2>
             <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
+            <h3 >
+                Step 1 
+            </h3>
+            <p>
+              In other to use our website, our users need to create an account through the "Sign up" and "join now" button in the home page.
+            </p>
+            <h3 >
+                Step 2 
+            </h3>
+            <p>
+              After creating an account our user can login using either a google account/facebook if our user has any or using the account he/she has created.
+            </p>
+            <h3 >
+                Step 3
+            </h3>
+            <p>
+              
+            </p> 
             <br>
             <br>
             <br>
