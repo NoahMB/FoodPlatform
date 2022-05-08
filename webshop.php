@@ -135,8 +135,8 @@ foreach ($data['items'] as $address)
                                 echo "<p>". $address['rating']."</p>";
                                 echo "<p>". $address['reviews']."</p>";
                                 echo  "<p class='price'>".$address['price'] ."</p> ";
-                                echo"<p><button>Buy</button><a href='https://www.amazon.com" . $address['url']. "' target = '_blank'>
-                                </a></p></div></br>";
+                                echo"<p><a href='https://www.amazon.com" . $address['url']. "' target = '_blank'><button>Buy
+                                </button></a></p></div></br>";
                                 
                             }
 
@@ -156,7 +156,7 @@ foreach ($data['items'] as $address)
                 echo "<p>". $address['reviews']."</p>";
                 echo  "<p class='price'>".$address['price'] ."</p> ";
                 
-                echo"<p><button>Buy</button><a href='https://www.amazon.com" . $address['url']. "' target = '_blank'></a></p></div></br>";
+                echo"<p><a href='https://www.amazon.com" . $address['url']. "' target = '_blank'><button>Buy</button></a></p></div></br>";
         }
     }
     }
