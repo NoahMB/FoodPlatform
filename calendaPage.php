@@ -7,18 +7,18 @@
   .calendarContent {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
   }
 
   .Upcoming {
     width: 25%;
     padding-left: 2%;
     padding-right: 2%;
-    max-height: 790px;
   }
 
   .List {
     overflow-y: auto;
-    max-height: calc(910px - 38.39px - 51px);
+    height: calc(100% - 86px);
   }
 
   .Event {
@@ -29,8 +29,10 @@
 
   .Title {
     text-align: center;
-    margin-bottom: 36px;
-    margin-top: 15px;
+    display: flex;
+    height: 86px;
+    justify-content: center;
+    align-items: center;
   }
 
     /* The Modal (background) */
@@ -84,6 +86,23 @@
     justify-content: space-evenly;
   }
 
+  .datecell p:not(:first-child) {
+    text-decoration: none;
+  }
+
+  .day {
+    align-self: flex-start;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-weight: bold;
+  }
+
+  .dayContent {
+    align-self: flex-start;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+
 </style>
  
   <?php include_once 'includes/nav.php';
@@ -99,7 +118,7 @@
  
   echo $calendar->show();?>
 
-  <div class="Upcoming">
+  <div class="Upcoming" id="Upcoming">
     <div class="Title">
       <h2>Upcoming Events</h2>
     </div>
@@ -257,6 +276,8 @@ if ($result->num_rows > 0) {
   window.onload = function () {
     document.getElementById("myForm").style.display = "none";
     document.getElementById("eventform").style.display = "none";
+    var offsetHeight = document.getElementById("calendar").offsetHeight;
+    document.getElementById("Upcoming").style.height = offsetHeight + 'px';
 };
 
 function openForm() {
@@ -301,6 +322,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
 </script>
 
 <?include_once 'includes/footer.php';?> 
