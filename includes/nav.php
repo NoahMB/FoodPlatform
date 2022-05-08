@@ -13,7 +13,7 @@ echo"
   <a href='calendaPage.php' class='logo'>KADDOO</a>
   <div class='header-right'> 
   <a href='includes/Logout.php'>Logout</a>
-    <a href='UserProfile.php'>welcome, " . $id ."</a>
+    <a href='UserProfile.php'>Welcome, " . $id ."</a>
   </div>
 </div>";
 }

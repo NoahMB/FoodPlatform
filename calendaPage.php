@@ -2,10 +2,36 @@
 <title>Kaddoo For Birthdays</title>
 </head>
 <body>
+
+  <style>
+    .calendarContent {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .Upcoming {
+      width: 25%;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+
+    .Event {
+      padding: 5%;
+      border: solid;
+      border-width: thin;
+    }
+
+    .Title {
+      text-align: center;
+      padding-bottom: 15px;
+    }
+  </style>
  
   <?php include_once 'includes/nav.php';
   ?>
   <br>
+
+  <div class="calendarContent">
 
   <?php
   include 'includes/calendar.php';
@@ -13,6 +39,31 @@
   $calendar = new Calendar();
  
   echo $calendar->show();?>
+
+  <div class="Upcoming">
+    <div class="Title">
+      <h2>Upcoming Events</h2>
+    </div>
+    <div class="List">
+      <?php 
+        $sql    = "SELECT * FROM `events` WHERE `FriendsID` IN 
+        (SELECT `FriendsID` FROM `friends` WHERE `AccountsID` = " . $_SESSION["AccountsID"] . ") ORDER BY `Date` ASC";
+
+        $result = mysqli_query($conn, $sql);
+        
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<div class='Event'>";
+                echo    "<p> ".$row['Date'] ."</p> ";
+                echo    "<a href='webshopRedirect.php?id=" . $row["EventsID"] . "&me=" . $_SESSION["AccountsID"] . "'><h5>". $row['Name']."</h5></a>";
+                echo "</div>";
+            }
+        } 
+      ?>
+    </div>
+
+  </div>
+  </div>
   <br>
 <button class="open-button" onclick="openForm()">Add friends</button>
 
