@@ -53,7 +53,7 @@
 }
 </style>
 <div class="filters">
-<form id="myFunction" onClick= { myFunction } >
+<form id="myFunction">
 
 <div class="pricefilter">
   <p>max price:</p>
@@ -83,7 +83,7 @@
 </form>
 </div>
 <?php
-$path = "C:/xampp/htdocs/Kaddoo/includes/Python/". $_SESSION["AccountsID"]."_output.json";
+$path = "includes/Python/". $_SESSION["AccountsID"]."_output.json";
 $json = file_get_contents($path, true);
 $data = json_decode($json, true);
 $pricelist = [];
