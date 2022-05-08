@@ -18,7 +18,7 @@
 
   .List {
     overflow-y: auto;
-    max-height: calc(790px - 38.39px - 51px);
+    max-height: calc(910px - 38.39px - 51px);
   }
 
   .Event {

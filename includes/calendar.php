@@ -105,7 +105,7 @@ class Calendar {
              
             $this->currentDate = date('Y-m-d',strtotime($this->currentYear.'-'.$this->currentMonth.'-'.($this->currentDay)));
              
-            $cellContent = "<p>" . $this->currentDay . "</p><br>";
+            $cellContent = "<p>" . $this->currentDay . "</p>";
 
             include 'conn.php';
 
@@ -116,7 +116,7 @@ class Calendar {
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) { 
                     $_SESSION["URL"] = "webshopRedirect.php?id=" . $row["EventsID"] . "&me=" . $_SESSION["AccountsID"];
-                    $cellContent = $cellContent . "<p><a href='" . $_SESSION["URL"] . "'>" . $row["Name"] . "</a></p><br>";
+                    $cellContent = $cellContent . "<p><a href='" . $_SESSION["URL"] . "'>" . $row["Name"] . "</a></p>";
                 }
             }
             $this->currentDay++;   

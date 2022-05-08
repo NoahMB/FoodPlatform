@@ -345,11 +345,11 @@ input , select{
 }
 
 .dates {
-  height: 625px;
+  height: 750px;
 }
 
 .calendar {
-  height: 790px;
+  height: 910px;
   width: 75%;
   border: solid;
   color: black;
