@@ -13,6 +13,12 @@
       width: 25%;
       padding-left: 2%;
       padding-right: 2%;
+      max-height: 1112px;
+    }
+
+    .List {
+      overflow-y: auto;
+      max-height: calc(1112px - 38.39px - 51px);
     }
 
     .Event {
@@ -23,7 +29,8 @@
 
     .Title {
       text-align: center;
-      padding-bottom: 15px;
+      margin-bottom: 36px;
+      margin-top: 15px;
     }
   </style>
  
