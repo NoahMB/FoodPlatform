@@ -3,6 +3,10 @@
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
+    <br>
+    <br>
+    <div class="TextAllign">
+    <div class = "StyleSignUP">
       <div class="SignUP_C">
         <div class="content">
         
@@ -45,7 +49,7 @@
                 <input type="password" id="pwdrepeat" name="pwdrepeat" minlength="8" placeholder="Repeat your Password">
                 <br>
                 <label for="Bday">
-                    Your Birthdate
+                    Your Birthday
                 </label>
                 <br>
                 <input type="date" id="Bday" name="Bday"value="">
@@ -74,21 +78,15 @@
             <br>
             <br>
         </form>
-        <p> <strong>Have an Accont Already? </strong> <a href="Login.php">LOG IN NOW</a> </p>
-        
+        <p> <strong>Have an Account Already? </strong> <a href="Login.php">LOG IN NOW</a> </p>
     
-    </div>
+       </div>
 
+     </div>
 </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    </div>
+  
+      
     <br>
     <br>
     <br>

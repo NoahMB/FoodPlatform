@@ -39,7 +39,13 @@
                 Step 3
             </h3>
             <p>
-              
+              When the user login, he/she will be directed to a calendar page. In this calendar page, our user can add friends and their birthday would be automatically be added to the calendar. The user can also add events using the (+) beside the upcoming even section.
+            </p>
+            <h3 >
+                Step 4 
+            </h3>
+            <p>
+                All user can also visit his/her profile page, this can be done by clicking on the (welcome,username) button on the to left hand corner. here the user would see brief info about his/her self.
             </p> 
             <br>
             <br>

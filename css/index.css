@@ -1,5 +1,5 @@
 body{
- background-color:  rgb(176,176,176);
+ background-color:  rgba(176, 176, 176, 0.845);
 }
 .ContentHome{
   background-color: whitesmoke; 
@@ -12,6 +12,15 @@ body{
     height: 300px;
     padding: 15px;  
     text-align: center;
+}
+.StyleSignUP{
+  height: 1000px;
+  width: 800px;
+  border: solid;
+}
+.TextAllign{
+ display: flex;
+ justify-content: center;
 }
 .SignUP_C{
     display: flex;
@@ -71,16 +80,15 @@ h1{
     
 }
 
-button{
+button, input[type=submit]{
     height:50px; width:270px;
     border-radius: 40px;
     font-size: 15px;
-    text-transform: uppercas
-    e;
+    text-transform: uppercase;
     background-color: black;
     color: white;
 }
-button:not(.plusButton, .friendEventButton):hover{
+button,input[type=submit]:not(.plusButton, .friendEventButton):hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     cursor: pointer;
 }
