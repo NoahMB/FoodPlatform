@@ -5,6 +5,7 @@
 <?php include_once 'includes/nav.php';?> 
 
 
+
         <div class = "ContentUser">
             <div class = "image">
                 <br>
@@ -12,15 +13,88 @@
             </div>
         </div>
         
-        <div>
             <h2 id = "AboutUser">
                 USER PROFILE :
             </h2> 
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
+            <br>
+        <?php
+
+                if (isset($_SESSION["Firstname"]) ) {
+                $id =  $_SESSION['Firstname'];
+
+                echo"
+                <div class='UserData'>
+                    First Name :   " . $id ."
+                </div>";      
+                }
+
+                $sql = "SELECT Lastname FROM `accounts` WHERE Firstname = '$id'";
+                
+                $result = mysqli_query($conn, $sql)->fetch_all(MYSQLI_ASSOC);
+
+
+                foreach($result as $persons){
+                    $FamilyNAME =  $persons["Lastname"];
+
+                    echo"
+                    <div class='UserData'>
+                        Family Name :   " . $FamilyNAME ."
+                    </div>"; 
+                
+                }
+
+
+                $sql_Bday = "SELECT Birthdate FROM `accounts` WHERE Firstname = '$id'";
+                
+                $result_bday = mysqli_query($conn, $sql_Bday)->fetch_all(MYSQLI_ASSOC);
+
+
+                foreach($result_bday  as $persons_bday){
+                    $UserBirthdate =  $persons_bday["Birthdate"];
+
+                    echo"
+                    <div class='UserData'>
+                        Your Birthday :   " . $UserBirthdate ."
+                    </div>"; 
+                
+                }    
+
+                $sql_Gender = "SELECT Gender FROM `accounts` WHERE Firstname = '$id'";
+                
+                $result_Gender = mysqli_query($conn, $sql_Gender)->fetch_all(MYSQLI_ASSOC);
+
+
+                foreach( $result_Gender as $persons_Gender){
+                    $UserGender =  $persons_Gender["Gender"];
+
+                    echo"
+                    <div class='UserData'>
+                        Gender :   ". $UserGender."
+                    </div>"; 
+                
+                } 
+
+               
+
+                $sql_Email = "SELECT Email FROM `accounts` WHERE Firstname = '$id'";
+                
+                $result_Email = mysqli_query($conn, $sql_Email)->fetch_all(MYSQLI_ASSOC);
+
+
+                foreach($result_Email  as $persons_Email){
+
+                    $UserEmail =  $persons_Email["Email"];
+
+                    echo"
+                    <div class='UserData'>
+                        Contact(Email) :   " . $UserEmail."
+                    </div>"; 
+                
+                } 
+
+
+
+        ?>
         <br>
         <br>
         <br>

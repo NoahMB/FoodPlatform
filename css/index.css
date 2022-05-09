@@ -18,6 +18,11 @@ body{
   width: 800px;
   border: solid;
 }
+.UserData{
+  text-indent: 20%;
+  font-size: 30px;
+  text-transform: capitalize;
+}
 .AboutUsContent{
     height: 1000px;
     width: 1000px;
