@@ -18,6 +18,12 @@ body{
   width: 800px;
   border: solid;
 }
+.AboutUsContent{
+    height: 1000px;
+    width: 1000px;
+    border: solid;
+    background-color: grey;
+}
 .TextAllign{
  display: flex;
  justify-content: center;
