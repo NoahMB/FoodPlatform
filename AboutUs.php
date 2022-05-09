@@ -28,6 +28,10 @@
             <h2>
                 About Our team
             </h2>
+            <p>
+                Our team consist of 3 highly skilled web developer,with every member carry our out specialized task.
+
+            </p>
             <br>
           <br>
           <br>
