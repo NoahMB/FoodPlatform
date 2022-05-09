@@ -23,6 +23,9 @@ body{
   font-size: 30px;
   text-transform: capitalize;
 }
+.ContainerUser{
+  background-color: rgba(245, 245, 245, 0.829);
+}
 .AboutUsContent{
     height: 1000px;
     width: 1000px;

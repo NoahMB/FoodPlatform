@@ -4,9 +4,8 @@
 <body>
 <?php include_once 'includes/nav.php';?> 
 
-
-
-        <div class = "ContentUser">
+   <div class ="ContainerUser">
+     <div class = "ContentUser">
             <div class = "image">
                 <br>
             <img src="Image/male.png" alt="ProfilePic_Male" id = "ProfilePic">
@@ -97,10 +96,6 @@
         ?>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <div class= "ReminderContent">
             <div class = "ReminderDetails">
 
@@ -137,10 +132,9 @@
         <br>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
+   </div>
 
+        
        
         <?php include_once 'includes/footer.php';?> 
 
