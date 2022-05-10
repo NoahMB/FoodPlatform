@@ -5,12 +5,13 @@
 <?php include_once 'includes/nav.php';?>
 <br>
 <br>
-<div class ="SignUP_C">  
-<figure class ="card">
-          <figcaption>
+    <div class = "TextAllign">
+    <div class="StyleSignUP">
+         <div class ="SignUP_C">  
           <br>
         <div class="content">
             <form action="includes/login.inc.php" method="post">
+            <br>
             <h1>
                 Welcome Back!
             </h1>
@@ -18,6 +19,8 @@
             <p>
                 Sign in to continue
             </p>
+            <br>
+            <br>
             <div class = "col">
                 <a href="#" class = "fb btn">
                     <i class = "fa fa-facebook fa-fw"></i> Login with Facebook
@@ -34,13 +37,16 @@
             <p>
                 Or use an email/user name.
             </p>
-
+            <br>
+            <br>
             <p> <strong> Don't have an accout yet?</strong> <a href="SignUp.php">Join Kaddoo.com now</a> </p>
             <input type="text" name="uid" id="uid" placeholder="E-Mail" required="true">
             <br>
             <br>
             <br>
             <input type="password" id="pwd" name="pwd" minlength="8" placeholder="Password" required="true">
+            <br>
+            <br>
             <p><a href="password.php">Forgot password?</a> </p>
             <br>
             <input type="submit" value="LOG IN" id="btn_submit" name="submit">
@@ -48,10 +54,13 @@
             <br>
 
             </form>
-            </figcaption>
-      </figure> 
-        </div>
-      </div> 
+    
+            </div>
+        </div> 
+
+    </div>
+
+</div>
       <br>     
       <?php include_once 'includes/footer.php';?> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

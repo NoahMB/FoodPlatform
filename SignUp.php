@@ -11,6 +11,7 @@
         <div class="content">
         
             <form method ="POST" action="includes/signup.inc.php">          
+                   <br>
                     <h1>
                         WELCOME
                     </h1>

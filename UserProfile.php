@@ -3,29 +3,54 @@
 </head>
 <body>
 <?php include_once 'includes/nav.php';?> 
-
-   <div class ="ContainerUser">
-     <div class = "ContentUser">
-            <div class = "image">
-                <br>
-            <img src="Image/male.png" alt="ProfilePic_Male" id = "ProfilePic">
-            </div>
-        </div>
-        
-            <h2 id = "AboutUser">
-                USER PROFILE :
-            </h2> 
-            <br>
+    
+    <div class ="ContainerUser">
         <?php
 
                 if (isset($_SESSION["Firstname"]) ) {
                 $id =  $_SESSION['Firstname'];
 
-                echo"
-                <div class='UserData'>
-                    First Name :   " . $id ."
-                </div>";      
                 }
+                ?>
+                <?php
+                $sql_Gender = "SELECT Gender FROM `accounts` WHERE Firstname = '$id'";
+                
+                $result_Gender = mysqli_query($conn, $sql_Gender)->fetch_all(MYSQLI_ASSOC);
+
+
+                foreach( $result_Gender as $persons_Gender){
+                    $UserGender =  $persons_Gender["Gender"];
+
+                    if ($UserGender == "male") {
+
+                        ?>
+                           <div class = "ContentUser">
+                                 <div class = "image">
+                           <br>
+                             <img src="Image/MaleProfilePic.jpg" alt="ProfilePic_Male" id = "ProfilePic">
+                                 </div>
+                         </div>   
+                    <?php
+                
+                } 
+                else{
+                    ?>
+                    <div class = "ContentUser">
+                          <div class = "image">
+                    <br>
+                      <img src="Image/GirlProfilePic.jpg" alt="ProfilePic_Male" id = "ProfilePic">
+                          </div>
+                  </div>   
+             <?php
+                }
+            }
+                ?>
+    
+            <h2 id = "AboutUser">
+                USER PROFILE :
+            </h2> 
+            <br>
+        <?php
 
                 $sql = "SELECT Lastname FROM `accounts` WHERE Firstname = '$id'";
                 
