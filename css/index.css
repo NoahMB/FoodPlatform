@@ -370,14 +370,14 @@ input , select{
   margin-top: 10px;
   padding: 20px;
   width: max-content;
-  color: rgb(123, 123, 174);
+  color: rgb(43, 43, 61);
 }
 
 .next {
   margin-top: 10px;
   padding: 20px;
   width: max-content;
-  color: rgb(123, 123, 174);
+  color: rgb(43, 43, 61);
 }
 
 .date {
@@ -390,7 +390,7 @@ input , select{
 
 .dates {
   height: 100%;
-  background-color: rgb(123, 123, 174);
+  background-color: rgb(43, 43, 61);
 }
 
 .calendar {
