@@ -3,10 +3,11 @@
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
-    
+    <br>
     <div class="SignUP_C">
-        <div  class="content">
+        <div  class="contentPassword">
             <form action="" method="get">
+                <br>
                 <h1>
                     Reset Password
                 </h1>
@@ -28,7 +29,6 @@
         </div>
     
     </div>
-
 
 
     <?php include_once 'includes/footer.php';?> 

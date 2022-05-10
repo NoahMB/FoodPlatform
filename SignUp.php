@@ -6,8 +6,8 @@
     <br>
     <br>
     <div class="TextAllign">
-    <div class = "StyleSignUP">
-      <div class="SignUP_C">
+     <div class = "StyleSignUP">
+       <div class="SignUP_C">
         <div class="content">
         
             <form method ="POST" action="includes/signup.inc.php">          
