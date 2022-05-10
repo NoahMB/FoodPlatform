@@ -5,6 +5,7 @@
 <?php include_once 'includes/nav.php';?> 
     
     <div class ="ContainerUser">
+    
         <?php
 
                 if (isset($_SESSION["Firstname"]) ) {
@@ -16,34 +17,23 @@
                 $sql_Gender = "SELECT Gender FROM `accounts` WHERE Firstname = '$id'";
                 
                 $result_Gender = mysqli_query($conn, $sql_Gender)->fetch_all(MYSQLI_ASSOC);
-
-
-                foreach( $result_Gender as $persons_Gender){
-                    $UserGender =  $persons_Gender["Gender"];
-
-                    if ($UserGender == "male") {
-
-                        ?>
-                           <div class = "ContentUser">
-                                 <div class = "image">
-                           <br>
-                             <img src="Image/boyProfilePic.jpg" alt="ProfilePic_Male" id = "ProfilePic">
-                                 </div>
-                         </div>   
-                    <?php
-                
-                } 
-                else{
-                    ?>
+                ?>
                     <div class = "ContentUser">
                           <div class = "image">
-                    <br>
-                      <img src="Image/GirlProfilePic.jpg" alt="ProfilePic_Male" id = "ProfilePic">
+                    
+                      <div>
+                            <div class="profile-pic">
+                              <label class="-label" for="file">
+                             <span class="glyphicon glyphicon-camera"></span>
+                          <span>Change Image</span>
+                         </label>
+                             <input id="file" type="file" onchange="loadFile(event)"/>
+                             <img src="Image/male.png" id="output" width="200" />
+                     </div>
+                      </div>
                           </div>
                   </div>   
              <?php
-                }
-            }
                 ?>
     
             <h2 id = "AboutUser">
@@ -51,7 +41,12 @@
             </h2> 
             <br>
         <?php
-
+                ?>
+        <div class="outer">
+            <div class="inner">
+                <figure class ="card">
+                 <figcaption>
+                <?php
                 $sql = "SELECT Lastname FROM `accounts` WHERE Firstname = '$id'";
                 
                 $result = mysqli_query($conn, $sql)->fetch_all(MYSQLI_ASSOC);
@@ -116,8 +111,13 @@
                 
                 } 
 
-
-
+            ?>
+                 </figcaption>
+         </figure>
+     </div>
+  </div>           
+            <?php
+        
         ?>
         <br>
         <br>
@@ -160,7 +160,9 @@
    </div>
 
         
-       
+   <script src="index.js">
+
+   </script>
         <?php include_once 'includes/footer.php';?> 
 
 </body>
