@@ -27,7 +27,7 @@
                            <div class = "ContentUser">
                                  <div class = "image">
                            <br>
-                             <img src="Image/MaleProfilePic.jpg" alt="ProfilePic_Male" id = "ProfilePic">
+                             <img src="Image/boyProfilePic.jpg" alt="ProfilePic_Male" id = "ProfilePic">
                                  </div>
                          </div>   
                     <?php
