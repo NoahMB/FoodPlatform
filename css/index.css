@@ -17,6 +17,10 @@ body{
   height: 1000px;
   width: 800px;
   border: solid;
+  border-radius: 2.5%;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  font-weight: bold;
 }
 .UserData{
   text-indent: 20%;
@@ -46,6 +50,9 @@ body{
 .TextAllign{
  display: flex;
  justify-content: center;
+ background-image: url(../Image/bg_about.jpg);
+
+
 }
 .SignUP_C{
     display: flex;
@@ -397,8 +404,10 @@ input , select{
   border: solid;
   color: black;
   background-color: whitesmoke;
+  background-color: rgb(245, 243, 243);
   margin-left: -0.01px;
   margin-top: 13px;
+  border-radius: 2.5%;
 }
 h1{
   text-align: center;
