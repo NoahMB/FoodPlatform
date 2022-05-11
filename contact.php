@@ -3,8 +3,10 @@
 </head>
 <body>
 <?php include_once 'includes/nav.php'; ?>
-
-
+<br>
+ <br>
+<div class="TextAllign">
+     <div class = "StyleSignUP">
       <div class="SignUP_C">
         <div class="content">
             <h1>
@@ -44,7 +46,8 @@
         </div>
         
       </div>
-
+      </div>
+</div>
 
       <br>
       <br>

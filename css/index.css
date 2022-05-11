@@ -17,8 +17,6 @@ body{
   height: 1000px;
   width: 800px;
   border: solid;
-  background-color: #ccc;
-  border-radius: 50px;
 }
 .UserData{
   text-indent: 20%;
@@ -123,6 +121,7 @@ button,input[type=submit]:not(.plusButton, .friendEventButton):hover{
 #JoinNowBtn{
   margin-left: 140px;
   border-radius: 20px;
+  width: 320px;
 }
 .content{
     width: 700px;
@@ -150,6 +149,7 @@ button,input[type=submit]:not(.plusButton, .friendEventButton):hover{
 .ContentHome{
   display: flex;
   justify-content: center;
+  height: 1500px;
 }
 input , select{
     width: 75%;
@@ -390,7 +390,6 @@ input , select{
 
 .dates {
   height: 100%;
-  background-color: rgb(43, 43, 61);
 }
 
 .calendar {

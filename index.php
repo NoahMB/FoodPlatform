@@ -27,6 +27,7 @@
                     Join Now
                 </button>
             </form>
+            <br>
            
         </div>
     </div>
