@@ -7,6 +7,7 @@
 
 
     <div class="ContentHome">
+        <div class="flexContent">     
         <div id="Calendar_image">
             <img src="Image/CalendarImage.png" alt="CalendarIamge">
         </div>
@@ -28,8 +29,40 @@
                 </button>
             </form>
             <br>
-           
+            <p id="TrustStatement">Trusted by millions of people all over the world &#127922;</p>
         </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="ExtraContentFlex">
+            <div class="ExtraContent">
+                <br>
+           <h2>
+                  Spread a Little Happiness
+           </h2> 
+
+            Imagine that indescribable moment of happiness someone feels after opening a truly personal gift.
+
+            Spreading this happiness is what we are passionate about, which is why we do everything we can to help you make someone else happy
+             </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="CardStuff">
+            <section class="cardS-container">
+                <article class="cardS">
+                    <img src="Image/GirlProfilePic.jpg" alt="" class="cardS__image">
+                    <img src="Image/boyProfilePic.jpg" alt="" class="cardS__image">
+                    </article>
+            </section>
+        </div>
+        <span id="HoverHere">
+            HOVER ON CALENDAR
+        </span>
     </div>
     <?php include_once 'includes/footer.php';?> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

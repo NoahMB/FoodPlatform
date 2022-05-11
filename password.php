@@ -3,32 +3,35 @@
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
-    <br>
-    <div class="SignUP_C">
-        <div  class="contentPassword">
-            <form action="" method="get">
+    <div class="dataContent">
+        <div class="SignUP_C">
+            <div  class="contentPassword">
+                <form action="" method="get">
+                    <br>
+                    <h1>
+                        Reset Password
+                    </h1>
+                    <p>
+                        Enter your address linked to your kaddoo account
+                    </p>
+                    <label for="email">
+                    E-MAIL
+                    </label>
                 <br>
-                <h1>
-                    Reset Password
-                </h1>
-                <p>
-                    Enter your address linked to your kaddoo account
-                </p>
-                <label for="email">
-                  E-MAIL
-                </label>
-               <br>
-               <br>
-               <input type="email" id="email" name="email" placeholder="Enter your Email"> 
-               <br>
-               <br>
-               <br>
-               <input type="submit" value="send" id="btn_submit" name="submit">
+                <br>
+                <input type="email" id="email" name="email" placeholder="Enter your Email"> 
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="send" id="btn_submit" name="submit">
 
-            </form>
-        </div>
-    
+                </form>
+            </div>
+        
     </div>
+
+    </div>
+   
 
 
     <?php include_once 'includes/footer.php';?> 
