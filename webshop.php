@@ -3,20 +3,15 @@
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
-
-<form action="includes/searchbar.php" method="post">
-    Search: <input type="text" name="search">
-    <input type="submit" name="submit">
-</form>
 <style>
-.card {
-    
+.card { 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   max-height: 650px;
-  margin: auto;
+ /* margin: auto;*/
   text-align: center;
   font-family: arial;
+  width: 28%;
 }
 
 .price {
@@ -52,36 +47,58 @@
     width: 300px;
 }
 </style>
+
+<div class="AllContent">
+<div class="SearchEnginePart">
+    <div class="BarPostion">
+        <form action="includes/searchbar.php" method="post" class="search-bar">
+        Search:  <input type="search" name="search" pattern=".*\S.*" required>
+            <button class="search-btn" type="submit"  name="submit">
+                <span>Search</span>
+            </button>
+        </form>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="filters">
+
 <form id="myFunction">
 
-<div class="pricefilter">
-  <p>max price:</p>
-  <input type="number" name="max" id="max" min="1" max="10000" value="50">
-  
+<div class="FilterContent">
+    <div class="pricefilter">
+        <p>MAX PRICE:</p>
+        <input type="number" name="max" id="max" min="1" max="10000" value="50">
+        
+        </div>
+        <div class="ratingfilter">
+        <p>MIN RATING:</p>
+        <input type="number" name="min" id="min" min="1" max="5" value="3">
+    
+    </div>
 </div>
-
-
-<div class="ratingfilter">
-  <p>min rating:</p>
-  <input type="number" name="min" id="min" min="1" max="5" value="3">
-  
-</div>
-<div class="orderbyfilter">
-  <p>order by:</p>
-  <select name="order" id="order">
-  <option value="descending" name="descending" id="descending">price descending</option>
-  <option value="ascending" name="ascending" id="ascending">price ascending</option>
-  </select>
-  
-</div>
-
 <br>
-<div class="submit">
-<input type="submit" value="Submit" >
+<br>
+    <div class="orderbyfilter">
+        <p>ORDER BY:</p>
+        <select name="order" id="order">
+        <option value="descending" name="descending" id="descending">price descending</option>
+        <option value="ascending" name="ascending" id="ascending">price ascending</option>
+        </select>
+    </div>
 </div>
+<br>
+<br>
+<br>
+    <div class="submit">
+        <input type="submit" value="Submit" >
+    </div>
 </form>
 </div>
+
+<div class="CardContent">
 <?php
 $path = "includes/Python/". $_SESSION["AccountsID"]."_output.json";
 $json = file_get_contents($path, true);
@@ -163,4 +180,10 @@ foreach ($data['items'] as $address)
 
 };
 ?>
+
+</div>
+
+
+</div>
+
 
