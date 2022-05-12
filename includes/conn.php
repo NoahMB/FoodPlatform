@@ -1,13 +1,12 @@
 <?php
 
 
-$servername = "127.0.0.1";
-$root = "root";
-$password = "";
+$servername = "ID362507_kaddoo.db.webhosting.be";
+$root = "ID362507_kaddoo";
+$password = "Ilovekaddoo123";
 
-$conn = new mysqli($servername, $root, $password, "Kaddoo");
+$conn = new mysqli($servername, $root, $password, "ID362507_kaddoo", 3306);
 
-// Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
