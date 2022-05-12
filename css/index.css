@@ -69,16 +69,10 @@ body{
 .TextAllign{
  display: flex;
  justify-content: center;
- background-image: url(../Image/bg_about.jpg);
-
-
 }
 .dataContent{
   display: flex;
-  justify-content: center;
-  background-image: url(../Image/bg_about.jpg);
- 
- 
+  justify-content: center; 
 }
 .SignUP_C{
     display: flex;
@@ -148,7 +142,6 @@ button, input[type=submit]{
 }
 
 button,input[type=submit]:not(.plusButton, .friendEventButton):hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     cursor: pointer;
 }
 #JoinNowBtn{
@@ -179,10 +172,7 @@ button,input[type=submit]:not(.plusButton, .friendEventButton):hover{
   color: white;
   width: 300px;
 }
-.ContentHome{
 
-  height: 1190px;
-}
 .flexContent{
   display: flex;
   justify-content: center;
@@ -443,31 +433,6 @@ h1{
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.card{
-   width: 750px;
-   height: 280px;
-   background-color: rgba(128, 128, 128, 0.834);
-   border: 20px solid;
-   border-image: 
-   linear-gradient(
-     green,
-     red,
-     yellow) 5;
-   animation: rotate
-   2.5s
-   ease-in
-   infinite;
- }
- @keyframes rotate{
-   50%{
-     border-image:
-     linear-gradient(
-       360deg,
-       green,
-       red,
-       yellow) 5;
-   }
- }
  .outer{
    margin:0 auto;
  }

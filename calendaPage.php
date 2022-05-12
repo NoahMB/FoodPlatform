@@ -87,13 +87,6 @@
     background: transparent;
   }
 
-  .plusButton {
-    width: 15%;
-    color: black;
-    border: none;
-    background: transparent;
-  }
-
   .friendEventButton {
     width: 5%;
     color: black;
