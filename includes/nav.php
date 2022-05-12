@@ -12,7 +12,7 @@ echo"
 <div class='header'>
   <a href='calendaPage.php' class='logo'>KADDOO</a>
   <div class='header-right'> 
-  <a href='includes/Logout.php'>Logout</a>
+  <a href='includes/logout.php'>Logout</a>
     <a href='UserProfile.php'>Welcome, " . $id ."</a>
   </div>
 </div>";
@@ -22,8 +22,8 @@ else{
   <a href='index.php' class='logo'>KADDOO</a>
   <div class='header-right'> 
     <a href='index.php'>Home</a>
-    <a href='SignUp.php'>Sign Up</a>
-    <a href='LogIn.php'>Log In</a>
+    <a href='signup.php'>Sign Up</a>
+    <a href='login.php'>Log In</a>
   </div>
 </div>";
 }
