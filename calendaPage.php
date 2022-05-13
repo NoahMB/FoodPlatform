@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    padding-top: 1%;
   }
 
   .Upcoming {
