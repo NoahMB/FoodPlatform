@@ -8,9 +8,11 @@ if (isset($_SESSION["Firstname"])) {
 echo"
 <div class='header'>
   <a href='calendaPage.php' class='logo'>KADDOO</a>
-  <div class='header-right'> 
+  <div class='header-right'>
+
   <a href='includes/logout.php'>Logout</a>
-    <a href='UserProfile.php'>Welcome, " . $id ."</a>
+  <a href='friendlist.php'>Friend List</a>
+  <a href='UserProfile.php'>Welcome, " . $id ."</a>
   </div>
 </div>";
 }
