@@ -167,6 +167,8 @@ echo $calendar->show();?>
           while ($row = $result->fetch_assoc()) {
               echo "<div class='Event'>";
               echo    "<p> ".$row['Date'] ."</p> ";
+              echo    "<a href='event.php?id=" . $row["EventsID"] . "'><h5><svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'>
+              <path stroke-linecap='round' stroke-linejoin='round' d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg></h5></a>";
               echo    "<a href='webshopRedirect.php?id=" . $row["EventsID"] . "&me=" . $_SESSION["AccountsID"] . "'><h5>". $row['Name']."</h5></a>";
               echo "</div>";
           }
@@ -308,6 +310,19 @@ if ($result->num_rows > 0) {
 </div>
 </div>
 </div>
+
+<div id="myModal1" class="modal1">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close1">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+<?php include_once 'includes/footer.php';?> 
+
 <script>
 window.onload = function () {
   document.getElementById("myForm").style.display = "none";
@@ -363,9 +378,34 @@ if (event.target == modal) {
 
 </script>
 
-  
+<script>
+// Get the modal
+var modal = document.getElementById("myModal1");
 
-<?include_once 'includes/footer.php';?> 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close1")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal1.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal1.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+</script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
