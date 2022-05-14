@@ -12,6 +12,7 @@
   text-align: center;
   font-family: arial;
   width: 28%;
+  flex: 1 1 290%;
 }
 
 .price {
