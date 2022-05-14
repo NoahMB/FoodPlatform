@@ -746,24 +746,26 @@ text-indent: 7%;
   display: flex;
   font-family: arial;
   gap: 70px;
+  background-color: #ccc;
 }
 .SearchEnginePart{
-  border-color: #ccc;
+  border-color: black;
   border: solid;
   width: 600px;
   height: 700px;
   margin-top: 20px;
   border-width: thin;
   background: rgb(247, 244, 244);
+  background-color: #21B0D4;
   margin-left: 10px;
 }
 .CardContent{
   border: solid;
   width: 980px;
   margin-top: 20px;
+  background-color: #f9f9f9;
   border-width: thin;
-  background: rgb(247, 244, 244);
-  border-color: #ccc;
+  border-color: black;
   display: flex;
   flex-wrap: wrap;
   gap: 20px 20px;
