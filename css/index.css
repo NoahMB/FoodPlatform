@@ -767,7 +767,6 @@ text-indent: 7%;
   background-color: #ccc;
 }
 .SearchEnginePart{
-  border-color: black;
   border: solid;
   width: 600px;
   height: 700px;
@@ -775,6 +774,7 @@ text-indent: 7%;
   border-width: thin;
   background: rgb(247, 244, 244);
   background-color: #21B0D4;
+  border-color: #21B0D4;
   margin-left: 10px;
 }
 .CardContent{
@@ -783,7 +783,7 @@ text-indent: 7%;
   margin-top: 20px;
   background-color: #f9f9f9;
   border-width: thin;
-  border-color: black;
+  border-color: #f9f9f9;
   display: flex;
   flex-wrap: wrap;
   gap: 20px 10px;
