@@ -254,11 +254,27 @@ input , select{
       float: none;
     }
   }
+  .EventContent{
+     background-color: whitesmoke;
+     height: 1100px;
+     display: flex;
+     justify-content: center;
+  }
   .FriendlistSection{
     background-color: whitesmoke;
     height: 1100px;
     display: flex;
     justify-content: center;
+  }
+  .EvenPageContainer{
+    margin-top: 2%;
+    border: solid;
+    border-width: thin;
+    width: 60%;
+    display: flex;
+    justify-content: start;
+    background-color: #ccc;
+    border-color: #ccc;
   }
   .FriendContent{
     margin-top: 2%;
@@ -405,7 +421,6 @@ input , select{
   border: solid;
   border-width: thin;
   height: 100%;
-  background-color: #8f6209;
 }
 
 .label {
@@ -777,6 +792,7 @@ text-indent: 7%;
   border-color: #21B0D4;
   margin-left: 10px;
 }
+
 .CardContent{
   border: solid;
   width: 980px;
@@ -791,4 +807,9 @@ text-indent: 7%;
   padding-left: 20px;
   padding-top: 20px;
 }
+.HeaderWebshop {
+  display: inline;
+  margin-left: 260px;
+}
+
 

@@ -20,6 +20,7 @@
   font-size: 22px;
 }
 
+
 .card button {
   border: none;
   outline: 0;
@@ -52,6 +53,16 @@
 <div class="AllContent">
 <div class="SearchEnginePart">
     <div class="BarPostion">
+        <br>
+            <div class="HeaderWebshop">
+                 <span class="iconify" data-icon="simple-icons:xampp" style="color: black;" data-width="50" id="IMAN"></span>
+             </div>
+            
+             <div class="HeaderWebshop">
+                 WEBSHOP
+             </div>
+        <br>
+        <br>
         <form action="includes/searchbar.php" method="post" class="search-bar">
         Search:  <input type="search" name="search" pattern=".*\S.*" required>
             <button class="search-btn" type="submit"  name="submit">
@@ -149,7 +160,7 @@ foreach ($data['items'] as $address)
 
                                 echo "<div class='card' >";
                                 echo "<img src='". $address['image'] ." 'style='height:300px'>";
-                                echo  "<p> ".$address['title'] ."</p> ";
+                                echo  "<p id = 'textSize'> ".$address['title'] ."</p> ";
                                 echo "<p>". $address['rating']."</p>";
                                 echo "<p>". $address['reviews']."</p>";
                                 echo  "<p class='price'>".$address['price'] ."</p> ";
@@ -187,4 +198,4 @@ foreach ($data['items'] as $address)
 
 </div>
 
-
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
