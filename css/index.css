@@ -254,7 +254,24 @@ input , select{
       float: none;
     }
   }
-
+  .FriendlistSection{
+    background-color: whitesmoke;
+    height: 1100px;
+    display: flex;
+    justify-content: center;
+  }
+  .FriendContent{
+    margin-top: 2%;
+    border: solid;
+    border-width: thin;
+    width: 60%;
+    background-color: #ccc;
+    border-color: #ccc;
+  }
+  table{
+    margin-top: 2%;
+    margin-left: 18%;
+  }
   .footer-basic {
     padding:40px 0;
     background-color:black;
