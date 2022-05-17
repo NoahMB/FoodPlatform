@@ -1,6 +1,5 @@
 <?php
 
-
     $servername = "ID362507_kaddoo.db.webhosting.be";
     $root = "ID362507_kaddoo";
     $password = "Ilovekaddoo123";
@@ -10,5 +9,6 @@
     if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }
+
 
 ?>
