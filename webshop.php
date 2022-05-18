@@ -1,5 +1,6 @@
 <?php include_once 'includes/header.php';?> 
     <title>webshop</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
@@ -54,14 +55,12 @@
 <div class="SearchEnginePart">
     <div class="BarPostion">
         <br>
-            <div class="HeaderWebshop">
-                 <span class="iconify" data-icon="simple-icons:xampp" style="color: black;" data-width="50" id="IMAN"></span>
-             </div>
-            
-             <div class="HeaderWebshop">
-                 WEBSHOP
-             </div>
-        <br>
+             <table class="tablecursed">
+                 <tr><td class="Icone"><span class="iconify" data-icon="simple-icons:xampp" style="color: black;" data-width="50" id="IMAN"></span></td>
+                <td>WEBSHOP</td>
+                </tr>
+
+             </table>
         <br>
         <form action="includes/searchbar.php" method="post" class="search-bar">
         Search:  <input type="search" name="search" pattern=".*\S.*" required>

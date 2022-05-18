@@ -807,9 +807,14 @@ text-indent: 7%;
   padding-left: 20px;
   padding-top: 20px;
 }
-.HeaderWebshop {
-  display: inline;
+.HeaderWebshop2 {
+  display: inline-block;
   margin-left: 260px;
 }
 
-
+.tablecursed {
+  margin-left: 240px;
+}
+.iconify{
+  padding-right: 18px;
+}
