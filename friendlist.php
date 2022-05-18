@@ -5,6 +5,11 @@ require_once 'includes/conn.php';
 
     <title>friend list</title>
 </head>
+<style>
+    table, th, td {
+  border: 1px solid black;
+}
+</style>
 <body>
     <div class="FriendlistSection">
         <div class="FriendContent">

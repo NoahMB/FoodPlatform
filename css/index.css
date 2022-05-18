@@ -271,6 +271,7 @@ input , select{
     border: solid;
     border-width: thin;
     width: 60%;
+    height: 1000px;
     display: flex;
     justify-content: start;
     background-color: #ccc;
@@ -281,6 +282,7 @@ input , select{
     border: solid;
     border-width: thin;
     width: 60%;
+    height: 1000px;
     background-color: #ccc;
     border-color: #ccc;
   }
@@ -817,4 +819,13 @@ text-indent: 7%;
 }
 .iconify{
   padding-right: 18px;
+}
+th{
+  padding-right: 25px;
+}
+
+.TextCOntent{
+  height: 250px;
+  max-height: 250px;
+  display: inline;
 }

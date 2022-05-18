@@ -159,7 +159,9 @@ foreach ($data['items'] as $address)
 
                                 echo "<div class='card' >";
                                 echo "<img src='". $address['image'] ." 'style='height:300px'>";
-                                echo  "<p id = 'textSize'> ".$address['title'] ."</p> ";
+                                echo "<div class ='TextCOntent'>";
+                                echo  "<p> ".$address['title'] ."</p> ";
+                                echo "</div>";
                                 echo "<p>". $address['rating']."</p>";
                                 echo "<p>". $address['reviews']."</p>";
                                 echo  "<p class='price'>".$address['price'] ."</p> ";
