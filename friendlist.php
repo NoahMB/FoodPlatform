@@ -8,6 +8,10 @@ require_once 'includes/conn.php';
 <style>
     table, th, td {
   border: 1px solid black;
+  
+}
+table{
+    margin-right: 30px;
 }
 </style>
 <body>

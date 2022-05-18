@@ -17,7 +17,7 @@
 }
 
 .price {
-  color: grey;
+  color: red;
   font-size: 22px;
 }
 
@@ -157,11 +157,9 @@ foreach ($data['items'] as $address)
 
                             if($rating >= $minrating){
 
-                                echo "<div class='card' >";
+                                echo "<div class='card'>";
                                 echo "<img src='". $address['image'] ." 'style='height:300px'>";
-                                echo "<div class ='TextCOntent'>";
-                                echo  "<p> ".$address['title'] ."</p> ";
-                                echo "</div>";
+                                echo  "<p title='".$address['title']."'>".substr($address['title'] , 0 , 30)."...</p>";
                                 echo "<p>". $address['rating']."</p>";
                                 echo "<p>". $address['reviews']."</p>";
                                 echo  "<p class='price'>".$address['price'] ."</p> ";
@@ -179,9 +177,9 @@ foreach ($data['items'] as $address)
             
         
         else{
-            echo "<div class='card' >";
+            echo "<div class='card'>";
                 echo "<img src='". $address['image'] ." 'style='height:300px'>";
-                echo  "<p> ".$address['title'] ."</p> ";
+                echo  "<p  title='".$address['title']."'>".substr($address['title'] , 0 , 30)."...</p>";
                 echo "<p>". $address['rating']."</p>";
                 echo "<p>". $address['reviews']."</p>";
                 echo  "<p class='price'>".$address['price'] ."</p> ";
