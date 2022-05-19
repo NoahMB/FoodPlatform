@@ -428,11 +428,10 @@ input , select{
   border: solid;
   border-width: thin;
   height: 100%;
-  background-color: rgb(13, 13, 43);
-  color: rgba(255, 255, 255, 0.821);
+  background-color: rgba(211, 211, 211, 0.575);
 }
 .datecell:hover{
-  background-color: grey;
+  background-color: rgb(12, 12, 52);
 }
 
 .label {
