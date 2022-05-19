@@ -262,7 +262,7 @@ input , select{
   }
   .FriendlistSection{
     background-color: whitesmoke;
-    height: 1100px;
+    height: 1500px;
     display: flex;
     justify-content: center;
   }
@@ -281,8 +281,9 @@ input , select{
     margin-top: 2%;
     border: solid;
     border-width: thin;
-    width: 60%;
-    height: 1000px;
+    border-radius: 10px;
+    width: 70%;
+    height: 1400px;
     background-color: #ccc;
     border-color: #ccc;
   }

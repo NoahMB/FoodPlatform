@@ -1,6 +1,6 @@
 <?php include_once 'includes/header.php'; ?>
     
-    <title>Kaddoo For Birthdays</title>
+    <title>Events</title>
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
