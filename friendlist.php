@@ -14,6 +14,10 @@ require_once 'includes/conn.php';
 table{
     margin: 0 auto;
 }
+th{
+background-color: #000;
+color: white;
+}
 th, td {
   padding-top: 10px;
   padding-bottom: 20px;
