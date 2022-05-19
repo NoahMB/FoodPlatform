@@ -431,6 +431,9 @@ input , select{
   background-color: rgb(13, 13, 43);
   color: rgba(255, 255, 255, 0.821);
 }
+.datecell:hover{
+  background-color: grey;
+}
 
 .label {
   margin-top: 10px;
