@@ -254,6 +254,11 @@ input , select{
       float: none;
     }
   }
+  .Event{
+    background-color: #ccc;
+    border-color: #ccc;
+  }
+
   .EventContent{
      background-color: whitesmoke;
      height: 1100px;
@@ -423,6 +428,8 @@ input , select{
   border: solid;
   border-width: thin;
   height: 100%;
+  background-color: rgb(13, 13, 43);
+  color: rgba(255, 255, 255, 0.821);
 }
 
 .label {
@@ -468,6 +475,7 @@ input , select{
   margin-top: 13px;
   border-top-left-radius: 2.5%;
   border-top-right-radius: 2.5%;
+
 }
 h1{
   text-align: center;
