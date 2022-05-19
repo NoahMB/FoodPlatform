@@ -271,9 +271,8 @@ input , select{
     border: solid;
     border-width: thin;
     width: 60%;
+    border-radius: 10px;
     height: 1000px;
-    display: flex;
-    justify-content: start;
     background-color: #ccc;
     border-color: #ccc;
   }
