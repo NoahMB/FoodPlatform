@@ -55,12 +55,6 @@
 <div class="SearchEnginePart">
     <div class="BarPostion">
         <br>
-             <table class="tablecursed">
-                 <tr><td class="Icone"><span class="iconify" data-icon="simple-icons:xampp" style="color: orange;" data-width="50" id="IMAN"></span></td>
-                <td>WEBSHOP</td>
-                </tr>
-
-             </table>
         <br>
         <form action="includes/searchbar.php" method="post" class="search-bar">
         Search:  <input type="search" name="search" pattern=".*\S.*" required>
