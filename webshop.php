@@ -56,7 +56,7 @@
     <div class="BarPostion">
         <br>
              <table class="tablecursed">
-                 <tr><td class="Icone"><span class="iconify" data-icon="simple-icons:xampp" style="color: black;" data-width="50" id="IMAN"></span></td>
+                 <tr><td class="Icone"><span class="iconify" data-icon="simple-icons:xampp" style="color: orange;" data-width="50" id="IMAN"></span></td>
                 <td>WEBSHOP</td>
                 </tr>
 
