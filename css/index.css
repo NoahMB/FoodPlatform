@@ -800,9 +800,11 @@ text-indent: 7%;
   margin-top: 20px;
   border-width: thin;
   background: rgb(247, 244, 244);
-  background-color: #21B0D4;
-  border-color: #21B0D4;
+  background-color: #063540;
+  border-color: #082830;
   margin-left: 10px;
+  color: white;
+  font-weight:thick;
 }
 
 .CardContent{
