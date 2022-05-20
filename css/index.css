@@ -431,7 +431,7 @@ input , select{
   background-color: rgba(211, 211, 211, 0.575);
 }
 .datecell:hover{
-  background-color: rgb(12, 12, 52);
+  background-color: whitesmoke;
 }
 
 .label {
