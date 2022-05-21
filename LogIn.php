@@ -1,5 +1,6 @@
 <?php include_once 'includes/header.php';?>
     <title>Kaddoo log in</title>
+    <link rel="shortcut icon" type="icon" href ="Image/FavIconLogin.ico">
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
