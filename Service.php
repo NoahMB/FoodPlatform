@@ -50,11 +50,26 @@
             <p>
                 All user can also visit his/her profile page, this can be done by clicking on the (welcome,username) button on the to left hand corner. here the user would see brief info about his/her self.
             </p> 
+            <h3 >
+                Step 5 
+            </h3>
+            <p>
+                In other to add friends birthday/event, our users can click on the modal button(+ button) on the top right hand corner, a pop up will show were user can add these. these even will then appear on the calendar and upcoming events
+            </p> 
+            <h3 >
+                Step 6
+            </h3>
+            <p>
+               User also has the ability of editing friends/ deleting them through the friend list button. Also User can see all events on the event button.
+            </p>  
+            <h3 >
+                Step 7
+            </h3>
+            <p>
+                In other to buy gifts for your friends / love ones, our user can click on their friends name or event and it will lead you to the web shop page where our user can buy things for love ones.
+            </p> 
             <br>
             <br>
-            <br>
-            <br>
-            <br>  
           </div>
     
       </div>

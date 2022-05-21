@@ -49,11 +49,12 @@ body{
   background-color: rgba(245, 245, 245, 0.829);
 }
 .AboutUsContent{
-    height: 1000px;
+    height: 1200px;
     width: 1000px;
-    border-radius: 10%;
+    border-radius: 2%;
     border: solid;
     background-color: #ccc;
+    border-color: #ccc;
    
 }
 .contentPassword{
