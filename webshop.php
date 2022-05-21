@@ -1,6 +1,7 @@
 <?php include_once 'includes/header.php';?> 
     <title>webshop</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <link rel="shortcut icon" type="icon" href =“Image/favicon.ico”>
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
