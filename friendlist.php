@@ -4,6 +4,7 @@ require_once 'includes/conn.php';
 ?> 
 
     <title>friend list</title>
+    <link rel="shortcut icon" type="icon" href ="Image/FriendList.ico">
 </head>
 <style>
     table, th, td {
