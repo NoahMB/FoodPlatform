@@ -1,6 +1,7 @@
 <?php include_once 'includes/header.php'; ?>
     
     <title>Kaddoo For Birthdays</title>
+    <link rel="shortcut icon" type="icon" href ="Image/Home.ico">
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
