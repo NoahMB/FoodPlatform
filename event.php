@@ -1,6 +1,7 @@
 <?php include_once 'includes/header.php'; ?>
     
     <title>Events</title>
+      <link rel="shortcut icon" type="icon" href ="Image/Event.ico">
     <link type="image/png" sizes="16x16" rel="icon" href=".../icons8-shopping-cart-16.png">
 </head>
 <style>
