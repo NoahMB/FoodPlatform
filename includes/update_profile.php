@@ -14,7 +14,7 @@ require_once 'conn.php';
 $sql = "UPDATE accounts SET Firstname = '".$name."', LastName = '".$LastName."', Email = '".$Email."',Birthdate = '".$Birthday."', PhoneNr = '".$PhoneNr."', Gender = '".$Gender."' WHERE AccountsID = ".$AccountsID."";
 echo $sql;
 $result = mysqli_query($conn, $sql);
-//header("location: ../UserProfile.php");
+header("location: ../UserProfile.php");
 }
 
  ?>
