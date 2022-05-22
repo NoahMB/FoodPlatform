@@ -208,9 +208,21 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<div class='card'>";
                 echo "<img src='". $row['Img'] ." 'style='height:300px'>";
-                echo  "<p  title='".$row['Title']."'>".substr($row['Title'] , 0 , 30)."...</p>";
-                echo "<p>". $row['Rating']."</p>";
-                echo "<p>". $row['Reviews']."</p>";
+                echo  "<p  title='".$row['Title']."'>".substr($row['Title'] , 0 , 25)."...</p>";
+
+                if(empty($row['Rating'])) {
+                    echo "No Data Available..."; echo '<br>'; echo '<br>';
+                  }
+                  else{
+                    echo "<p>". $row['Rating']."</p>";
+                  }
+
+                  if(empty($row['Reviews'])) {
+                    echo "No Data Available...";echo '<br>';echo '<br>';
+                  }
+                  else{
+                    echo "<p>". $row['Reviews']."</p>"; 
+                  }
                 echo  "<p class='price'>$".$row['Price'] ."</p> ";
                 
                 echo"<p><a href='https://www.amazon.com" . $row['URL']. "' target = '_blank'><button>Buy</button></a></p></div></br>";
