@@ -96,7 +96,7 @@
 
 <div class="CardContent">
 <?php
-$path = "includes/Python/output.json";
+/* $path = "includes/Python/output.json";
 $json = file_get_contents($path, true);
 $data = json_decode($json, true);
 $pricelist = [];
@@ -174,7 +174,26 @@ foreach ($data['products'] as $address)
     }
     }
 
-};
+}; */
+
+$sql    = "SELECT * FROM `products` WHERE `Search_Url` IN 
+(SELECT `Interests` FROM `interests` WHERE `InterestsID` IN (SELECT `InterestsID` FROM `friendsinterests` WHERE `FriendsID` IN 
+(SELECT `FriendsID` FROM `events` WHERE `EventsID` = " . $_GET["id"] . ")))";
+
+$result = mysqli_query($conn, $sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo "<div class='card'>";
+                echo "<img src='". $row['Img'] ." 'style='height:300px'>";
+                echo  "<p  title='".$row['Title']."'>".substr($row['Title'] , 0 , 30)."...</p>";
+                echo "<p>". $row['Rating']."</p>";
+                echo "<p>". $row['Reviews']."</p>";
+                echo  "<p class='price'>".$row['Price'] ."</p> ";
+                
+                echo"<p><a href='https://www.amazon.com" . $row['URL']. "' target = '_blank'><button>Buy</button></a></p></div></br>";
+    }
+} 
 ?>
 
 </div>
