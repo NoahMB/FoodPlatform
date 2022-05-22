@@ -70,3 +70,15 @@ create table likedgifts(
     primary key(LikedGiftsID)
 );
 
+create table products(
+	ProductsID int NOT NULL AUTO_INCREMENT,
+    Title varchar(100) NOT NULL,
+    Img varchar(100) NOT NULL,
+    URL varchar(100) NOT NULL,
+    Rating varchar(100) NOT NULL,
+    Reviews varchar(100) NOT NULL,
+    Price varchar(100) NOT NULL,
+    Search_Url varchar(100) NOT NULL,
+    primary key(ProductsID)
+);
+

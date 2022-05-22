@@ -138,6 +138,16 @@
     background-color: lightgrey;
   }
 
+  .eventInfoButton {
+    float: left;
+    width: 5%;
+  }
+
+  .eventDate {
+    width: 95%;
+    float: left;
+  }
+
 </style>
  
   <?php include_once 'includes/nav.php';
@@ -167,8 +177,8 @@ echo $calendar->show();?>
       if ($result->num_rows > 0) {
           while ($row = $result->fetch_assoc()) {
               echo "<div class='Event'>";
-              echo    "<p> ".$row['Date'] ."</p> ";
-              echo    "<a href='event.php?id=" . $row["EventsID"] . "'><h5><svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'>
+              echo    "<p class='eventDate'> ".$row['Date'] ."</p> ";
+              echo    "<a class='eventInfoButton' href='event.php?id=" . $row["EventsID"] . "'><h5><svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'>
               <path stroke-linecap='round' stroke-linejoin='round' d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' /></svg></h5></a>";
               echo    "<a href='webshopRedirect.php?id=" . $row["EventsID"] . "&me=" . $_SESSION["AccountsID"] . "'><h5>". $row['Name']."</h5></a>";
               echo "</div>";

@@ -5,6 +5,7 @@ import urllib3
 http = urllib3.PoolManager()
 import sys
 import nltk
+import subprocess
 
 # Create an Extractor by reading from the YAML file
 e = Extractor.from_yaml_file('includes/Python/search_results.yml')
@@ -38,13 +39,13 @@ def scrape(url):
 
 id = sys.argv[1]
 
-urlName = "includes/Python/" + str(id) + "_urls.txt"
-outputName = "includes/Python/" + str(id) + "_output.json"
+urlName = "urls.txt"
+outputName = "output.json"
 
 # product_data = []
 with open(urlName,'r') as urllist, open(outputName,'w') as outfile:
     outfile.write("{\n")
-    outfile.write("\"items\": [\n")
+    outfile.write("\"products\": [\n")
     for url in urllist.read().splitlines():
         data = scrape(url) 
         if data:
@@ -57,3 +58,5 @@ with open(urlName,'r') as urllist, open(outputName,'w') as outfile:
                 # sleep(5)
     outfile.write("]\n")
     outfile.write("}")
+
+subprocess.call("php toDB.php")
