@@ -66,12 +66,12 @@
 <div class="FilterContent">
     <div class="pricefilter">
         <p>MAX PRICE:</p>
-        <input type="number" name="max" id="max" min="1" max="10000">
+        <input type="number" name="max" id="max" min="0" max="10000" value="<?php echo $_POST["max"] ?>">
         
         </div>
         <div class="ratingfilter">
         <p>MIN RATING:</p>
-        <input type="number" name="min" id="min" min="1" max="5">
+        <input type="number" name="min" id="min" min="0" max="5" value="<?php echo $_POST["min"] ?>">
     
     </div>
 </div>
@@ -80,8 +80,16 @@
     <div class="orderbyfilter">
         <p>ORDER BY:</p>
         <select name="order" id="order">
-        <option value="DESC" name="descending" id="descending">price descending</option>
-        <option value="ASC" name="ascending" id="ascending">price ascending</option>
+            <?php 
+                if ($_POST["order"] == "DESC") {
+                    echo "<option value='DESC' name='descending' id='descending' selected>price descending</option>
+                        <option value='ASC' name='ascending' id='ascending'>price ascending</option>";
+                }
+                else {
+                    echo "<option value='DESC' name='descending' id='descending'>price descending</option>
+                    <option value='ASC' name='ascending' id='ascending' selected>price ascending</option>";
+                }
+            ?>
         </select>
     </div>
 </div>
