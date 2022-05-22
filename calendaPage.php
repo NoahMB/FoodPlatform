@@ -152,6 +152,36 @@
  
   <?php include_once 'includes/nav.php';
   ?>
+
+<?php
+  $sql = "SELECT * FROM `events` WHERE `FriendsID` IN 
+  (SELECT `FriendsID` FROM `friends` WHERE `AccountsID` = " . $_SESSION["AccountsID"] . ") AND Date <= NOW()";
+
+  $result = mysqli_query($conn, $sql);
+      
+  if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+      $sql2 = "SELECT Firstname, Lastname from friends where FriendsID = " . $row["FriendsID"];
+      $result2 = mysqli_query($conn, $sql2);
+      $row2 = $result2->fetch_assoc();
+      if ($row["Name"] == $row2["Firstname"] . " " . $row2["Lastname"] . " Birthday") {
+        $sql4 = "SELECT * FROM `events` WHERE `Name` = '" . $row2["Firstname"] . " " . $row2["Lastname"] . " Birthday' AND Date >= NOW()";
+        $result4 = mysqli_query($conn, $sql4);
+        if ($result4->num_rows == 0) {
+          $eventname = $row2["Firstname"] ." ". $row2["Lastname"] . " Birthday";
+          $year = date("Y", strtotime(date('Y-m-d'). ' + 1 year')) ;
+          $month = date("m",strtotime($row['Date']));
+          $day = date("d", strtotime($row['Date']));
+          $date = $year ."-". $month."-". $day;
+
+          $sql3 = "INSERT INTO events (Name, Date, FriendsID) Values ('".$eventname."','".$date."',".$row['FriendsID'].")";
+          echo $sql3;
+          mysqli_query($conn , $sql3);
+        }
+      }
+    }
+  }
+?>
 <div class="CalendarContainer">
     <div class="calendarContent">
 
@@ -170,7 +200,7 @@ echo $calendar->show();?>
   <div class="List">
     <?php 
       $sql    = "SELECT * FROM `events` WHERE `FriendsID` IN 
-      (SELECT `FriendsID` FROM `friends` WHERE `AccountsID` = " . $_SESSION["AccountsID"] . ") AND Date >= NOW() ORDER BY `Date` ASC";
+      (SELECT `FriendsID` FROM `friends` WHERE `AccountsID` = " . $_SESSION["AccountsID"] . ") AND Date BETWEEN NOW() AND DATE(NOW() + INTERVAL 6 MONTH) ORDER BY `Date` ASC";
 
       $result = mysqli_query($conn, $sql);
       
