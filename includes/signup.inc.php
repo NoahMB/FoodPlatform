@@ -44,10 +44,7 @@ if(uidExists($conn, $email) !== false){
  }
 
  createUser($conn, $name, $phonenumber, $email, $pwd, $gender, $birthday, $LastName);
-/* todo: */
-// na het maken van een bedrijf kom je uit op een pagina waar je een account aanmaakt
-// create createBedrijf() function
-// edit createUser(), add fldBedrijfID parameter (fldBedrijfID = $new_id = createBedrijf())
+
 }
 else{
     header("location: ../signup.php?error=none");

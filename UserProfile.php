@@ -43,121 +43,73 @@
         <?php
                 ?>
         <div class="outer">
-            <div class="inner">
-                <figure class ="card">
-                 <figcaption>
-                <?php
-                $sql = "SELECT Lastname FROM `accounts` WHERE Firstname = '$id'";
+            
                 
-                $result = mysqli_query($conn, $sql)->fetch_all(MYSQLI_ASSOC);
-
-
-                foreach($result as $persons){
-                    $FamilyNAME =  $persons["Lastname"];
-
-                    echo"
-                    <div class='UserData'>
-                        Family Name :   " . $FamilyNAME ."
-                    </div>"; 
-                
-                }
-
-
-                $sql_Bday = "SELECT Birthdate FROM `accounts` WHERE Firstname = '$id'";
-                
-                $result_bday = mysqli_query($conn, $sql_Bday)->fetch_all(MYSQLI_ASSOC);
-
-
-                foreach($result_bday  as $persons_bday){
-                    $UserBirthdate =  $persons_bday["Birthdate"];
-
-                    echo"
-                    <div class='UserData'>
-                        Your Birthday :   " . $UserBirthdate ."
-                    </div>"; 
-                
-                }    
-
-                $sql_Gender = "SELECT Gender FROM `accounts` WHERE Firstname = '$id'";
-                
-                $result_Gender = mysqli_query($conn, $sql_Gender)->fetch_all(MYSQLI_ASSOC);
-
-
-                foreach( $result_Gender as $persons_Gender){
-                    $UserGender =  $persons_Gender["Gender"];
-
-                    echo"
-                    <div class='UserData'>
-                        Gender :   ". $UserGender."
-                    </div>"; 
-                
-                } 
-
-               
-
-                $sql_Email = "SELECT Email FROM `accounts` WHERE Firstname = '$id'";
-                
-                $result_Email = mysqli_query($conn, $sql_Email)->fetch_all(MYSQLI_ASSOC);
-
-
-                foreach($result_Email  as $persons_Email){
-
-                    $UserEmail =  $persons_Email["Email"];
-
-                    echo"
-                    <div class='UserData'>
-                        Contact(Email) :   " . $UserEmail."
-                    </div>"; 
-                
-                } 
-
-            ?>
-                 </figcaption>
-         </figure>
-     </div>
+                 <?php 
+        $sql = "SELECT * FROM accounts WHERE AccountsID = " . $_SESSION["AccountsID"];
+$result = mysqli_query($conn, $sql);
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) { 
+        echo "<form action='includes/update_profile.php ' method ='POST'>
+            <label for='FirstName'>
+            </label>
+            <br>
+            <input type='text' name='FirstName' id='FirstName' value=" . $row["Firstname"] ." >
+            
+             
+            <br>";
+        echo "
+            <label for='LastName'>
+            </label>
+            <br>
+            <input type='text' name='LastName' id='LastName' value=" . $row["LastName"] ." >
+            
+              
+            <br>";
+        echo "
+            <label for='Email'>
+            </label>
+            <br>
+            <input type='mail' name='Email' id='Email' value=" . $row["Email"] ." >
+            
+              
+            <br>";
+        echo "
+            <label for='Birthday'>
+            </label>
+            <br>
+            <input type='date' name='Birthday' id='Birthday' value=" . $row["Birthdate"] ." >
+            
+              
+            <br>";
+        echo "
+            <label for='PhoneNr'>
+            </label>
+            <br>
+            <input type='text' name='PhoneNr' id='PhoneNr' value=" . $row["PhoneNr"] ." >
+            
+              
+            <br>";
+        echo "
+            <label for='Gender'>
+            </label>
+            <br>
+            <input type='text' name='Gender' id='Gender' value=" . $row["Gender"] ." >
+            <br>
+            <br>
+            <button type='submit' name='submit' id='submit'>edit</button>
+            </form>   
+            <br>";
+        }
+    }
+        
+        ?>
+     
   </div>           
             <?php
         
         ?>
-        <br>
-        <br>
-        <div class= "ReminderContent">
-            <div class = "ReminderDetails">
-
-                <div class="dropdown">
-                  <span> REMINDER TIME : </span> 
-                  <br>
-                  <br>     
-                    <button class="dropbtn">One Week</button>
-                    <div class="dropdown-content">
-                    <a href="#">Two Week </a>
-                    <a href="#">Three Week</a>
-                    <a href="#">Four Week</a>
-                    </div>
-                 </div>
-            </div>
-
-
-            <div class = "UpdateDetials">
-                <a href="password.php">RESET PASSWORD</a>
-                <br>
-                <br>
-                UPDATE
-            </div>
-            
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-   </div>
+       
 
         
    <script src="index.js">
