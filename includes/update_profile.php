@@ -6,7 +6,7 @@ $LastName = $_POST["LastName"];
 $Email = $_POST["Email"];
 $Birthday = $_POST["Birthday"];
 $PhoneNr = $_POST["PhoneNr"];
-$Gender = $_POST["Gender"];
+$Gender = $_POST["gender"];
 $AccountsID = $_SESSION["AccountsID"];
 require_once 'conn.php';
 

@@ -94,7 +94,28 @@ if ($result->num_rows > 0) {
             <label for='Gender'>
             </label>
             <br>
-            <input type='text' name='Gender' id='Gender' value=" . $row["Gender"] ." >
+            <select name='gender' id='gender' >";
+            if($row["Gender"] == "male"){
+              echo"  <option value='male'selected>
+                Male
+            </option>
+            <option value='female'>
+                Female
+            </option>";
+            }
+            else{
+            
+                echo"  <option value='male'>
+                Male
+            </option>
+            <option value='female'selected>
+                Female
+            </option>";
+            
+            
+            }
+                    
+               echo" </select>
             <br>
             <br>
             <button type='submit' name='submit' id='submit'>edit</button>
