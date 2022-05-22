@@ -55,8 +55,9 @@
 <div class="AllContent">
 <div class="SearchEnginePart">
 <br>
-<br>
-<br>
+<div id="WebshopHeader">
+    <p>WEBSHOP</p> 
+</div>
 <br>
 <br>
 <div class="filters">
@@ -93,6 +94,7 @@
         </select>
     </div>
 </div>
+<br>
 <br>
 <br>
 <br>
