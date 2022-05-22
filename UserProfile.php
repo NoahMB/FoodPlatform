@@ -19,20 +19,21 @@
                 $result_Gender = mysqli_query($conn, $sql_Gender)->fetch_all(MYSQLI_ASSOC);
                 ?>
                     <div class = "ContentUser">
-                          <div class = "image">
-                    
-                      <div>
+                        <div class = "image">
                             <div class="profile-pic">
-                              <label class="-label" for="file">
-                             <span class="glyphicon glyphicon-camera"></span>
-                          <span>Change Image</span>
-                         </label>
-                             <input id="file" type="file" onchange="loadFile(event)"/>
-                             <img src="Image/male.png" id="output" width="200" />
-                     </div>
-                      </div>
+                                <?php
+                                    $sql = "SELECT PfP FROM accounts WHERE AccountsID = ". $_SESSION["AccountsID"];
+                                    $result = mysqli_query($conn , $sql);
+                                    $row = mysqli_fetch_array($result);
+                                    if (empty($row["PfP"])) {
+                                        echo "<img src='Image/male.png' width='200' />";
+                                    } else {
+                                        echo "<img src='Image/profilePictures/" . $row["PfP"] . "' width='200' />";
+                                    }
+                                ?>
+                             </div>
                           </div>
-                  </div>   
+                    </div>   
              <?php
                 ?>
     
@@ -50,7 +51,7 @@
 $result = mysqli_query($conn, $sql);
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) { 
-        echo "<form action='includes/update_profile.php ' method ='POST'>
+        echo "<form action='includes/update_profile.php' method ='POST' enctype='multipart/form-data'>
             <label for='FirstName'>
             </label>
             <br>
@@ -114,6 +115,15 @@ if ($result->num_rows > 0) {
             
             
             }
+
+            echo "
+            <label for='PFpicture'>
+            </label>
+            <br>
+            <input class='formpos' type='file' name='uploadfile' accept='image/png, image/jpeg' value='". $row["PfP"] ."'>
+            
+              
+            <br>";
                     
                echo" </select>
             <br>
