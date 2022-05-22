@@ -246,6 +246,7 @@ if ($result->num_rows > 0) {
 ?>
               </select>
 <br>
+<br>
   <button type="submit" name="submit" id="submit" class="btn">ADD</button>
   <br>
   <br>
@@ -289,6 +290,7 @@ if ($result->num_rows > 0) {
   <br>
   <input type="date" id="eventdate" name="eventdate"value="">
  
+<br>
 <br>
   <button type="submit" name="submit" id="submit" class="btn">ADD</button>
   <br>
