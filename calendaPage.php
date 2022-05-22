@@ -170,7 +170,7 @@ echo $calendar->show();?>
   <div class="List">
     <?php 
       $sql    = "SELECT * FROM `events` WHERE `FriendsID` IN 
-      (SELECT `FriendsID` FROM `friends` WHERE `AccountsID` = " . $_SESSION["AccountsID"] . ") ORDER BY `Date` ASC";
+      (SELECT `FriendsID` FROM `friends` WHERE `AccountsID` = " . $_SESSION["AccountsID"] . ") AND Date >= NOW() ORDER BY `Date` ASC";
 
       $result = mysqli_query($conn, $sql);
       

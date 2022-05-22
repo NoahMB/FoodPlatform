@@ -77,7 +77,7 @@ create table products(
     URL varchar(100) NOT NULL,
     Rating varchar(100) NOT NULL,
     Reviews varchar(100) NOT NULL,
-    Price varchar(100) NOT NULL,
+    Price double NOT NULL,
     Search_Url varchar(100) NOT NULL,
     primary key(ProductsID)
 );

@@ -61,17 +61,17 @@
 <br>
 <div class="filters">
 
-<form id="myFunction">
+<form id="myFunction" method="POST">
 
 <div class="FilterContent">
     <div class="pricefilter">
         <p>MAX PRICE:</p>
-        <input type="number" name="max" id="max" min="1" max="10000" value="50">
+        <input type="number" name="max" id="max" min="1" max="10000">
         
         </div>
         <div class="ratingfilter">
         <p>MIN RATING:</p>
-        <input type="number" name="min" id="min" min="1" max="5" value="3">
+        <input type="number" name="min" id="min" min="1" max="5">
     
     </div>
 </div>
@@ -80,8 +80,8 @@
     <div class="orderbyfilter">
         <p>ORDER BY:</p>
         <select name="order" id="order">
-        <option value="descending" name="descending" id="descending">price descending</option>
-        <option value="ascending" name="ascending" id="ascending">price ascending</option>
+        <option value="DESC" name="descending" id="descending">price descending</option>
+        <option value="ASC" name="ascending" id="ascending">price ascending</option>
         </select>
     </div>
 </div>
@@ -89,7 +89,7 @@
 <br>
 <br>
     <div class="submit">
-        <input type="submit" value="Submit" >
+        <input type="submit" value="Submit" name="submit">
     </div>
 </form>
 </div>
@@ -178,7 +178,19 @@ foreach ($data['products'] as $address)
 
 $sql    = "SELECT * FROM `products` WHERE `Search_Url` IN 
 (SELECT `Interests` FROM `interests` WHERE `InterestsID` IN (SELECT `InterestsID` FROM `friendsinterests` WHERE `FriendsID` IN 
-(SELECT `FriendsID` FROM `events` WHERE `EventsID` = " . $_GET["id"] . ")))";
+(SELECT `FriendsID` FROM `events` WHERE `EventsID` = " . $_GET["id"] . "))) AND Price >= 1";
+
+if (isset($_POST["submit"])) {
+    if (!empty($_POST["max"])) { 
+        $sql = $sql . " AND Price <= " . $_POST["max"];
+    }
+    if (!empty($_POST["min"])) {
+        $sql = $sql . " AND Rating >= " . $_POST["min"];
+    }
+    if (!empty($_POST["order"])) {
+        $sql = $sql . " Order By Price " . $_POST["order"];
+    }
+}
 
 $result = mysqli_query($conn, $sql);
 
@@ -189,7 +201,7 @@ if ($result->num_rows > 0) {
                 echo  "<p  title='".$row['Title']."'>".substr($row['Title'] , 0 , 30)."...</p>";
                 echo "<p>". $row['Rating']."</p>";
                 echo "<p>". $row['Reviews']."</p>";
-                echo  "<p class='price'>".$row['Price'] ."</p> ";
+                echo  "<p class='price'>$".$row['Price'] ."</p> ";
                 
                 echo"<p><a href='https://www.amazon.com" . $row['URL']. "' target = '_blank'><button>Buy</button></a></p></div></br>";
     }
@@ -202,3 +214,5 @@ if ($result->num_rows > 0) {
 </div>
 
 <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+<?php include_once 'includes/footer.php';?> 
