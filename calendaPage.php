@@ -249,29 +249,8 @@ if ($result->num_rows > 0) {
   <button type="submit" name="submit" id="submit" class="btn">ADD</button>
   <br>
   <br>
-  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
 </form>
 </div>
-<!-- 
-
-
-
-
-
-
-
-
-add event
-
-
-
-
-
-
-
-
--->
-
 
 <div class="form-popup" id="eventform">
 <form action="includes/events.php"  method="POST" class="form-container">
@@ -314,7 +293,6 @@ if ($result->num_rows > 0) {
   <button type="submit" name="submit" id="submit" class="btn">ADD</button>
   <br>
   <br>
-  <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
 </form>
 </div>
 </div>
@@ -334,6 +312,7 @@ window.onload = function () {
 
 function openForm() {
 document.getElementById("myForm").style.display = "block";
+document.getElementById("eventform").style.display = "none";
 }
 
 function closeForm() {
@@ -342,6 +321,7 @@ document.getElementById("myForm").style.display = "none";
 
 function openForm1() {
 document.getElementById("eventform").style.display = "block";
+document.getElementById("myForm").style.display = "none";
 }
 function closeForm1() {
 document.getElementById("eventform").style.display = "none";
