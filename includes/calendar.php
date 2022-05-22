@@ -118,7 +118,7 @@ class Calendar {
                 $cellContent = $cellContent . "<div class='dayContent'>";
 
                 while($row = $result->fetch_assoc()) { 
-                    $_SESSION["URL"] = "webshopRedirect.php?id=" . $row["EventsID"] . "&me=" . $_SESSION["AccountsID"];
+                    $_SESSION["URL"] = "webshop.php?id=" . $row["EventsID"];
                     $cellContent = $cellContent . "<p><a href='" . $_SESSION["URL"] . "'>" . $row["Name"] . "</a></p>";
                 }
 

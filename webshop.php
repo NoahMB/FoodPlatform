@@ -54,16 +54,6 @@
 
 <div class="AllContent">
 <div class="SearchEnginePart">
-    <div class="BarPostion">
-        <br>
-        <br>
-        <form action="includes/searchbar.php" method="post" class="search-bar">
-        Search:  <input type="search" name="search" pattern=".*\S.*" required>
-            <button class="search-btn" type="submit"  name="submit">
-                <span>Search</span>
-            </button>
-        </form>
-    </div>
 <br>
 <br>
 <br>
@@ -106,13 +96,13 @@
 
 <div class="CardContent">
 <?php
-$path = "includes/Python/". $_SESSION["AccountsID"]."_output.json";
+$path = "includes/Python/output.json";
 $json = file_get_contents($path, true);
 $data = json_decode($json, true);
 $pricelist = [];
 if (isset($_GET["order"])) {
     $order = $_GET['order'];
-    foreach ($data['items'] as $address)
+    foreach ($data['products'] as $address)
         {
             $price = str_replace(",","",$address['price']);
             $price = str_replace("$","",$price);
@@ -128,7 +118,7 @@ if (isset($_GET["order"])) {
     }
 
 }
-foreach ($data['items'] as $address)
+foreach ($data['products'] as $address)
 {
     $price = str_replace(",","",$address['price']);
     $price = str_replace("$","",$price);

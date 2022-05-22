@@ -56,7 +56,7 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
             while ($row = $result->fetch_assoc()) {
 
                 echo "<tr>";
-                echo   "<td>"  . "<a href='webshopRedirect.php?id=" . $row["EventsID"] . "&me=" . $_SESSION["AccountsID"] . "'><h5>". $row['Name']."</h5></a>" . "</td>";
+                echo   "<td>"  . "<a href='webshop.php?id=" . $row["EventsID"] . "'><h5>". $row['Name']."</h5></a>" . "</td>";
                 echo   "<td>" .$row['Date'] . "</td>";
                 echo   "<td>" .$row['GetReminder']. "</td>";
                 echo   "<td>" .$row['GiftBought'] . "</td>";
