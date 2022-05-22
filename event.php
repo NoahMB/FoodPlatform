@@ -4,33 +4,6 @@
       <link rel="shortcut icon" type="icon" href ="Image/Event.ico">
     <link type="image/png" sizes="16x16" rel="icon" href=".../icons8-shopping-cart-16.png">
 </head>
-<style>
-    table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-
-}
-table{
-    margin: 0 auto;
-}
-th{
-background-color: #000;
-color: white;
-}
-th, td {
-  padding-top: 10px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 40px;
-}
-table { border-collapse: separate; }
-td { border: solid 1px #000; }
-tr:first-child td:first-child { border-top-left-radius: 10px; }
-tr:first-child td:last-child { border-top-right-radius: 10px; }
-tr:last-child td:first-child { border-bottom-left-radius: 10px; }
-tr:last-child td:last-child { border-bottom-right-radius: 10px; }
-
-</style>
 <body>
 <?php include_once 'includes/nav.php';?>
 <div class="EventContent">
