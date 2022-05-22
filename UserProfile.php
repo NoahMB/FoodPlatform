@@ -94,8 +94,8 @@ if ($result->num_rows > 0) {
             <label for='Gender'>
             </label>
             <br>
-            <select name='gender' id='gender' value=" . $row["Gender"] .">";
-            if($row["Gender"] == "Male"){
+            <select name='gender' id='gender' >";
+            if($row["Gender"] == "male"){
               echo"  <option value='male'selected>
                 Male
             </option>
