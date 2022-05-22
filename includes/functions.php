@@ -146,11 +146,10 @@ function AddFriend($conn, $name, $LastName, $birthday, $interest, $id)
     $resultMax = mysqli_query($conn , $sqlMaxID);
     $rowMax = mysqli_fetch_array($resultMax);
 
-    
-
-    $sql2 = "INSERT INTO friendsinterests (FriendsID, InterestsID) VALUES (".$rowMax['FriendsID']."," .$interest. ")";
-    mysqli_query($conn , $sql2);
-    
+    foreach ($interest as $int) {
+        $sql2 = "INSERT INTO friendsinterests (FriendsID, InterestsID) VALUES (".$rowMax['FriendsID']."," .$int. ")";
+        mysqli_query($conn , $sql2);
+    }
 
     $eventname = $name ." ". $LastName. " Birthday";
     $year = date("Y");

@@ -229,7 +229,7 @@ echo $calendar->show();?>
                   Interest
               </label>
               <br>
-              <select name="interest" id="interest">
+              <select name="interest[]" id="interest" multiple>
               <?php
 $sql    = "SELECT * FROM interests";
 

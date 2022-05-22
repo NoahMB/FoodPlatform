@@ -5,9 +5,7 @@ if (isset($_POST["submit"])) {
 $name = $_POST["Firstname"];
 $LastName = $_POST["LastName"];
 $birthday = $_POST["Bday"];
-$interest = $_POST["interest"];
-
-  
+$interest = $_POST["interest"];  
 
 require_once 'conn.php';
 require_once 'functions.php';
