@@ -63,7 +63,7 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
                             $result2= mysqli_query($conn , $sql2);
                             echo   "<td>";
                             while ($row2 = $result2->fetch_assoc()) {
-                                 echo $row2['Interests'] ; echo '<br>';
+                                 echo $row2['Interests'] ; echo '<br>';echo '<br>';
                             }
                             "</td>";
                     echo"<td><a href=''><svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'>
