@@ -81,7 +81,7 @@
             <br>
             <br>
         </form>
-        <p> <strong>Have an Account Already? </strong> <a href="Login.php">LOG IN NOW</a> </p>
+        <p> <strong>Have an Account Already? </strong> <a href="LogIn.php">LOG IN NOW</a> </p>
     
        </div>
 
@@ -92,6 +92,10 @@
       
    
     <?php include_once 'includes/footer.php';?> 
+<script>
+  var today = new Date().toISOString().split('T')[0];
+  document.getElementsByName("Bday")[0].setAttribute('max', today);
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
