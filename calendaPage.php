@@ -220,7 +220,7 @@ echo $calendar->show();?>
   <input type="text" name="LastName" id="LastName" placeholder="Insert Your Last Name" >
 <br>
   <label for="Bday">
-  Your Birthdate
+    Birthdate
   </label>
   <br>
   <input type="date" id="Bday" name="Bday"value="">
@@ -377,6 +377,12 @@ if (event.target == modal) {
 }
 
 
+</script>
+
+<script>
+  var today = new Date().toISOString().split('T')[0];
+  document.getElementsByName("Bday")[0].setAttribute('max', today);
+  document.getElementsByName("eventdate")[0].setAttribute('min', today);
 </script>
 
 
