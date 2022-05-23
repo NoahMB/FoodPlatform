@@ -345,6 +345,7 @@ body{
      height: 1900px;
      background-color: #ccc;
      border-color: #ccc;
+     display: table;
    }
    table{
      margin-top: 2%;
