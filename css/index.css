@@ -648,7 +648,7 @@ body{
    text-decoration: none;
  }
  .EventsContent{
-   text-indent: 280px;
+  text-align: center;
    font-size: 22px;
    font-weight: bold;
  }
