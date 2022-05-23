@@ -25,6 +25,9 @@
                 text-decoration: none;
                       color: black; 
               }
+              #interest{
+                margin-left: 20%;
+                }
         </style>
  <?php include_once 'includes/nav.php';?>
 
