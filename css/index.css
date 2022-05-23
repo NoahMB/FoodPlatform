@@ -1069,6 +1069,7 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
   margin-left: 20%;
   border: solid;
   border-width: thin;
+  border-color: white;
   background-color: white;
   text-align: start;
 }

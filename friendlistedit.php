@@ -21,20 +21,7 @@
                 text-decoration: none;
                 color: black; 
               }
-               label {
-        display: block;
-        padding-left: 15px;
-        text-indent: -15px;
-      }
-      input {
-        width: 100px;
-        height: 40px;
-        padding: 0;
-        margin: 0;
-        vertical-align: bottom;
-        position: relative;
-        top: -1px;
-      }
+               
              
         </style>
  <?php include_once 'includes/nav.php';?>
@@ -54,16 +41,19 @@ echo '<br>';
 echo "<form method ='POST' action='includes/friendedit.php?id=" . $id . "'>";
 echo    "<label for='Firstname' class = 'EditFirendLable'>Firstname
         </label>
+        <br>
         <input type='text' name='Firstname' id='Firstname' class ='InputEditList' value=" . $row["Firstname"] ." >
         <br>
         <br>
         <label for='Lastname' class = 'EditFirendLable'>Lastname
         </label>
+        <br>
         <input type='text' name='Lastname' id='Lastname'  class ='InputEditList' value=" . $row["Lastname"] ." >
         <br>
         <br>
         <label for='Birthdate' class = 'EditFirendLable'>Birthdate
         </label>
+        <br>
         <input type='date' name='Birthdate' id='Birthdate' class ='InputEditList' value=" . $row["Birthdate"] ." >
         <br>
         <br>

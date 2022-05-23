@@ -109,6 +109,7 @@ echo $calendar->show();?>
   <br>
   <input type="date" id="Bday" name="Bday"value="">
   <br>
+  <div>
   <label for="interest">
                   Interest
               </label>
@@ -129,6 +130,7 @@ if ($result->num_rows > 0) {
 
 ?>
 </div>
+  </div>
 <br>
 <br>
   <button type="submit" name="submit" id="submit" class="btn">ADD</button>
