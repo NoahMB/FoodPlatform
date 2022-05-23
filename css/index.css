@@ -273,6 +273,40 @@ body{
      background-color: #ccc;
      border-color: #ccc;
    }
+
+  .InputEditList{
+    width: 60%;
+  }
+  .EditFriendListContainer{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+  
+  }
+  .EditFirendLable{
+    font-size: 18px;
+  }
+  #InterestLabel{
+    font-size: 18px;
+
+  }
+  #interest{
+    margin-left: 20%;
+  }
+  .EditFriendListContent{
+    border: solid;
+    border-width: thin;
+    border-color: #ccc;
+    background-color: #ccc;
+    border-radius: 2%;
+    height: 700px;
+    width: 50%;
+    text-align: center;
+    margin-top: 2%;
+  }
+  #submit{
+    width: 60%;
+  }
  
    .EventContent{
       background-color: whitesmoke;
