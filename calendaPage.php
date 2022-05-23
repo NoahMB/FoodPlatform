@@ -113,7 +113,8 @@ echo $calendar->show();?>
                   Interest
               </label>
               <br>
-              <select name="interest[]" id="interest" multiple>
+
+              <div class="InterestSelectBox">
               <?php
 $sql    = "SELECT * FROM interests";
 
@@ -121,14 +122,13 @@ $result = mysqli_query($conn, $sql);
 
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
-      echo  "<option value='".$row['InterestsID']."'>".$row['Interests']."
-      
-  </option>";
+      echo  "<input type='checkbox' name='interest[]' value='".$row['InterestsID']."' id=". $row['Interests'] . " />".
+      "<label for=" . $row['Interests'] . ">" . $row['Interests'] . "</label><br>";
   }
 }
 
 ?>
-              </select>
+</div>
 <br>
 <br>
   <button type="submit" name="submit" id="submit" class="btn">ADD</button>
