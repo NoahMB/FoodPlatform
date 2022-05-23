@@ -2,13 +2,24 @@
     <title>Contact us</title>
     
     <link rel="shortcut icon" type="icon" href ="Image/Cont.ico">
+
 </head>
+<style>
+   .contents{
+     width: 750px;
+     text-align: center;
+     height: 680px;
+     padding: 15px;  
+     text-align: center;
+    
+ }
+</style>
 <body>
 <?php include_once 'includes/nav.php'; ?>
 <div class="TextAllign">
      <div class = "StyleSignUP">
       <div class="SignUP_C">
-        <div class="content">
+        <div class="contents">
             <h1>
                 CONTACT US
             </h1>
@@ -22,17 +33,20 @@
            <br>
            <input type="text" name="Firstname" id="User_name" placeholder="Insert Your Name" >
            <br>
+           <br>
             <label for="email">
               YOUR EMAIL
              </label>
             <br>
             <input type="email" id="email" name="email" placeholder="Enter your Email"> 
             <br>
+            <br>
             <label for="form-firstname" >
                SUBJECT 
            </label>
            <br>
            <input type="text" name="Subject" id="Subject" placeholder="Insert Your Subject" >
+            <br>
             <br>
             <br>
             <textarea rows="8" cols="60" name="comment" form="usrform">
