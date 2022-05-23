@@ -1064,9 +1064,13 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
 
 .InterestSelectBox {
   height: 100px;
-  width: 75%;
+  width: 60%;
   overflow: auto;
-  margin-left: 15px;
+  margin-left: 20%;
+  border: solid;
+  border-width: thin;
+  background-color: white;
+  text-align: start;
 }
 
 .InterestSelectBox input{

@@ -21,6 +21,20 @@
                 text-decoration: none;
                 color: black; 
               }
+               label {
+        display: block;
+        padding-left: 15px;
+        text-indent: -15px;
+      }
+      input {
+        width: 100px;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        vertical-align: bottom;
+        position: relative;
+        top: -1px;
+      }
              
         </style>
  <?php include_once 'includes/nav.php';?>
@@ -57,7 +71,7 @@ echo    "<label for='Firstname' class = 'EditFirendLable'>Firstname
         <p id = 'InterestLabel'>Interests</p>  
         ";
         }
-        
+
         echo"<div class='InterestSelectBox'>";
 
 $sql2 = "SELECT * FROM interests";
