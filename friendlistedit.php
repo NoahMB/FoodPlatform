@@ -92,6 +92,8 @@ echo"<br>
 </div>                      
 </div>
 
+<?php include_once 'includes/footer.php';?> 
+
 <script>
   var today = new Date().toISOString().split('T')[0];
   document.getElementsByName("Birthdate")[0].setAttribute('max', today);

@@ -57,5 +57,5 @@ require_once 'includes/conn.php';
 
 </div>
         
-
+<?php include_once 'includes/footer.php';?> 
 </body>
