@@ -336,6 +336,10 @@ body{
      background-color: #ccc;
      border-color: #ccc;
    }
+   #SubmitCreateAccount{
+     margin-left: 10px;
+     width: 70%;
+   }
    .FriendContent{
      margin-top: 2%;
      border: solid;
