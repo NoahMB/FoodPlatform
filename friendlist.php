@@ -2,9 +2,8 @@
 include_once 'includes/nav.php';
 require_once 'includes/conn.php';
 ?> 
-
-    <title>friend list</title>
-    <link rel="shortcut icon" type="icon" href ="Image/FriendList.ico">
+<title>friend List</title>
+<link rel="shortcut icon" type="icon" href ="Image/FriendList.ico">
 </head>
 <body>
     <div class="FriendlistSection">
