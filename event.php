@@ -9,40 +9,34 @@
 <div class="EventContent">
     <div class="EvenPageContainer">
         <br>
+        <div class="EventsContent">
         <?php 
+            $sql    = "SELECT * FROM `events` WHERE `EventsID` = " . $_GET['id'];
 
+            $result = mysqli_query($conn, $sql);
 
-        $sql    = "SELECT * FROM `events` WHERE `EventsID` = " . $_GET['id'];
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
 
-        $result = mysqli_query($conn, $sql);
+                    echo   "<h2>"  .  $row['Name']. "</h2>"; echo '<br>';
 
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
+                    echo   "<p> Date:   " .$row['Date'] . "</p>"; echo "<br>";
+                            
+                    $sql1    = "SELECT * FROM `friends` WHERE `FriendsID` = " . $row['FriendsID'];
+            
+                    $result1 = mysqli_query($conn, $sql1);
+            
+                    if ($result1->num_rows > 0) {
+                        while ($row1 = $result1->fetch_assoc()) {
+                            echo   "<p> Friend :  " .$row1['Firstname'] . " " .$row1['Lastname'] ."</p><br>";
+                        }
+                    }
 
-                echo   "<h2>"  . "<a href='webshop.php?id=" . $row["EventsID"] . "'><h5>". $row['Name']."</h5></a>" . "</h2>"; echo '<br>';
-
-                ?>
-                <div class="EventsContent">
-                        <?php
-                        echo   "<p> Date of Birth  :   " .$row['Date'] . "</p>"; echo "<br>";
-                        echo   "<p> Reminder : " .$row['GetReminder']. "</p>";echo "<br>";
-                        echo   "<p> Number of Gift Bought: " .$row['GiftBought'] . "</p>";echo "<br>";
-                        
-                        $sql1    = "SELECT * FROM `friends` WHERE `FriendsID` = " . $row['FriendsID'];
-        
-                        $result1 = mysqli_query($conn, $sql1);
-        
-                        if ($result1->num_rows > 0) {
-                            while ($row1 = $result1->fetch_assoc()) {
-                                echo   "<p> Name of Friend :  " .$row1['Firstname'] . " " .$row1['Lastname'] ."</p>";
-                            }
-                                }
-                            }
-                        } 
-                
-                        ?>
-                </div>
-               
+                    echo "<a href='webshop.php?id=" . $row["EventsID"] . "'>Go to webshop</a>";
+                }
+            }        
+        ?>
+        </div>       
     </div>
 </div>
 <?php include_once 'includes/footer.php';?> 
