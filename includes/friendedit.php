@@ -22,14 +22,19 @@ if (isset($_POST["submit"])) {
 
         echo $sql3;
 
-        $sql2 = "SELECT EventsID FROM `events` WHERE Name = '" . $row2["Firstname"] . " " . $row2["Lastname"] . " Birthday' AND FriendsID = " . $_GET['id'] . ";";
+        $sql2 = "SELECT * FROM `events` WHERE Name = '" . $row2["Firstname"] . " " . $row2["Lastname"] . " Birthday' AND FriendsID = " . $_GET['id'] . ";";
         $result = mysqli_query($conn , $sql2);
 
         echo $sql2;
 
         if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                        $sqlupdate = "UPDATE `events` SET Name = '". $Firstname . " " . $Lastname . " Birthday' WHERE EventsID = " . $row['EventsID'];
+                        $year = date("Y",strtotime($row["Date"]));
+                        $month = date("m",strtotime($Birthdate));
+                        $day = date("d", strtotime($Birthdate));
+                        $date = $year ."-". $month."-". $day;
+
+                        $sqlupdate = "UPDATE `events` SET Name = '". $Firstname . " " . $Lastname . " Birthday', Date = '" . $date . "'  WHERE EventsID = " . $row['EventsID'];
                         mysqli_query($conn, $sqlupdate);
                 }
         }

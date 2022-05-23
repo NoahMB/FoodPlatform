@@ -91,3 +91,8 @@ echo"<br>
 ?>
 </div>                      
 </div>
+
+<script>
+  var today = new Date().toISOString().split('T')[0];
+  document.getElementsByName("Birthdate")[0].setAttribute('max', today);
+</script>
