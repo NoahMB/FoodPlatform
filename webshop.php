@@ -5,53 +5,6 @@
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
-<style>
-.card { 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  max-height: 650px;
- /* margin: auto;*/
-  text-align: center;
-  font-family: arial;
-  width: 28%;
-  flex: 1 1 290%;
-}
-
-.price {
-  color: red;
-  font-size: 22px;
-}
-
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-}
-.pricefilter{
-    width: 150px;
-}
-.ratingfilter{
-    width: 150px;
-}
-.submit{
-    width: 150px;
-}
-.orderbyfilter{
-    width: 300px;
-}
-</style>
-
 <div class="AllContent">
 <div class="SearchEnginePart">
 <br>

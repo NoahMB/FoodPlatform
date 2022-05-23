@@ -4,16 +4,6 @@
     <link rel="shortcut icon" type="icon" href ="Image/Cont.ico">
 
 </head>
-<style>
-   .contents{
-     width: 750px;
-     text-align: center;
-     height: 680px;
-     padding: 15px;  
-     text-align: center;
-    
- }
-</style>
 <body>
 <?php include_once 'includes/nav.php'; ?>
 <div class="TextAllign">

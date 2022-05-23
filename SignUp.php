@@ -76,7 +76,7 @@
                 </select>
                 <br>
                 <br>
-            <input type="submit" value="Create Account" id="submit" name="submit">
+            <input type="submit" value="Create Account"id="SubmitCreateAccount" name="submit" >
             <br>
             <br>
             <br>
