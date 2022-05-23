@@ -1066,7 +1066,7 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
   height: 100px;
   width: 75%;
   overflow: auto;
-  margin: auto;
+  margin-left: 15px;
 }
 
 .InterestSelectBox input{

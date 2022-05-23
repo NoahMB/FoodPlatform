@@ -19,8 +19,9 @@
               }
               a:hover{
                 text-decoration: none;
-                      color: black; 
+                color: black; 
               }
+             
         </style>
  <?php include_once 'includes/nav.php';?>
 <div class="EditFriendListContainer">
@@ -56,6 +57,7 @@ echo    "<label for='Firstname' class = 'EditFirendLable'>Firstname
         <p id = 'InterestLabel'>Interests</p>  
         ";
         }
+        
         echo"<div class='InterestSelectBox'>";
 
 $sql2 = "SELECT * FROM interests";
@@ -65,7 +67,7 @@ while ($row2 = $result2->fetch_assoc()) {
         $result3 = mysqli_query($conn, $sql3);
         $row3 = $result3->fetch_assoc();
                 if(!empty($row3["Interests"])){
-                        echo "<input type='checkbox' name='interest[]' value='".$row2['InterestsID']."' id=". $row2['Interests'] . " checked/>".
+                        echo "<input type='checkbox' id = 'interest' name='interest[]' value='".$row2['InterestsID']."' id=". $row2['Interests'] . " checked/>".
                         "<label for=" . $row2['Interests'] . ">" . $row2['Interests'] . "</label><br>";
                 }
                 else{
