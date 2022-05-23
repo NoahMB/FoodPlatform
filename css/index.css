@@ -30,8 +30,8 @@ body{
  .form-popup{
    border: solid;
    border-width: thin;
-   border: #f1f1f1;
-  background-color: #f1f1f1;
+   border: #ccc;
+  background-color: #ccc;
    text-align: center;
    width: 60%;
    height: 70%;
@@ -300,7 +300,7 @@ body{
     background-color: #ccc;
     border-radius: 2%;
     height: 700px;
-    width: 50%;
+    width: 60%;
     text-align: center;
     margin-top: 2%;
   }
