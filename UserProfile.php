@@ -1,5 +1,6 @@
 <?php include_once 'includes/header.php';?> 
     <title>User's Profile</title>
+    <link rel="shortcut icon" type="icon" href ="Image/faviconProfile.ico">
 </head>
 <body>
     <style>
