@@ -32,7 +32,9 @@
                         }
                     }
 
-                    echo "<a href='webshop.php?id=" . $row["EventsID"] . "'>Go to webshop</a>";
+                    echo "<a href='webshop.php?id=" . $row["EventsID"] . "'>Go to webshop</a><br><br>";
+
+                    echo "<a href='deleteEvent.php?id=" . $row["EventsID"] . "'>Delete</a>";
                 }
             }        
         ?>
