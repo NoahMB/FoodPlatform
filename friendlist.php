@@ -6,10 +6,10 @@ require_once 'includes/conn.php';
 <link rel="shortcut icon" type="icon" href ="Image/FriendList.ico">
 </head>
 <body>
+
     <div class="FriendlistSection">
         <div class="FriendContent">
-            <br>
-            <br>
+            <button id='myBtn' class="plusButton addfriendlist"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 svgfriendlist" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" /> </svg></button>
                 <table>
                 <tr>
                     <th>First Name</th>
@@ -52,10 +52,99 @@ require_once 'includes/conn.php';
 
                         
                     </table>
+                    
 
     </div>
 
 </div>
+<div id="myModal" class="modal">
+<div class="modal-content">
+    <span class="close">&times;</span>
+<div class="addForms">
+<div class="form-popup" id="myForm">
+<form action="includes/friends.php"  method="POST" class="form-container">
+  <h1>Add Friend</h1>
+
+  <label for="Firstname" >
+   First Name
+  </label>
+  <br>
+  <input type="text" name="Firstname" id="Firstname" placeholder="Insert Your First Name" >
+<br>
+<label for="LastName" >
+   Last Name
+  </label>
+  <br>
+  <input type="text" name="LastName" id="LastName" placeholder="Insert Your Last Name" >
+<br>
+  <label for="Bday">
+    Birthdate
+  </label>
+  <br>
+  <input type="date" id="Bday" name="Bday"value="">
+  <br>
+  <div>
+  <label for="interest">
+                  Interest
+              </label>
+              <br>
+
+              <div class="InterestSelectBox">
+              <?php
+$sql    = "SELECT * FROM interests";
+
+$result = mysqli_query($conn, $sql);
+
+if ($result->num_rows > 0) {
+  while ($row = $result->fetch_assoc()) {
+      echo  "<input type='checkbox' name='interest[]' value='".$row['InterestsID']."' id=". $row['Interests'] . " />".
+      "<label for=" . $row['Interests'] . ">" . $row['Interests'] . "</label><br>";
+  }
+}
+
+?>
+</div>
+  </div>
+<br>
+<br>
+  <button type="submit" name="submit" id="submit" class="btn">ADD</button>
+  <br>
+  <br>
+</form>
+</div>
+</div>
+</div>
         
 <?php include_once 'includes/footer.php';?> 
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+  modal.style.display = "none";
+}
+}
+
+
+</script>
+
 </body>

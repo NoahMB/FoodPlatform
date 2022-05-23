@@ -1078,3 +1078,13 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
 .InterestSelectBox input{
   width: 10%;
 }
+
+.svgfriendlist {
+  height: 100% !important;
+}
+
+.addfriendlist {
+  width: 10% !important;
+  margin: 15px;
+  margin-top: 2.5%;
+}
