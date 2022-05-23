@@ -9,15 +9,6 @@
 <div class="EventContent">
     <div class="EvenPageContainer">
         <br>
-        <br>
-            <table>
-                <tr>
-                    <th>To Webshop</th>
-                    <th>Date</th>
-                    <th>Reminder</th>
-                    <th>Gift Bought</th>
-                    <th>Name</th>
-                </tr>
         <?php 
 
 
@@ -28,26 +19,30 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
 
-                echo "<tr>";
-                echo   "<td>"  . "<a href='webshop.php?id=" . $row["EventsID"] . "'><h5>". $row['Name']."</h5></a>" . "</td>";
-                echo   "<td>" .$row['Date'] . "</td>";
-                echo   "<td>" .$row['GetReminder']. "</td>";
-                echo   "<td>" .$row['GiftBought'] . "</td>";
+                echo   "<h2>"  . "<a href='webshop.php?id=" . $row["EventsID"] . "'><h5>". $row['Name']."</h5></a>" . "</h2>"; echo '<br>';
+
+                ?>
+                <div class="EventsContent">
+                        <?php
+                        echo   "<p> Date of Birth  :   " .$row['Date'] . "</p>"; echo "<br>";
+                        echo   "<p> Reminder : " .$row['GetReminder']. "</p>";echo "<br>";
+                        echo   "<p> Number of Gift Bought: " .$row['GiftBought'] . "</p>";echo "<br>";
+                        
+                        $sql1    = "SELECT * FROM `friends` WHERE `FriendsID` = " . $row['FriendsID'];
+        
+                        $result1 = mysqli_query($conn, $sql1);
+        
+                        if ($result1->num_rows > 0) {
+                            while ($row1 = $result1->fetch_assoc()) {
+                                echo   "<p> Name of Friend :  " .$row1['Firstname'] . " " .$row1['Lastname'] ."</p>";
+                            }
+                                }
+                            }
+                        } 
                 
-                $sql1    = "SELECT * FROM `friends` WHERE `FriendsID` = " . $row['FriendsID'];
-
-                $result1 = mysqli_query($conn, $sql1);
-
-                if ($result1->num_rows > 0) {
-                    while ($row1 = $result1->fetch_assoc()) {
-                        echo   "<td>" .$row1['Firstname'] . " " .$row1['Lastname'] ."</td>";
-                    }
-                }
-            }
-        } 
-
-        ?>
-         </table>
+                        ?>
+                </div>
+               
     </div>
 </div>
 <?php include_once 'includes/footer.php';?> 
