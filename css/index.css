@@ -13,6 +13,12 @@ body{
      padding: 15px;  
      text-align: center;
  }
+ .InputProfileContent, .formpos{
+  width: 60%;
+ }
+ .User_Info{
+  margin-left: 20%;
+ }
  .StyleSignUP{
    height: 1000px;
    width: 800px;
