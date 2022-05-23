@@ -140,7 +140,7 @@ if ($result->num_rows > 0) {
                     <label for='PFpicture'>
                     </label>
                     <br>
-                    <input class='formpos'  type='file' name='uploadfile' accept='image/png, image/jpeg' value='". $row["PfP"] ."'>
+                    <input class='formpos'  type='file' style='margin-top: 20px;' name='uploadfile' accept='image/png, image/jpeg' value='". $row["PfP"] ."'>
                     
                       
                     <br>";
