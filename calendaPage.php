@@ -29,7 +29,6 @@
           $date = $year ."-". $month."-". $day;
 
           $sql3 = "INSERT INTO events (Name, Date, FriendsID) Values ('".$eventname."','".$date."',".$row['FriendsID'].")";
-          echo $sql3;
           mysqli_query($conn , $sql3);
         }
       }

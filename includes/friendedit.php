@@ -16,6 +16,24 @@ if (isset($_POST["submit"])) {
                 mysqli_query($conn , $sql2);
         }
 
+        $sql3 = "SELECT * FROM `friends` WHERE FriendsID = " . $_GET['id'];
+        $result2 = mysqli_query($conn , $sql3);
+        $row2 = $result2->fetch_assoc();
+
+        echo $sql3;
+
+        $sql2 = "SELECT EventsID FROM `events` WHERE Name = '" . $row2["Firstname"] . " " . $row2["Lastname"] . " Birthday' AND FriendsID = " . $_GET['id'] . ";";
+        $result = mysqli_query($conn , $sql2);
+
+        echo $sql2;
+
+        if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                        $sqlupdate = "UPDATE `events` SET Name = '". $Firstname . " " . $Lastname . " Birthday' WHERE EventsID = " . $row['EventsID'];
+                        mysqli_query($conn, $sqlupdate);
+                }
+        }
+
         $sqlupdate = "UPDATE friends SET Firstname = '".$Firstname."', Lastname = '".$Lastname."', Birthdate = '".$Birthdate."' WHERE FriendsID = " . $_GET['id'];
         mysqli_query($conn, $sqlupdate);
 }

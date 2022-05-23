@@ -42,13 +42,13 @@ echo "<form method ='POST' action='includes/friendedit.php?id=" . $id . "'>";
 echo    "<label for='Firstname' class = 'EditFirendLable'>Firstname
         </label>
         <br>
-        <input type='text' name='Firstname' id='Firstname' class ='InputEditList' value=" . $row["Firstname"] ." >
+        <input type='text' name='Firstname' id='Firstname' class ='InputEditList' value='" . $row["Firstname"] ."' >
         <br>
         <br>
         <label for='Lastname' class = 'EditFirendLable'>Lastname
         </label>
         <br>
-        <input type='text' name='Lastname' id='Lastname'  class ='InputEditList' value=" . $row["Lastname"] ." >
+        <input type='text' name='Lastname' id='Lastname'  class ='InputEditList' value='" . $row["Lastname"] ."' >
         <br>
         <br>
         <label for='Birthdate' class = 'EditFirendLable'>Birthdate
