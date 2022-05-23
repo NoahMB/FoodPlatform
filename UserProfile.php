@@ -3,11 +3,6 @@
     <link rel="shortcut icon" type="icon" href ="Image/faviconProfile.ico">
 </head>
 <body>
-    <style>
-        #submit{
-            width: 30%;
-        }
-    </style>
 <?php include_once 'includes/nav.php';?> 
     
     <div class ="ContainerUser">
@@ -148,7 +143,7 @@ if ($result->num_rows > 0) {
                        echo" </select>
                     <br>
                     <br>
-                    <button type='submit' name='submit' id='submit'>Edit</button>
+                    <button type='submit' name='submit' style=' width: 30%;' id='submit'>Edit</button>
                     </form>   
                     <br>";
                 }

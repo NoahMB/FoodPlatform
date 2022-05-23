@@ -7,23 +7,7 @@
  <link rel="shortcut icon" type="icon" href ="Image/FriendList.ico">
  </head>
  <body>
-        <style>
-              .kleiner{
-                      width: 50px;
-                      height: 50px;
-              }  
-              a{
-                      text-decoration: none;
-                      color: black;
 
-              }
-              a:hover{
-                text-decoration: none;
-                color: black; 
-              }
-               
-             
-        </style>
  <?php include_once 'includes/nav.php';?>
 <div class="EditFriendListContainer">
 <?php
@@ -91,7 +75,6 @@ echo"<br>
 ?>
 </div>                      
 </div>
-
 <?php include_once 'includes/footer.php';?> 
 
 <script>
