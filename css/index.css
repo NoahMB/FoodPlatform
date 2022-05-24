@@ -63,20 +63,42 @@ body{
  .ContainerUser{
    background-color: #ccc;
  }
- .BackEndContainer{
-   display: flex;
-   justify-content: center;
-   height: 1000px;
- }
- .BackEnd{
-   text-indent: 2px;
-   border: solid;
-   border-width: thin;
-   border-radius: 10px;
-   width: 60%;
-   margin-top: 20px;
-   height: 900px;
- }
+ div.Parent1{
+  display: flex;
+}
+div.child1{
+  width: 50%;
+  height: 150px;
+  text-align: center;
+  box-sizing: border-box;
+  border: solid;
+  border-width: thin;
+  background-color: whitesmoke;
+}
+
+div.Parent2{
+  display: flex;
+}
+div.child2{
+  width: 50%;
+  height: 550px;
+  text-align: center;
+  box-sizing: border-box;
+  border: solid;
+  border-width: thin;
+}
+.barchat{
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: right;
+}
+.Piechart{
+ 
+  display: flex;
+  justify-content: center;
+}
+
  .AboutUsContent{
      height: 1200px;
      width: 1000px;
