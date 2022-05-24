@@ -6,9 +6,14 @@
 </head>
 <body>
 <?php include_once 'includes/nav.php';?>
+<div class="BackEndContainer">
+<div class="BackEnd">
 <div>
+    <div style="text-align:center;">
+    <h2>Data Distribution of Backend</h2>
+    </div>
+    <br>
     <section>
-        <p>Amount of accounts</p>
         <?php 
         $accounts = "SELECT * FROM accounts";
         $result = mysqli_query($conn, $accounts);
@@ -18,13 +23,14 @@
             $counter++;
         }
         }
-        echo $counter;
-        ?>
+     echo "Amount of accounts : " ;  echo $counter; 
+             ?>
+             <br>
+             <br>
     </section>
 </div>
 <div>
     <section>
-        <p>average friends per account</p>
         <?php 
         $accounts = "SELECT * FROM friends";
         $result = mysqli_query($conn, $accounts);
@@ -35,13 +41,13 @@
         }
         }
         $average = round($counterfriends/$counter,2);
-        echo $average;
+        echo "Average friends per account : " ;  echo $average;
         ?>
     </section>
+    <br>
 </div>
 <div>
     <section>
-        <p>average event per account</p>
         <?php 
         $accounts = "SELECT * FROM events";
         $result = mysqli_query($conn, $accounts);
@@ -52,9 +58,10 @@
         }
         }
         $average = round($counterfriends/$counter,2);
-        echo $average;
+        echo "Average event per account : " ;  echo $average;
         ?>
     </section>
+    <br>
 </div>
 <div>
     <section>
@@ -95,7 +102,7 @@
         ]);
 
         var options = {
-          title: 'most popular friend birthday',
+          title: 'Most popular friend birthday',
           legend: 'none',
           pieSliceText: 'label',
           slices: {  4: {offset: 0.2},
@@ -110,7 +117,7 @@
       }
     </script>
     
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
+    <div id="piechart" style="width: 900px; height: 500px; font-size : 12px;"></div>
       
     </section>
 </div>

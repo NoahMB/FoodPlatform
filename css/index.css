@@ -63,6 +63,20 @@ body{
  .ContainerUser{
    background-color: #ccc;
  }
+ .BackEndContainer{
+   display: flex;
+   justify-content: center;
+   height: 1000px;
+ }
+ .BackEnd{
+   text-indent: 2px;
+   border: solid;
+   border-width: thin;
+   border-radius: 10px;
+   width: 60%;
+   margin-top: 20px;
+   height: 900px;
+ }
  .AboutUsContent{
      height: 1200px;
      width: 1000px;
@@ -264,6 +278,9 @@ body{
    /* Float the link section to the right */
    .header-right {
      float: right;
+   }
+   section{
+     font-size: 20px;
    }
    
    /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
