@@ -61,7 +61,7 @@ body{
    justify-content: center;
  }
  .ContainerUser{
-   background-color: rgba(245, 245, 245, 0.829);
+   background-color: #ccc;
  }
  .AboutUsContent{
      height: 1200px;
