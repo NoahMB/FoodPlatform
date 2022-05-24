@@ -58,7 +58,7 @@
 </div>
 <div>
     <section>
-        <p>most popular friend birthday</p>
+        
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
@@ -111,6 +111,73 @@
     </script>
     
     <div id="piechart" style="width: 900px; height: 500px;"></div>
+      
+    </section>
+</div>
+<div>
+    <section>
+        
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Move', 'amount'],
+             <?php 
+        $interests1 = "SELECT interests.Interests as interests , count(friendsinterests.InterestsID) as amount from friendsinterests JOIN interests ON friendsinterests.InterestsID=interests.InterestsID GROUP by friendsinterests.InterestsID";
+        
+        $result = mysqli_query($conn, $interests1);
+        
+        $counterfriends = 0;
+        $row_cnt = $result->num_rows;
+        $i = 0;
+        if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $i++;
+             
+            
+            
+
+                    if ($i == $row_cnt){
+                        echo "['".$row['interests']."',".$row['amount']."]";
+                    }
+                    else{
+                        echo "['".$row['interests']."',".$row['amount']."],";
+                    }
+                
+            ?>
+              
+            <?php
+        }
+        }
+        
+        ?>
+
+        ]);
+
+        var options = {
+        width: 800,
+        legend: { position: 'none' },
+        chart: {
+            title: 'most popular interest',
+             },
+        axes: {
+            x: {
+            0: { side: 'top', label: 'interests'} // Top x-axis.
+            }
+        },
+        bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        // Convert the Classic options to Material options.
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+        };
+    </script>
+    
+    <div id="top_x_div" style="width: 800px; height: 600px;"></div>
       
     </section>
 </div>
