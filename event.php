@@ -17,27 +17,27 @@
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) { 
                     echo "
-                    <h1>" . $row['Name'] . "</h1><br>
+                    <h2>" . $row['Name'] . "</h2><br>
                     
                     <form action='includes/update_event.php?id=" . $_GET['id'] . "' method ='POST' enctype='multipart/form-data'>
                     <label for='Name'>
                     Name
                     </label>
                     <br>
-                    <input type='text' name='Name' id='Name' class = 'InputProfileContent' value='" . $row['Name'] ."'> 
-                    
+                    <input type='text' name='Name' class = 'InputEditEvent' id='Name' class = 'InputProfileContent' value='" . $row['Name'] ."'> 
+                    <br>
                      
                     <br>";
                 echo "
                     <label for='Date'>
-                    Date
+                    Event Date
                     </label>
                     <br>
-                    <input type='date' name='Date' id='Date' class = 'InputProfileContent' value=" . $row['Date'] ." ><br>";
-
+                    <input type='date' name='Date' id='Date' class = 'InputEditEvent'  class = 'InputProfileContent' value=" . $row['Date'] ." ><br>";
+                    echo '<br>';
                 echo"
                 <label for='Friend'>
-                Friend
+                Friends
                 </label>
                 <br>
                 <div class='InterestSelectBox'>";
@@ -64,9 +64,10 @@
                         
                 echo"</div><br>
                 
-                
+                        
+                    <br> 
 
-                    <button type='submit' name='submit' style=' width: 30%;' id='submit'>Edit</button>
+                    <button type='submit' name='submit' style=' width: 50%; border-radius: 5px;' id='submit'>Edit</button>
                     </form><br>";
                     echo "<a href='webshop.php?id=" . $row["EventsID"] . "'>Go to webshop</a><br><br>";
                     echo "<a href='deleteEvent.php?id=" . $row["EventsID"] . "'>Delete</a> 
