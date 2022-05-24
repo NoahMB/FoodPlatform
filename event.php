@@ -69,8 +69,8 @@
 
                     <button type='submit' name='submit' style=' width: 50%; border-radius: 5px;' id='submit'>Edit</button>
                     </form><br>";
-                    echo "<a href='webshop.php?id=" . $row["EventsID"] . "'>Go to webshop</a><br><br>";
-                    echo "<a href='deleteEvent.php?id=" . $row["EventsID"] . "'>Delete</a> 
+                    echo "<a style='font-weight: bold;' href='webshop.php?id=" . $row["EventsID"] . "'>Go to webshop</a><br><br>";
+                    echo "<a style='font-weight: bold;' href='deleteEvent.php?id=" . $row["EventsID"] . "'>Delete</a> 
                     <br><br>";
 
                 
