@@ -17,7 +17,7 @@
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) { 
                     echo "
-                    <h2>" . $row['Name'] . "</h2><br>
+                    <h1>" . $row['Name'] . "</h1><br>
                     
                     <form action='includes/update_event.php?id=" . $_GET['id'] . "' method ='POST' enctype='multipart/form-data'>
                     <label for='Name'>
