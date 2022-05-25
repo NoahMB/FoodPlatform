@@ -81,7 +81,7 @@
             <br>
             <br>
         </form>
-        <p> <strong>Have an Account Already? </strong> <a href="LogIn.php">LOG IN NOW</a> </p>
+        <p> <strong>Have an Account Already? </strong> <a href="login.php">LOG IN NOW</a> </p>
     
        </div>
 
