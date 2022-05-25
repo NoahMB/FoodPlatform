@@ -8,6 +8,7 @@
 <?php include_once 'includes/nav.php';?>
 <div class="Parent1">
         <div class="child1">
+            <p class = "HeaderTop">Amount of Accounts </p>
             <section>
                 <?php 
                 $accounts = "SELECT * FROM accounts";
@@ -18,12 +19,13 @@
                     $counter++;
                 }
                 }
-            echo "Amount of accounts : " ;  echo $counter; 
+             echo $counter; 
                     ?>
                     
             </section>
         </div>
         <div class="child1">
+            <p class = "HeaderTop">Average friends per Account</p>
             <section>
                 <?php 
                 $accounts = "SELECT * FROM friends";
@@ -35,11 +37,12 @@
                 }
                 }
                 $average = round($counterfriends/$counter,2);
-                echo "Average friends per account : " ;  echo $average;
+                echo $average;
                 ?>
             </section>
         </div>
         <div class="child1">
+            <P class = "HeaderTop"> Average event per Account </P>
             <section>
                 <?php 
                 $accounts = "SELECT * FROM events";
@@ -51,11 +54,11 @@
                 }
                 }
                 $average = round($counterfriends/$counter,2);
-                echo "Average event per account : " ;  echo $average;
+                echo $average;
                 ?>
             </section>
         </div>
-
+                
 </div>
 
 <div class="Parent2">
@@ -97,7 +100,7 @@
 
             ]);
 
-            var options = {
+            var options = {   
             title: 'Most popular friend birthday',
             legend: 'none',
             pieSliceText: 'label',

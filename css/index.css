@@ -75,9 +75,11 @@ div.child1{
   border-width: thin;
   background-color: whitesmoke;
 }
-
 div.Parent2{
   display: flex;
+}
+.HeaderTop{
+  font-size: 20px;
 }
 div.child2{
   width: 50%;
