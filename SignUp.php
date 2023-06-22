@@ -50,11 +50,7 @@
                 <br>
                 <input type="password" id="pwdrepeat" name="pwdrepeat" minlength="8" placeholder="Repeat your Password">
                 <br>
-                <label for="Bday">
-                    Your Birthday
-                </label>
-                <br>
-                <input type="date" id="Bday" name="Bday"value="">
+                
                 <br>
                 <label for="PhoneNr">
                     Enter your phone number
@@ -62,18 +58,7 @@
                 <br>
                 <input type="tel" id="PhoneNr" name="PhoneNr" placeholder="Enter your phone number"> 
                 <br>
-                <label for="gender">
-                    Gender
-                </label>
-                <br>
-                <select name="gender" id="gender">
-                    <option value="male">
-                        Male
-                    </option>
-                    <option value="female">
-                        Female
-                    </option>
-                </select>
+                
                 <br>
                 <br>
             <input type="submit" value="Create Account"id="SubmitCreateAccount" name="submit" >
