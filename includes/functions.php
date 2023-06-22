@@ -1,9 +1,9 @@
 <?php
 
-function emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat, $gender, $birthday, $LastName)
+function emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat,  $LastName)
 {
     $result;
-    if (empty($name) || empty($email) || empty($phonenumber) || empty($pwd) || empty($pwdrepeat)|| empty($gender)|| empty($birthday)|| empty($LastName) ) {
+    if (empty($name) || empty($email) || empty($phonenumber) || empty($pwd) || empty($pwdrepeat)|| empty($LastName) ) {
         $result = true;
     } else {
         $result = false;
@@ -43,7 +43,7 @@ function pwdMatch($pwd, $pwdrepeat)
 function uidExists($conn, $email)
 {
     $result = true;
-    $sql = "SELECT * FROM accounts WHERE Email = ?;";
+    $sql = "SELECT * FROM tblguardian WHERE Email = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed1");
@@ -63,9 +63,9 @@ function uidExists($conn, $email)
 }
 
 
-function createUser($conn, $name, $phonenumber, $email, $pwd, $gender, $birthday, $LastName)
+function createUser($conn, $name, $phonenumber, $email, $pwd,  $LastName)
 {
-    $sql = "INSERT INTO accounts (FirstName, PhoneNr, Email , Gender, Birthdate, LastName ,Password) VALUES (?, ?, ?, ?, ?, ?, ?);";
+    $sql = "INSERT INTO tblguardian (Voornaam, PhoneNr, Email  naam ,Pwd) VALUES (?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed2");
@@ -74,7 +74,7 @@ function createUser($conn, $name, $phonenumber, $email, $pwd, $gender, $birthday
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "sssssss", $name, $phonenumber, $email, $gender, $birthday, $LastName, $hashedPwd);
+    mysqli_stmt_bind_param($stmt, "sssss", $name, $phonenumber, $email, $LastName, $hashedPwd);
 
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
@@ -116,7 +116,7 @@ function loginUser($conn, $email, $pwd)
 }
 
 
-function emptyInputFriends($name, $LastName, $gender, $interest)
+/*function emptyInputFriends($name, $LastName, $gender, $interest)
 {
     $result;
     if (empty($name) || empty($LastName) || empty($gender) || empty($interest)) {
@@ -184,4 +184,4 @@ function Addevent($conn, $friends, $Eventname, $Eventdate)
    
     header("location: ../calendaPage.php?error=none");
     exit();
-}
+}*/
