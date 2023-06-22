@@ -2,14 +2,13 @@
 
 if (isset($_POST["submit"])) {
     //code...
-$name = $_POST["Firstname"];
-$email = $_POST["email"];
-$phonenumber = $_POST["PhoneNr"];
-$LastName = $_POST["family_name"];
-$pwd = $_POST["pwd"];
-$pwdrepeat = $_POST["pwdrepeat"];
-$birthday = $_POST["Bday"];
-$gender = $_POST["gender"];
+$name = $_POST["Voornaam"];
+$email = $_POST["Email"];
+$phonenumber = $_POST["Telefoonnummer"];
+$LastName = $_POST["Naam"];
+$pwd = $_POST["Pwd"];
+$pwdrepeat = $_POST["Pwdrepeat"];
+
 
    
 
@@ -18,7 +17,7 @@ require_once 'functions.php';
 
 
 
-if(emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat, $gender, $birthday, $LastName) !== false){
+if(emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat, $LastName) !== false){
     header("location: ../signup.php?error=emptyinput");
     exit();
 }
@@ -43,7 +42,7 @@ if(uidExists($conn, $email) !== false){
     exit();
  }
 
- createUser($conn, $name, $phonenumber, $email, $pwd, $gender, $birthday, $LastName);
+ createUser($conn, $name, $phonenumber, $email, $pwd,$LastName);
 
 }
 else{
