@@ -2,7 +2,7 @@
 
 if (isset($_POST["submit"])) {
     //code...
-$name = $_POST["Voornaam"];
+$name = $_POST["Firstname"];
 $email = $_POST["email"];
 $phonenumber = $_POST["PhoneNr"];
 $LastName = $_POST["family_name"];

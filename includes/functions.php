@@ -65,13 +65,13 @@ function uidExists($conn, $email)
 
 function createUser($conn, $name, $phonenumber, $email, $pwd,  $LastName)
 {
-    $sql = "INSERT INTO tblguardian (Voornaam, PhoneNr, Email  naam ,Pwd) VALUES (?, ?, ?, ?, ?);";
+    $sql = "INSERT INTO tblguardian (Voornaam, Telefoonnummer, Email, Naam ,Pwd) VALUES (?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed2");
         exit();
     }
-
+    
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
     mysqli_stmt_bind_param($stmt, "sssss", $name, $phonenumber, $email, $LastName, $hashedPwd);
@@ -79,7 +79,9 @@ function createUser($conn, $name, $phonenumber, $email, $pwd,  $LastName)
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../signup.php?error=none");
+    
     exit();
+    
 }
 
 function emptyInputLogin($email, $pwd)
@@ -96,19 +98,19 @@ function loginUser($conn, $email, $pwd)
 {
     $uidExists = uidExists($conn, $email);
     if ($uidExists === false) {
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../login.php?error=wronglogin2");
         exit();
     }
     $pwdHashed = $uidExists["Password"];
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if ($checkPwd === false) {
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../login.php?error=wronglogin1");
         exit();
     } else if ($checkPwd === true) {
         session_start();
-        $_SESSION["AccountsID"] = $uidExists["AccountsID"];
-        $_SESSION["Firstname"] = $uidExists["Firstname"];
+        $_SESSION["GuardianID"] = $uidExists["GuardianID"];
+        $_SESSION["Voornaam"] = $uidExists["Voornaam"];
 
         header("location: ../calendaPage.php?table=created");
         exit();
