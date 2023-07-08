@@ -1,7 +1,6 @@
 <?php
 
 if (isset($_POST["submit"])) {
-    //code...
 $name = $_POST["Voornaam"];
 $email = $_POST["Email"];
 $phonenumber = $_POST["Telefoonnummer"];
@@ -16,18 +15,10 @@ if(emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat, $LastName) !=
     header("location: ../signup.php?error=emptyinput");
     exit();
 }
-// if(invalidUid($username) !== false){
-//     header("location: ../signup.php?error=invaliduid");
-//     exit();
-// }
 if(invalidEmail($email) !== false){
     header("location: ../signup.php?error=invalidemail");
     exit();
 }
-//if(invalidPhonenumber($phonenumber) !== false){
-    //header("location: ../signup.php?error=invalidphonenumber");
-  //  exit();
-//}
 if(pwdMatch($pwd, $pwdrepeat) !== false){
     header("location: ../signup.php?error=passwordsdontmatch");
     exit();
@@ -35,9 +26,9 @@ if(pwdMatch($pwd, $pwdrepeat) !== false){
 if(uidExists($conn, $email) !== false){
     header("location: ../signup.php?error=usernametaken");
     exit();
- }
+}
 
- createUser($conn, $name, $phonenumber, $email, $pwd,$LastName);
+createUser($conn, $name, $phonenumber, $email, $pwd,$LastName);
 
 }
 else{
