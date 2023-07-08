@@ -1,5 +1,5 @@
 <?php include_once 'includes/header.php'; ?>
-<title>Kaddoo For Birthdays</title>
+<title>FoodPlatform</title>
 <link rel="shortcut icon" type="icon" href ="Image/Calenda.ico">
 </head>
 <body>
