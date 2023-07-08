@@ -110,7 +110,7 @@ function loginUser($conn, $email, $pwd)
         $_SESSION["AccountsID"] = $uidExists["AccountsID"];
         $_SESSION["Firstname"] = $uidExists["Firstname"];
 
-        header("location: ../calendaPage.php?table=created");
+        header("location: ../Calendar.php?table=created");
         exit();
     }
 }
@@ -132,7 +132,7 @@ function AddFriend($conn, $name, $LastName, $birthday, $interest, $id)
     $sql = "INSERT INTO friends (Firstname, Lastname, Birthdate , AccountsID) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../calendaPage.php?error=stmtfailed3");
+        header("location: ../Calendar.php?error=stmtfailed3");
         exit();
     }
 
@@ -161,7 +161,7 @@ function AddFriend($conn, $name, $LastName, $birthday, $interest, $id)
     mysqli_query($conn , $sql3);
     mysqli_stmt_close($stmt);
    
-    header("location: ../calendaPage.php?error=none");
+    header("location: ../Calendar.php?error=none");
     exit();
 }
 function emptyInputevent($friends, $Eventname, $Eventdate)
@@ -182,6 +182,6 @@ function Addevent($conn, $friends, $Eventname, $Eventdate)
 
     mysqli_query($conn , $sql3);
    
-    header("location: ../calendaPage.php?error=none");
+    header("location: ../Calendar.php?error=none");
     exit();
 }
