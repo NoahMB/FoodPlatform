@@ -13,7 +13,7 @@ if (isset($_SESSION["Firstname"])) {
                   if($row['Email'] == "admin@gmail.com"){
                     echo"
                     <div class='header'>
-                      <a href='Calendar.php' class='logo'>KADDOO</a>
+                      <a href='Calendar.php' class='logo'>FOODPLATFORM</a>
                       <div class='header-right'>
                       <a href='includes/logout.php'>Logout</a>
                       <a href='friendlist.php'>Friend List</a>
@@ -42,7 +42,7 @@ if (isset($_SESSION["Firstname"])) {
 }
 else{
   echo"<div class='header'>
-  <a href='index.php' class='logo'>KADDOO</a>
+  <a href='index.php' class='logo'>FOODPLATFORM</a>
   <div class='header-right'> 
     <a href='index.php'>Home</a>
     <a href='signup.php'>Sign Up</a>

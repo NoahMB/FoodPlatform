@@ -3,8 +3,8 @@
     <link rel="shortcut icon" type="icon" href ="Image/AddUser.ico">
 </head>
 <body>
-<?php include_once 'includes/nav.php';?>
-   
+    <?php include_once 'includes/nav.php';?> 
+    
     <div class="TextAllign">
         
      <div class = "StyleSignUP">
@@ -18,84 +18,55 @@
                     </h1>
                     <p>Create your Account</p>
                     <br>
-                <label for="Firstname" >
+                <label for="Voornaam" >
                      First Name
                 </label>
                 <br>
-                <input type="text" name="Firstname" id="Firstname" placeholder="Insert Your First Name" >
+                <input type="text" name="Voornaam" id="Voornaam" placeholder="Insert Your First Name" >
                 <br>
-    
-                <label for="family_name">
+                <label for="Naam">
                     Last Name
                 </label>
                 <br>
-                <input type="text" name="family_name" id="family_name" placeholder="Insert Your Last Name" required="true">
+                <input type="text" name="Naam" id="Naam" placeholder="Insert Your Last Name" required="true">
                 <br>
-                
-                <label for="email">
+                <label for="Email">
                    Enter Email
                 </label>
                 <br>
-                <input type="email" id="email" name="email" placeholder="Enter your Email"> 
+                <input type="email" id="Email" name="Email" placeholder="Enter your Email"> 
                 <br>
-                <label for="pwd">
+                <label for="Pwd">
                     Password
                 </label>
                 <br>
-                <input type="password" id="pwd" name="pwd" minlength="8" placeholder="Enter your Password">
+                <input type="password" id="Pwd" name="Pwd" minlength="8" placeholder="Enter your Password">
                 <br>
-                <label for="pwdrepeat">
+                <label for="Pwdrepeat">
                    Repeat Password
                 </label>
                 <br>
-                <input type="password" id="pwdrepeat" name="pwdrepeat" minlength="8" placeholder="Repeat your Password">
+                <input type="password" id="Pwdrepeat" name="Pwdrepeat" minlength="8" placeholder="Repeat your Password">
                 <br>
-                <label for="Bday">
-                    Your Birthday
-                </label>
-                <br>
-                <input type="date" id="Bday" name="Bday"value="">
-                <br>
-                <label for="PhoneNr">
+                <label for="Telefoonnummer">
                     Enter your phone number
                 </label>
                 <br>
-                <input type="tel" id="PhoneNr" name="PhoneNr" placeholder="Enter your phone number"> 
-                <br>
-                <label for="gender">
-                    Gender
-                </label>
-                <br>
-                <select name="gender" id="gender">
-                    <option value="male">
-                        Male
-                    </option>
-                    <option value="female">
-                        Female
-                    </option>
-                </select>
+                <input type="tel" id="Telefoonnummer" name="Telefoonnummer" placeholder="Enter your phone number"> 
                 <br>
                 <br>
-            <input type="submit" value="Create Account"id="SubmitCreateAccount" name="submit" >
+            <input type="submit" value="Create Account" id="submit" name="submit">
             <br>
             <br>
             <br>
         </form>
         <p> <strong>Have an Account Already? </strong> <a href="login.php">LOG IN NOW</a> </p>
-    
        </div>
-
+      </div>
      </div>
-</div>
     </div>
-  
-      
    
     <?php include_once 'includes/footer.php';?> 
-<script>
-  var today = new Date().toISOString().split('T')[0];
-  document.getElementsByName("Bday")[0].setAttribute('max', today);
-</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </body>

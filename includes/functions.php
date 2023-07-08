@@ -1,28 +1,17 @@
 <?php
 
-function emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat, $gender, $birthday, $LastName)
+function emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat, $LastName)
 {
-    $result;
-    if (empty($name) || empty($email) || empty($phonenumber) || empty($pwd) || empty($pwdrepeat)|| empty($gender)|| empty($birthday)|| empty($LastName) ) {
+    if (empty($name) || empty($email) || empty($phonenumber) || empty($pwd) || empty($pwdrepeat)|| empty($LastName) ) {
         $result = true;
     } else {
         $result = false;
     }
     return $result;
 }
-// function invalidUid($username)
-// {
-//     $result;
-//     if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-//         $result = true;
-//     } else {
-//         $result = false;
-//     }
-//     return $result;
-// }
+
 function invalidEmail($email)
 {
-    $result;
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $result = true;
     } else {
@@ -30,9 +19,9 @@ function invalidEmail($email)
     }
     return $result;
 }
+
 function pwdMatch($pwd, $pwdrepeat)
 {
-    $result;
     if ($pwd !== $pwdrepeat) {
         $result = true;
     } else {
@@ -40,10 +29,11 @@ function pwdMatch($pwd, $pwdrepeat)
     }
     return $result;
 }
+
 function uidExists($conn, $email)
 {
     $result = true;
-    $sql = "SELECT * FROM accounts WHERE Email = ?;";
+    $sql = "SELECT * FROM tblGuardian WHERE Email = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed1");
@@ -62,10 +52,9 @@ function uidExists($conn, $email)
     exit();
 }
 
-
-function createUser($conn, $name, $phonenumber, $email, $pwd, $gender, $birthday, $LastName)
+function createUser($conn, $name, $phonenumber, $email, $pwd, $LastName)
 {
-    $sql = "INSERT INTO accounts (FirstName, PhoneNr, Email , Gender, Birthdate, LastName ,Password) VALUES (?, ?, ?, ?, ?, ?, ?);";
+    $sql = "INSERT INTO tblGuardian (Voornaam, Naam, Email, Telefoonnummer, Pwd) VALUES (?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed2");
@@ -74,8 +63,7 @@ function createUser($conn, $name, $phonenumber, $email, $pwd, $gender, $birthday
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "sssssss", $name, $phonenumber, $email, $gender, $birthday, $LastName, $hashedPwd);
-
+    mysqli_stmt_bind_param($stmt, "sssss", $name, $LastName, $email, $phonenumber, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../signup.php?error=none");
@@ -84,7 +72,6 @@ function createUser($conn, $name, $phonenumber, $email, $pwd, $gender, $birthday
 
 function emptyInputLogin($email, $pwd)
 {
-    $result;
     if (empty($email) || empty($pwd)) {
         $result = true;
     } else {
@@ -92,6 +79,7 @@ function emptyInputLogin($email, $pwd)
     }
     return $result;
 }
+
 function loginUser($conn, $email, $pwd)
 {
     $uidExists = uidExists($conn, $email);
@@ -113,75 +101,4 @@ function loginUser($conn, $email, $pwd)
         header("location: ../Calendar.php?table=created");
         exit();
     }
-}
-
-
-function emptyInputFriends($name, $LastName, $gender, $interest)
-{
-    $result;
-    if (empty($name) || empty($LastName) || empty($gender) || empty($interest)) {
-        $result = true;
-    } else {
-        $result = false;
-    }
-    return $result;
-}
-function AddFriend($conn, $name, $LastName, $birthday, $interest, $id)
-{
-     
-    $sql = "INSERT INTO friends (Firstname, Lastname, Birthdate , AccountsID) VALUES (?, ?, ?, ?);";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../Calendar.php?error=stmtfailed3");
-        exit();
-    }
-
-
-    mysqli_stmt_bind_param($stmt, "ssss", $name, $LastName, $birthday, $id);
-    
-    
-    mysqli_stmt_execute($stmt);
-
-    $sqlMaxID = "SELECT FriendsID FROM friends WHERE FriendsID = (SELECT MAX(FriendsID) FROM friends)";
-    $resultMax = mysqli_query($conn , $sqlMaxID);
-    $rowMax = mysqli_fetch_array($resultMax);
-
-    foreach ($interest as $int) {
-        $sql2 = "INSERT INTO friendsinterests (FriendsID, InterestsID) VALUES (".$rowMax['FriendsID']."," .$int. ")";
-        mysqli_query($conn , $sql2);
-    }
-
-    $eventname = $name ." ". $LastName. " Birthday";
-    $year = date("Y");
-    $month = date("m",strtotime($birthday));
-    $day = date("d", strtotime($birthday));
-    $date = $year ."-". $month."-". $day;
-
-    $sql3 = "INSERT INTO events (Name, Date, FriendsID) Values ('".$eventname."','".$date."',".$rowMax['FriendsID'].")";
-    mysqli_query($conn , $sql3);
-    mysqli_stmt_close($stmt);
-   
-    header("location: ../Calendar.php?error=none");
-    exit();
-}
-function emptyInputevent($friends, $Eventname, $Eventdate)
-{
-    $result;
-    if (empty($friends) || empty($Eventname) || empty($Eventdate)) {
-        $result = true;
-    } else {
-        $result = false;
-    }
-    return $result;
-}
-
-function Addevent($conn, $friends, $Eventname, $Eventdate)
-{
-    $sql3 = "INSERT INTO events (Name, Date, FriendsID) Values ('".$Eventname."','".$Eventdate."',".$friends.")";
-    
-
-    mysqli_query($conn , $sql3);
-   
-    header("location: ../Calendar.php?error=none");
-    exit();
 }

@@ -9,13 +9,8 @@ $LastName = $_POST["Naam"];
 $pwd = $_POST["Pwd"];
 $pwdrepeat = $_POST["Pwdrepeat"];
 
-
-   
-
-require_once 'conn.php';
-require_once 'functions.php';
-
-
+include_once 'conn.php';
+include_once 'functions.php';
 
 if(emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat, $LastName) !== false){
     header("location: ../signup.php?error=emptyinput");
