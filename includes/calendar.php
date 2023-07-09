@@ -107,23 +107,6 @@ class Calendar {
              
             $cellContent = "<div class='day'><p>" . $this->currentDay . "</p></div>";
 
-            include 'conn.php';
-
-            $sql = "SELECT * FROM `events` WHERE `FriendsID` IN 
-            (SELECT `FriendsID` FROM `friends` WHERE `AccountsID` = " . $_SESSION["AccountsID"] . ") and `Date` = '" . 
-            $this->currentDate ."'";
-            $result = mysqli_query($conn, $sql);
-            if ($result->num_rows > 0) {
-
-                $cellContent = $cellContent . "<div class='dayContent'>";
-
-                while($row = $result->fetch_assoc()) { 
-                    $_SESSION["URL"] = "event.php?id=" . $row["EventsID"];
-                    $cellContent = $cellContent . "<p><a href='" . $_SESSION["URL"] . "'>" . $row["Name"] . "</a></p>";
-                }
-
-                $cellContent = $cellContent . "</div>";
-            }
             $this->currentDay++;   
              
         }else{

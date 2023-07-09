@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 function emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat, $LastName)
 {
@@ -84,10 +86,10 @@ function loginUser($conn, $email, $pwd)
 {
     $uidExists = uidExists($conn, $email);
     if ($uidExists === false) {
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../login.php?error=notreal");
         exit();
     }
-    $pwdHashed = $uidExists["Password"];
+    $pwdHashed = $uidExists["Pwd"];
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if ($checkPwd === false) {
