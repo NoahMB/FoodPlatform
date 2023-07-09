@@ -95,8 +95,8 @@ function loginUser($conn, $email, $pwd)
         exit();
     } else if ($checkPwd === true) {
         session_start();
-        $_SESSION["AccountsID"] = $uidExists["AccountsID"];
-        $_SESSION["Firstname"] = $uidExists["Firstname"];
+        $_SESSION["GuardianID"] = $uidExists["GuardianID"];
+        $_SESSION["Voornaam"] = $uidExists["Voornaam"];
 
         header("location: ../Calendar.php?table=created");
         exit();
