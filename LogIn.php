@@ -38,7 +38,7 @@
             </p>
             <br>
             <br>
-            <p> <strong> Don't have an accout yet?</strong> <a href="SignUp.php">Join Kaddoo.com now</a> </p>
+            <p> <strong> Don't have an accout yet?</strong> <a href="SignUp.php">Join now</a> </p>
             <input type="text" name="uid" id="uid" placeholder="E-Mail" required="true">
             <br>
             <br>
