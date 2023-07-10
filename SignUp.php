@@ -54,11 +54,11 @@
                 <br>
                 <input type="date" id="Bday" name="Bday"value="">
                 <br>
-                <label for="PhoneNr">
+                <label for="Telefoonnummer">
                     Enter your phone number
                 </label>
                 <br>
-                <input type="tel" id="PhoneNr" name="PhoneNr" placeholder="Enter your phone number"> 
+                <input type="tel" id="Telefoonnummer" name="Telefoonnummer" placeholder="Enter your phone number"> 
                 <br>
                 <label for="gender">
                     Gender
