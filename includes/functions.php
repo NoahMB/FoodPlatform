@@ -1,28 +1,20 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-function emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat,  $LastName)
+function emptyInputSignup($name, $email, $phonenumber, $pwd, $pwdrepeat, $gender, $birthday, $LastName)
 {
     $result;
-    if (empty($name) || empty($email) || empty($phonenumber) || empty($pwd) || empty($pwdrepeat)|| empty($LastName) ) {
+    if (empty($name) || empty($email) || empty($phonenumber) || empty($pwd) || empty($pwdrepeat)|| empty($gender)|| empty($birthday)|| empty($LastName) ) {
         $result = true;
     } else {
         $result = false;
     }
     return $result;
 }
-// function invalidUid($username)
-// {
-//     $result;
-//     if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-//         $result = true;
-//     } else {
-//         $result = false;
-//     }
-//     return $result;
-// }
+
 function invalidEmail($email)
 {
-    $result;
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $result = true;
     } else {
@@ -30,9 +22,9 @@ function invalidEmail($email)
     }
     return $result;
 }
+
 function pwdMatch($pwd, $pwdrepeat)
 {
-    $result;
     if ($pwd !== $pwdrepeat) {
         $result = true;
     } else {
@@ -40,10 +32,11 @@ function pwdMatch($pwd, $pwdrepeat)
     }
     return $result;
 }
+
 function uidExists($conn, $email)
 {
     $result = true;
-    $sql = "SELECT * FROM tblguardian WHERE Email = ?;";
+    $sql = "SELECT * FROM accounts WHERE Email = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed1");
@@ -63,9 +56,9 @@ function uidExists($conn, $email)
 }
 
 
-function createUser($conn, $name, $phonenumber, $email, $pwd,  $LastName)
+function createUser($conn, $name, $phonenumber, $email, $pwd, $gender, $birthday, $LastName)
 {
-    $sql = "INSERT INTO tblguardian (Voornaam, Telefoonnummer, Email, Naam ,Pwd) VALUES (?, ?, ?, ?, ?);";
+    $sql = "INSERT INTO accounts (FirstName, PhoneNr, Email , Gender, Birthdate, LastName ,Password) VALUES (?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed2");
@@ -74,7 +67,7 @@ function createUser($conn, $name, $phonenumber, $email, $pwd,  $LastName)
     
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "sssss", $name, $phonenumber, $email, $LastName, $hashedPwd);
+    mysqli_stmt_bind_param($stmt, "sssssss", $name, $phonenumber, $email, $gender, $birthday, $LastName, $hashedPwd);
 
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
@@ -86,7 +79,6 @@ function createUser($conn, $name, $phonenumber, $email, $pwd,  $LastName)
 
 function emptyInputLogin($email, $pwd)
 {
-    $result;
     if (empty($email) || empty($pwd)) {
         $result = true;
     } else {
@@ -94,14 +86,15 @@ function emptyInputLogin($email, $pwd)
     }
     return $result;
 }
+
 function loginUser($conn, $email, $pwd)
 {
     $uidExists = uidExists($conn, $email);
     if ($uidExists === false) {
-        header("location: ../login.php?error=wronglogin2");
+        header("location: ../login.php?error=wronglogin");
         exit();
     }
-    $pwdHashed = $uidExists["Password"];
+    $pwdHashed = $uidExists["Pwd"];
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if ($checkPwd === false) {
@@ -112,13 +105,13 @@ function loginUser($conn, $email, $pwd)
         $_SESSION["GuardianID"] = $uidExists["GuardianID"];
         $_SESSION["Voornaam"] = $uidExists["Voornaam"];
 
-        header("location: ../calendaPage.php?table=created");
+        header("location: ../Calendar.php?table=created");
         exit();
     }
 }
 
 
-/*function emptyInputFriends($name, $LastName, $gender, $interest)
+function emptyInputFriends($name, $LastName, $gender, $interest)
 {
     $result;
     if (empty($name) || empty($LastName) || empty($gender) || empty($interest)) {
@@ -186,4 +179,4 @@ function Addevent($conn, $friends, $Eventname, $Eventdate)
    
     header("location: ../calendaPage.php?error=none");
     exit();
-}*/
+}

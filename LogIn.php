@@ -1,5 +1,5 @@
 <?php include_once 'includes/header.php';?>
-    <title>Kaddoo log in</title>
+    <title>Log in</title>
     <link rel="shortcut icon" type="icon" href ="Image/FavIconLogin.ico">
 </head>
 <body>
@@ -38,7 +38,7 @@
             </p>
             <br>
             <br>
-            <p> <strong> Don't have an accout yet?</strong> <a href="SignUp.php">Join Kaddoo.com now</a> </p>
+            <p> <strong> Don't have an accout yet?</strong> <a href="SignUp.php">Join now</a> </p>
             <input type="text" name="uid" id="uid" placeholder="E-Mail" required="true">
             <br>
             <br>
@@ -60,7 +60,6 @@
     </div>
 
 </div>    
-      <?php include_once 'includes/footer.php';?> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
