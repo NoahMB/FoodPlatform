@@ -18,25 +18,7 @@
             <p>
                 Sign in to continue
             </p>
-            <br>
-            <br>
-            <div class = "col">
-                <a href="#" class = "fb btn">
-                    <i class = "fa fa-facebook fa-fw"></i> Login with Facebook
-                </a>
-                <br>
-                <br>
-                <a href="#" class = "btn google">
-                    <i class = "fa fa-google fa-fw"></i> Login with Google
-                </a>
-
-            </div>
-            <br>
-            <br>
-            <p>
-                Or use an email/user name.
-            </p>
-            <br>
+            
             <br>
             <p> <strong> Don't have an accout yet?</strong> <a href="SignUp.php">Join now</a> </p>
             <input type="text" name="uid" id="uid" placeholder="E-Mail" required="true">
