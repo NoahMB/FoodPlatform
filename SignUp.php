@@ -4,12 +4,6 @@
 </head>
 <body>
     <?php include_once 'includes/nav.php';?> 
-    
-    <div class="TextAllign">
-        
-     <div class = "StyleSignUP">
-       <div class="SignUP_C">
-        <div class="content">
         
             <form method ="POST" action="includes/signup.inc.php">          
                    <br>
