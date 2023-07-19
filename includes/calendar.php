@@ -118,7 +118,8 @@ class Calendar {
              
         # $cellContent needs to be changed 
 
-        return '<div id="'.$this->currentDate.'" class="datecell '.($cellContent==null?'mask':'').'">'
+        return '
+        <div id="'.$this->currentDate.'" class="datecell '.($cellContent==null?'mask':'').'"  '.($cellContent!=null?'data-toggle="modal" data-target="#exampleModal"':'').'>'  
         .
 
         $cellContent # content in day cells
