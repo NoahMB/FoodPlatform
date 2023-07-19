@@ -104,8 +104,13 @@ class Calendar {
         if( ($this->currentDay!=0)&&($this->currentDay<=$this->daysInMonth) ){
              
             $this->currentDate = date('Y-m-d',strtotime($this->currentYear.'-'.$this->currentMonth.'-'.($this->currentDay)));
+
+            include 'conn.php';
+            $sql = "SELECT MenuName FROM `TblOrders` WHERE `StudentID` IN (SELECT `StudentID` FROM `tblFamilie` WHERE `GuardianID` = " . $_SESSION["GuardianID"] . " ) AND OrderDate = '" . $this->currentDate . "';";
+            $result = mysqli_query($conn, $sql);
+            $row = $result->fetch_assoc();
              
-            $cellContent = "<div class='day'><p>" . $this->currentDay . "</p></div>";
+            $cellContent = "<div class='day'><p class='dayNumber'>" . $this->currentDay . "</p><p class='dayOrder'>" . ($result->num_rows > 0?$row["MenuName"]:'') . "<p></div>";
 
             $this->currentDay++;   
              
@@ -124,6 +129,7 @@ class Calendar {
         include 'conn.php';
         $sql = "SELECT OrderDate FROM `TblOrders` WHERE `StudentID` IN (SELECT `StudentID` FROM `tblFamilie` WHERE `GuardianID` = " . $_SESSION["GuardianID"] . " ) AND OrderDate = '" . $this->currentDate . "';";
         $result = mysqli_query($conn, $sql);
+        $row = $result->fetch_assoc();
 
         return '
         <div onClick = "clickFunction('.$dateID.')" id="'.$this->currentDate.'" 

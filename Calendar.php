@@ -5,8 +5,8 @@
 <body>
  
   <?php include_once 'includes/nav.php';?>
-
-  
+  <br>
+  <h5 style="margin-left:15px;">Kies een datum:</h5>
   <div class="CalendarContainer">
     <div class="calendarContent">
 
@@ -58,13 +58,13 @@
           ?>
           <br>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="meal" id="exampleRadios1" value="Soep" checked>
+            <input class="form-check-input" type="radio" name="meal" id="exampleRadios1" value="S" checked>
             <label class="form-check-label" for="exampleRadios1">
               Soep
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="meal" id="exampleRadios2" value="Soep + Maaltijd">
+            <input class="form-check-input" type="radio" name="meal" id="exampleRadios2" value="M">
             <label class="form-check-label" for="exampleRadios2">
               Soep + Maaltijd
             </label>
@@ -74,15 +74,9 @@
           </form>
 
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
       </div>
     </div>
   </div>  
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
   <script>
       function clickFunction(date) {
@@ -90,6 +84,5 @@
         console.log(date);
       }
   </script>
-    
-</body>
-</html>
+
+<?php include_once 'includes/footer.php';?>
