@@ -121,13 +121,23 @@ class Calendar {
 
         $dateID = "'" . $this->currentDate . "'";
 
+        include 'conn.php';
+        $sql = "SELECT OrderDate FROM `TblOrders` WHERE `StudentID` IN (SELECT `StudentID` FROM `tblFamilie` WHERE `GuardianID` = " . $_SESSION["GuardianID"] . " ) AND OrderDate = '" . $this->currentDate . "';";
+        $result = mysqli_query($conn, $sql);
+
         return '
-        <div onClick = "clickFunction('.$dateID.')" id="'.$this->currentDate.'" class="datecell '.($cellContent==null?'mask':'').'"  '.($cellContent!=null?'data-toggle="modal" data-target="#exampleModal"':'').'>'  
+        <div onClick = "clickFunction('.$dateID.')" id="'.$this->currentDate.'" 
+        class="datecell '.($cellContent==null?'mask':'').'
+        
+        '. ($result->num_rows > 0?'dateOrdered':'') .'
+
+        "  '.($cellContent!=null?'data-toggle="modal" data-target="#exampleModal"':'').'>'  
         .
 
         $cellContent # content in day cells
         
-        .'</div>';
+        .
+        '</div>';
     }
      
     /**

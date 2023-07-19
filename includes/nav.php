@@ -9,7 +9,7 @@ if (isset($_SESSION["Voornaam"])) {
   echo"
 
   <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
-  <a class='nav-item nav-link' href='index.php'>FOODPLATFORM</a>
+  <a class='nav-item nav-link' href='Calendar.php'>FOODPLATFORM</a>
   <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false'aria-label='Toggle navigation'>
     <span class='navbar-toggler-icon'></span>
   </button>

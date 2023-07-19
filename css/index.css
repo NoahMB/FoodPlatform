@@ -59,6 +59,15 @@
 .datecell:hover{
   background-color: whitesmoke;
 }
+
+.dateOrdered {
+  background-color: rgb(155 229 142) !important;
+}
+
+.dateOrdered:hover{
+  background-color: rgb(181 230 172) !important;
+}
+
 .week .datecell:nth-child(6), .week .datecell:nth-child(7){
  color: red;
  border-color: #000;
