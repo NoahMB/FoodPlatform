@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;500&display=swap');
+
+body {
+  font-family: 'Bitter', serif !important;
+}
+
+a {
+  color: #94c11f !important;
+}
+
+.btn-primary {
+  background-color: #94c11f !important;
+  border-color: #94c11f !important;
+}
+
 .labels {
   display: flex;
   flex-flow: row wrap;
@@ -157,12 +172,12 @@
 }
 
 .nav-item {
-  color: #006462 !important;
+  color: #94c11f !important;
   text-decoration: none !important;
 }
 
 .nav-item a {
-  color: #006462 !important;
+  color: #94c11f !important;
 }
 
 .nav-photo {
