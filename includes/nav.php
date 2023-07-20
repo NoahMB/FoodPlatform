@@ -34,8 +34,8 @@ else
   <div class='collapse navbar-collapse justify-content-end' id='navbarNavAltMarkup'>
     <div class='navbar-nav'>
       <a class='nav-item nav-link active' href='index.php'>Home</a>
-      <a class='nav-item nav-link active' href='signup.php'>Sign Up</a>
-      <a class='nav-item nav-link active' href='login.php'>Log In</a>
+      <a class='nav-item nav-link active' href='signup.php'>Inschrijven</a>
+      <a class='nav-item nav-link active' href='login.php'>Inloggen</a>
     </div>
   </div>
 </nav>              

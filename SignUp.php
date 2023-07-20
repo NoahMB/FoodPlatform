@@ -6,75 +6,54 @@
     <?php include_once 'includes/nav.php';?> 
         
         <div class="loginSignup">
-            <form method ="POST" action="includes/signup.inc.php">          
-                   <br>
-                    <h1>
-                        WELCOME
-                    </h1>
-                    <p>Create your Account</p>
-                    <br>
-                <label for="Voornaam" >
-                     First Name
-                </label>
-                <br>
-                <input type="text" name="Voornaam" id="Voornaam" placeholder="Insert Your First Name" >
-                <br>
-                <label for="Naam">
-                    Last Name
-                </label>
-                <br>
-                <input type="text" name="Naam" id="Naam" placeholder="Insert Your Last Name" required="true">
-                <br>
-                <label for="Email">
-                   Enter Email
-                </label>
-                <br>
-                <input type="email" id="Email" name="Email" placeholder="Enter your Email"> 
-                <br>
-                <label for="Pwd">
-                    Password
-                </label>
-                <br>
-                <input type="password" id="Pwd" name="Pwd" minlength="8" placeholder="Enter your Password">
-                <br>
-                <label for="Pwdrepeat">
-                   Repeat Password
-                </label>
-                <br>
-                <input type="password" id="Pwdrepeat" name="Pwdrepeat" minlength="8" placeholder="Repeat your Password">
-                <br>
-                <label for="Bday">
-                    Your Birthday
-                </label>
-                <br>
+            <h1>Welkom!</h1>
+            <p><strong>Al een account? </strong> <a href="login.php">Inloggen</a> </p>
+            <form method ="POST" action="includes/signup.inc.php">  
+                
+            <div class="form-group">
+                <label for="Voornaam" >Voornaam</label>
+                <input type="text" name="Voornaam" id="Voornaam" placeholder="Voornaam" >
+            </div>
+            <div class="form-group">
+                <label for="Naam">Naam</label>
+                <input type="text" name="Naam" id="Naam" placeholder="Naam" required="true">
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="Email" placeholder="Email"> 
+            </div>
+            <div class="form-group">
+                <label for="Pwd">Wachtwoord</label>
+                <input type="password" id="Pwd" name="Pwd" minlength="8" placeholder="Wachtwoord">
+            </div>
+            <div class="form-group">
+                <label for="Pwdrepeat">Herhaal Wachtwoord</label>
+                <input type="password" id="Pwdrepeat" name="Pwdrepeat" minlength="8" placeholder="Herhaal Wachtwoord">
+            </div>
+            <div class="form-group">
+                <label for="Bday">Geboortedatum</label>
                 <input type="date" id="Bday" name="Bday"value="">
-                <br>
-                <label for="Telefoonnummer">
-                    Enter your phone number
-                </label>
-                <br>
-                <input type="tel" id="Telefoonnummer" name="Telefoonnummer" placeholder="Enter your phone number"> 
-                <br>
-                <label for="gender">
-                    Gender
-                </label>
-                <br>
+            </div>
+            <div class="form-group">
+                <label for="Telefoonnummer">Telefoonnummer</label>
+                <input type="tel" id="Telefoonnummer" name="Telefoonnummer" placeholder="Telefoonnummer"> 
+            </div>
+            <div class="form-group">
+                <label for="gender">Geslacht</label>
                 <select name="gender" id="gender">
                     <option value="male">
-                        Male
+                        Man
                     </option>
                     <option value="female">
-                        Female
+                        Vrouw
+                    </option>
+                    <option value="Geen">
+                        Zeg ik liever niet
                     </option>
                 </select>
-                <br>
-                <br>
-            <input type="submit" value="Create Account" id="submit" name="submit">
-            <br>
-            <br>
-            <br>
-        </form>
-        <p> <strong>Have an Account Already? </strong> <a href="login.php">LOG IN NOW</a> </p>
+            </div>
+                <input type="submit" value="Account aanmaken" id="submit" name="submit" class="btn btn-primary">
+            </form>
        </div>
    
 <?php include_once 'includes/footer.php';?>

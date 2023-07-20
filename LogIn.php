@@ -7,23 +7,22 @@
 
         <div class="loginSignup">
             <h1>
-                Welcome Back!
+                Welkom terug!
             </h1>
 
-            <p> <strong> Don't have an accout yet?</strong> <a href="SignUp.php">Join now</a> </p>
+            <p> <strong> Nog geen account?</strong> <a href="SignUp.php">Nu inschrijven</a> </p>
             
             <form action="includes/login.inc.php" method="post">
                 <div class="form-group">
-                    <label for="uid">Email address</label>
-                    <input type="text" name="uid" id="uid" placeholder="E-Mail" required="true">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <label for="uid">Email</label>
+                    <input type="text" name="uid" id="uid" placeholder="Email" required="true">
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Password</label>
-                    <input type="password" id="pwd" name="pwd" minlength="8" placeholder="Password" required="true">
+                    <label for="pwd">Wachtwoord</label>
+                    <input type="password" id="pwd" name="pwd" minlength="8" placeholder="Wachtwoord" required="true">
                 </div>
-                <p><a href="password.php">Forgot password?</a> </p>
-                <input type="submit" value="LOG IN" id="btn_submit" class="btn btn-primary" name="submit">
+                <p><a href="password.php">Wachtwoord vergeten?</a> </p>
+                <input type="submit" value="Inloggen" id="btn_submit" class="btn btn-primary" name="submit">
             </form>
         </div>
 
