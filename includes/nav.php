@@ -15,8 +15,8 @@ if (isset($_SESSION["Voornaam"])) {
   </button>
   <div class='collapse navbar-collapse justify-content-end' id='navbarNavAltMarkup'>
     <div class='navbar-nav'>
-      <a class='nav-item nav-link active' href='includes/logout.php'>Logout</a>
-      <a class='nav-item nav-link active' href='Calendar.php'>Welcome, " . $id ."</a>
+      <a class='nav-item nav-link active' href='includes/logout.php'>Uitloggen</a>
+      <a class='nav-item nav-link active' href='Calendar.php'>Welkom, " . $id ."</a>
     </div>
   </div>
 </nav>

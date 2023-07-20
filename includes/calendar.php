@@ -9,7 +9,7 @@ class Calendar {
     }
      
     /********************* PROPERTY ********************/  
-    private $dayLabels = array("Mon","Tue","Wed","Thu","Fri","Sat","Sun");
+    private $dayLabels = array("Maa","Din","Woe","Don","Vrij","Zat","Zon");
      
     private $currentYear=0;
      
@@ -225,9 +225,9 @@ class Calendar {
          
         return
             
-            '<div class="prev"><a class="prev" href="'.$this->naviHref.'?month='.sprintf('%02d',$preMonth).'&year='.$preYear.'">Prev</a></div>'.
+            '<div class="prev"><a class="prev" href="'.$this->naviHref.'?month='.sprintf('%02d',$preMonth).'&year='.$preYear.'">Vorige</a></div>'.
             '<div class="date">'.date('Y M',strtotime($this->currentYear.'-'.$this->currentMonth.'-1')).'</div>'.
-            '<div class="next"><a class="next" href="'.$this->naviHref.'?month='.sprintf("%02d", $nextMonth).'&year='.$nextYear.'">Next</a></div>';
+            '<div class="next"><a class="next" href="'.$this->naviHref.'?month='.sprintf("%02d", $nextMonth).'&year='.$nextYear.'">Volgende</a></div>';
     }
          
     /**

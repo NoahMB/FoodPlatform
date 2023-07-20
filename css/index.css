@@ -13,6 +13,13 @@ a {
   border-color: #94c11f !important;
 }
 
+.loginSignup {
+  margin: auto;
+  width: 50%;
+  padding: 2em;
+  text-align: center;
+}
+
 .labels {
   display: flex;
   flex-flow: row wrap;

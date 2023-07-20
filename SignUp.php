@@ -5,6 +5,7 @@
 <body>
     <?php include_once 'includes/nav.php';?> 
         
+        <div class="loginSignup">
             <form method ="POST" action="includes/signup.inc.php">          
                    <br>
                     <h1>
@@ -75,8 +76,5 @@
         </form>
         <p> <strong>Have an Account Already? </strong> <a href="login.php">LOG IN NOW</a> </p>
        </div>
-      </div>
-     </div>
-    </div>
    
 <?php include_once 'includes/footer.php';?>
