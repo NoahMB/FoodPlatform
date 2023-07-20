@@ -157,6 +157,14 @@
 }
 
 .nav-item {
-  color: white !important;
+  color: #006462 !important;
   text-decoration: none !important;
+}
+
+.nav-item a {
+  color: #006462 !important;
+}
+
+.nav-photo {
+  width: 220px;
 }

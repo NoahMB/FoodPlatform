@@ -8,8 +8,8 @@ if (isset($_SESSION["Voornaam"])) {
            
   echo"
 
-  <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
-  <a class='nav-item' href='Calendar.php'>FOODPLATFORM</a>
+  <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+  <a class='nav-item nav-photo' href='Calendar.php'><img src='Image/logoKasteeltje.png' alt='logo Kasteeltje' width='100%' height='100%'></a>
   <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false'aria-label='Toggle navigation'>
     <span class='navbar-toggler-icon'></span>
   </button>
@@ -26,8 +26,8 @@ if (isset($_SESSION["Voornaam"])) {
 else 
 {
   echo"
-  <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
-  <a class='nav-item' href='index.php' class='logo'>FOODPLATFORM</a>
+  <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+  <a class='nav-item nav-photo' href='index.php' class='logo'><img src='Image/logoKasteeltje.png' alt='logo Kasteeltje' width='100%' height='100%'></a>
   <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false'aria-label='Toggle navigation'>
     <span class='navbar-toggler-icon'></span>
   </button>
