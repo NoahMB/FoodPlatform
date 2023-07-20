@@ -6,7 +6,7 @@
  
   <?php include_once 'includes/nav.php';?>
   <br>
-  <h5 style="margin-left:15px;">Kies een datum:</h5>
+  <h5 style="margin-left:15px;">Klik en kies een datum:</h5>
   <div class="CalendarContainer">
     <div class="calendarContent">
 

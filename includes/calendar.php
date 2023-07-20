@@ -22,6 +22,8 @@ class Calendar {
     private $daysInMonth=0;
      
     private $naviHref= null;
+
+    private $availableDays = null;
      
     /********************* PUBLIC **********************/  
         
@@ -73,7 +75,11 @@ class Calendar {
                                     $content.='<div class="week">';        
                                     //Create days in a week
                                     for($j=1;$j<=7;$j++){
-                                        $content.=$this->_showDay($i*7+$j);
+                                        if ($j == 3 || $j == 6 || $j == 7) {
+                                            $content.=$this->_showDayNoClick($i*7+$j);
+                                        } else {
+                                            $content.=$this->_showDay($i*7+$j);
+                                        }
                                     }
                                     $content.='</div>'; 
                                 }  
@@ -145,6 +151,64 @@ class Calendar {
         .
         '</div>';
     }
+
+    private function _showDayNoClick($cellNumber){
+         
+        if($this->currentDay==0){
+             
+            $firstDayOfTheWeek = date('N',strtotime($this->currentYear.'-'.$this->currentMonth.'-01'));
+                     
+            if(intval($cellNumber) == intval($firstDayOfTheWeek)){
+                 
+                $this->currentDay=1;
+                 
+            }
+        }
+         
+        if( ($this->currentDay!=0)&&($this->currentDay<=$this->daysInMonth) ){
+             
+            $this->currentDate = date('Y-m-d',strtotime($this->currentYear.'-'.$this->currentMonth.'-'.($this->currentDay)));
+
+            include 'conn.php';
+            $sql = "SELECT MenuName FROM `TblOrders` WHERE `StudentID` IN (SELECT `StudentID` FROM `tblFamilie` WHERE `GuardianID` = " . $_SESSION["GuardianID"] . " ) AND OrderDate = '" . $this->currentDate . "';";
+            $result = mysqli_query($conn, $sql);
+            $row = $result->fetch_assoc();
+             
+            $cellContent = "<div class='day'><p class='dayNumber'>" . $this->currentDay . "</p><p class='dayOrder'>" . ($result->num_rows > 0?$row["MenuName"]:'') . "<p></div>";
+
+            $this->currentDay++;   
+             
+        }else{
+             
+            $this->currentDate =null;
+ 
+            $cellContent=null;
+        }
+             
+        # $cellContent needs to be changed 
+
+
+        $dateID = "'" . $this->currentDate . "'";
+
+        include 'conn.php';
+        $sql = "SELECT OrderDate FROM `TblOrders` WHERE `StudentID` IN (SELECT `StudentID` FROM `tblFamilie` WHERE `GuardianID` = " . $_SESSION["GuardianID"] . " ) AND OrderDate = '" . $this->currentDate . "';";
+        $result = mysqli_query($conn, $sql);
+        $row = $result->fetch_assoc();
+
+        return '
+        <div onClick = "clickFunction('.$dateID.')" id="'.$this->currentDate.'" 
+        class="datecell unavailable'.($cellContent==null?' mask':'').'
+        
+        '. ($result->num_rows > 0?'dateOrdered':'') .'
+
+        ">'  
+        .
+
+        $cellContent # content in day cells
+        
+        .
+        '</div>';
+    }
      
     /**
     * create navigation
@@ -188,7 +252,7 @@ class Calendar {
     * calculate number of weeks in a particular month
     */
     private function _weeksInMonth($month=null,$year=null){
-         
+
         if( null==($year) ) {
             $year =  date("Y",time()); 
         }

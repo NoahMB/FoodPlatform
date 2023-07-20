@@ -18,12 +18,22 @@ a {
   flex-flow: row wrap;
   text-align: center;
 }
+
 .calendar {
   width: 100%;
   color: black;
   margin-left: 1%;
   margin-right: 1%;
 }
+
+.unavailable {
+  background-color: rgb(110 110 110 / 59%) !important;
+}
+
+.mask {
+  background-color: rgb(110 110 110 / 59%) !important;
+}
+
 .calendarContent {
  display: flex;
  align-items: flex-start;
