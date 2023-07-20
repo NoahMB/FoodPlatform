@@ -25,7 +25,12 @@ function getSpecifiedDays($month, $year) {
     }
     return $dates;
 }
+function looptyloop($month, $year){
+    $sql = "SELECT StudentID, Voornaam, Naam, Klas FROM tblstudent";
+    $result = mysqli_query($conn, $sql);
+    $row = $result->fetch_assoc();
 
+}
 function GenerateMonthorders($month, $year){
     
     header("content-type: application/vnd.ms-excel");
@@ -34,9 +39,10 @@ function GenerateMonthorders($month, $year){
     <tr>
     <th>Naam</th>
     <th>Voornaam</th>
-    <th>Mailadres Ouders</th>
     <th>klas</th>
-    <th>juf</th>
+    <!--<th>juf</th>-->
+    <th>Mailadres Ouders</th>
+    
     <?php getSpecifiedDays($month, $year)?>
     </tr>
     </table>
